@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{% block title %}SMARTSTUDY{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <script src="{{ STATIC_URL }}lib/jquery/jquery.js"></script>
+
+    <!-- Loading project css -->
+    <link href="{{ STATIC_URL }}css/smartstudy.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="top">
+    <div id="nav">
+        {% include "nav.html" %}
+    </div>
+</div>
+<div id="middle">
+    <div id="content">
+    {% block content %}{% endblock %}
+    </div>
+</div>
+<div id="bottom">
+    <div id="copyright">
+        {% include "footer.html" %}
+    </div>
+</div>
+{% block script %}{% endblock %}
+<script>
+// To detect scrolling    
+var lastScrollTop = 0;
+var $top = $('#top');
+var top_height = $top.height();
+
+$(window).scroll(function () { 
+    var top_position = $top.css('position');
+    var scrollTop = $(this).scrollTop()
+
+    if( scrollTop < top_height ) {
+        $top.clearQueue().css( {'top': '0px', 'position': 'absolute'} );
+    } else {
+        if( scrollTop < lastScrollTop ) {
+            if( top_position != 'fixed' ) {
+                $top.clearQueue()
+                    .css( {'top': '-'+top_height+'px', 'position': 'fixed'} )
+                    .delay(500).animate({ top: 0 }, 500, function() {});
+            }
+        } else if( top_position == 'fixed' ) {
+            $top.clearQueue()
+                .css( {'top': scrollTop, 'position': 'absolute'} )
+        }
+    }
+    lastScrollTop = scrollTop;
+});
+</script>
+</body>
+</html>
