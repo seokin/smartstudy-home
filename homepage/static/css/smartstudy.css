@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14pt;
+}
+
+p {
+    font-size: 20pt;
+}
+
+#top {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+}
+
+#nav {
+    text-align: left;
+    background: green;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 2%;
+
+    box-shadow: 0px 3px 5px -2px #FFF;
+}
+
+#middle {
+    z-index: 0;
+    overflow:auto;
+    min-height: 100%;
+}
+
+#content {
+    text-align: justify;
+    padding: 0 2%;
+    margin: 48px 0;
+}
+
+#bottom {
+    position: relative;
+    margin-top: -36px;
+    padding-top: 10px;
+    height: 26px;
+    clear:both;
+} 
+
+#copyright {
+    text-align:right;
+    font-family: "Verdana",sans-serif;
+    font-size:8pt;
+    color:#BBB;
+
+    height: 26px;
+    background: #EEE;
+    padding: 0 2%;
+}
