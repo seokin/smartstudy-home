@@ -31,28 +31,31 @@
 <script>
 // To detect scrolling    
 var lastScrollTop = 0;
-var animating = false;
-var threshold = 50;
+var thresholdUp = 10;
+var thresholdDown = 80;
+var animationDelay = 250;
+var animationDur = 150;
 var $top = $('#top');
 var top_height = $top.height();
 
 $(window).scroll(function () { 
-    if( animating ) return;
     var top_position = $top.css('position');
     var scrollTop = $(this).scrollTop()
 
     if( scrollTop < top_height ) {
-        $top.clearQueue().css( {'top': '0px', 'position': 'absolute'} );
+        $top.clearQueue().css({ top: 0, position: 'absolute' });
     } else {
         if( scrollTop < lastScrollTop ) {
-            if( top_position != 'fixed' && (scrollTop + threshold < lastScrollTop) ) {
-                animating = true;
+            if( top_position != 'fixed' && ( scrollTop + thresholdDown < lastScrollTop ) ) {
                 $top.clearQueue()
-                    .css( {'top': '-'+top_height+'px', 'position': 'fixed'} )
-                    .delay(250).animate({ top: 0 }, 250, function() { animating = false});
+                    .css({ top: '-'+top_height+'px', position: 'fixed' })
+                    .delay(animationDelay).animate({ top: 0 }, animationDur);
             }
-        } else if( top_position == 'fixed' ) {
-            $top.clearQueue().css( {'top': scrollTop, 'position': 'absolute'} )
+        } else if( top_position == 'fixed' && ( scrollTop - thresholdUp > lastScrollTop ) ) {
+            $top.clearQueue()
+                .delay(animationDelay).animate({ top: '-'+top_height+'px' }, animationDur, function() { 
+                    $(this).clearQueue().css({ top: 0, position: 'absolute' });
+                });
         }
     }
     lastScrollTop = scrollTop;
