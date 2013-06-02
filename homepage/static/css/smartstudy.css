@@ -36,6 +36,14 @@ h1 span {
     line-height: 100%;
 }
 
+h1:before {
+    content: "|";
+    color: #3e8b8b;
+    font-size: 36pt;
+    margin-left: -36px;
+    padding-right: 22px;
+}
+
 h2 {
     font-size: 24pt;
     font-weight: 400;
@@ -382,22 +390,28 @@ section p img {
     position: relative;
 }
 
-.members li.expand {
-}
-
-.members li img {
-    width: auto;
-    height: 56px;
+.members li .photo {
+    width: 54px;
+    height: 54px;
     border: 8px solid white;
     border-radius: 500px;
     -webkit-border-radius: 500px;
     float: left;
     box-shadow: #000 0 0px 6px;
+    overflow: hide;
+}
+
+.members li .photo img {
+    width: 48px;
+    height: 48px;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    border: 3px solid #3e8b8b;
 }
 
 .members li .desc {
     height: 64px;
-    padding: 10px 10px 0px 82px;
+    padding: 6px 10px 0px 82px;
 }
 
 .members li .desc .firstname {

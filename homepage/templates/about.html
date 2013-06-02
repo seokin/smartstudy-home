@@ -32,7 +32,9 @@
     <ul class="members">
         {% for c in crew %}
         <li>
-        <img src="{{ c.picture.url }}" alt="{{ c.name_eng }}">
+            <div class="photo">
+                <img src="{{ c.picture.url }}" alt="{{ c.name_eng }}">
+            </div>
             <div class="desc">
                 <p>
                     <span class="firstname">{{ c.firstname_eng }}</span>
