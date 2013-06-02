@@ -15,8 +15,8 @@ class CrewAdmin(admin.ModelAdmin):
             "all": ("css/admin.css",)
         }
 
-    list_display = ('id', picture, 'title', 'name', 'name_eng', 'nick', 'email', 'twitter', 'facebook', 'home',)
-    list_editable = ('title', 'name', 'name_eng', 'email', 'twitter', 'facebook', 'home',)
+    list_display = ('id', picture, 'title', 'name', 'name_eng', 'nick', 'email', 'github', 'twitter', 'facebook', 'home',)
+    list_editable = ('title', 'name', 'name_eng', 'email', 'github', 'twitter', 'facebook', 'home',)
     list_display_links = ('id',)
     search_fields = ['title', 'uid', 'nick', 'comment', ]
     ordering = ('-id',)

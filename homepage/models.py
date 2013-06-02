@@ -20,6 +20,15 @@ class Crew(models.Model):
     home = models.URLField(verbose_name=u'홈페이지', null=True, blank=True)
     facebook = models.URLField(verbose_name=u'페이스북', null=True, blank=True)
     twitter = models.CharField(verbose_name=u'트위터', null=True, blank=True, max_length=50)
+    github = models.CharField(verbose_name=u'깃허브', null=True, blank=True, max_length=50)
+
+    def firstname_eng(self):
+        return self.name_eng.partition(' ')[0]
+
+    def lastname_eng(self):
+        return self.name_eng.partition(' ')[2]
+
+
 
 #
 #class App(models.Model):

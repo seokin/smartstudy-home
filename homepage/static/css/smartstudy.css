@@ -73,12 +73,26 @@ section {
 
 [class^="icon-"], [class*=" icon-"] {
     display: inline-block;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px;
     vertical-align: middle;
-    padding-bottom: 4px;
     background-repeat: no-repeat;
-    opacity: 0.8;
+    opacity: 0.7;
+    transition: opacity 0.25s;
+    -webkit-transition: opacity 0.25s;
+}
+
+.desc [class^="icon-"], .desc [class*=" icon-"] {
+    opacity: 0.3;
+    width: 28px;
+    height: 28px;
+    background-size: 28px 28px;
+    margin-right: -8px;
+}
+
+[class^="icon-"]:hover, [class*=" icon-"]:hover {
+    opacity: 1.0;
 }
 
 .icon-link {
@@ -94,17 +108,25 @@ section {
 
 .icon-about {
     background-image: url("../image/icon/about.png");
-    background-size: 32px 32px;
+    background-size: 28px 28px;
 }
 
 .icon-product {
     background-image: url("../image/icon/product.png");
-    background-size: 32px 32px;
+    background-size: 28px 28px;
 }
 
 .icon-contact {
     background-image: url("../image/icon/contact.png");
-    background-size: 32px 32px;
+    background-size: 28px 28px;
+}
+
+.icon-twitter {
+    background-image: url("../image/icon/twitter.png");
+}
+
+.icon-github {
+    background-image: url("../image/icon/github.png");
 }
 
 #navbar {
@@ -353,7 +375,7 @@ section p img {
 .members li img {
     width: auto;
     height: 64px;
-    border: 3px solid white;
+    border: 5px solid white;
     border-radius: 500px;
     -webkit-border-radius: 500px;
     float: left;
@@ -365,16 +387,14 @@ section p img {
     padding: 8px 10px 0px 80px;
 }
 
-.members li .desc .twitter {
-    font-size: 8pt;
-    font-weight: 400;
-    color: #889;
-    text-decoration: none;
+.members li .desc .firstname {
+    font-size: 14pt;
+    font-weight: 900;
 }
 
-.members li .desc .name {
+.members li .desc .lastname {
     font-size: 14pt;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .members li .desc .title {
@@ -382,8 +402,7 @@ section p img {
     font-weight: 400;
 }
 
-
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .members li {
         width: 45%;
         margin: 1%;

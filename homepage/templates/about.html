@@ -34,11 +34,16 @@
         <li>
         <img src="{{ c.picture.url }}" alt="{{ c.name_eng }}">
             <div class="desc">
-                {% if c.twitter %}
-                <p class="name">{{ c.name_eng }} <a class="twitter" href="https://twitter.com/{{ c.twitter }}">@{{ c.twitter }}</a></p>
-                {% else %}
-                <p class="name">{{ c.name_eng }}</p>
-                {% endif %}
+                <p>
+                    <span class="firstname">{{ c.firstname_eng }}</span>
+                    <span class="lastname">{{ c.lastname_eng }}</span>
+                    {% if c.twitter %}
+                    <a href="https://twitter.com/{{ c.twitter }}"><i class="icon-twitter"></i></a>
+                    {% endif %}
+                    {% if c.github %}
+                    <a href="https://github.com/{{ c.github }}"><i class="icon-github"></i></a>
+                    {% endif %}
+                </p>
                 <p class="title">{{ c.title }}</p>
             </div>
         </li>
