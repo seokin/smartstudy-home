@@ -2,33 +2,33 @@
     <div class="wrap">
         <ul class="sitemap">
             <li>
-                <a href="#">ABOUT</a>
+                <a href="{% url 'contact' %}">ABOUT</a>
                 <ul class="submenu">
-                    <li><a href="#">Company</a></li>
-                    <li><a href="#">Vision</a></li>
-                    <li><a href="#">Technique</a></li>
-                    <li><a href="#">Crew</a></li>
-                    <li><a href="#">License</a></li>
-                    <li><a href="#">Privacy</a></li>
+                    <li><a href="{% url 'about' %}#company">Company</a></li>
+                    <li><a href="{% url 'about' %}#vision">Vision</a></li>
+                    <li><a href="{% url 'about' %}#technique">Technique</a></li>
+                    <li><a href="{% url 'about' %}#crew">Crew</a></li>
+                    <li><a href="{% url 'about' %}#license">License</a></li>
+                    <li><a href="{% url 'about' %}#privacy">Privacy</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">PRODUCT</a>
+                <a href="{% url 'product' %}">PRODUCT</a>
                 <ul class="submenu">
-                    <li><a href="#">Featured</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Mobile VOD</a></li>
-                    <li><a href="#">Comics</a></li>
-                    <li><a href="#">Utilities</a></li>
+                    <li><a href="{% url 'product' %}#featured">Featured</a></li>
+                    <li><a href="{% url 'product' %}#education">Education</a></li>
+                    <li><a href="{% url 'product' %}#mobile">Mobile VOD</a></li>
+                    <li><a href="{% url 'product' %}#comics">Comics</a></li>
+                    <li><a href="{% url 'product' %}#utilities">Utilities</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">CONTACT</a>
+                <a href="{% url 'contact' %}">CONTACT</a>
                 <ul class="submenu">
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Business</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Location</a></li>
+                    <li><a href="{% url 'contact' %}#support">Support</a></li>
+                    <li><a href="{% url 'contact' %}#business">Business</a></li>
+                    <li><a href="{% url 'contact' %}#press">Press</a></li>
+                    <li><a href="{% url 'contact' %}#location">Location</a></li>
                 </ul>
             </li>
             <li>

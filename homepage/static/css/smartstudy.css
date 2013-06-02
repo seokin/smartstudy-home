@@ -44,9 +44,12 @@ h2 {
 
 hr {
     border: 0px;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 32px;
     border-bottom: 1px solid #ebebff;
+}
+
+section {
+    padding-top: 52px;
 }
 
 .pull-right {
@@ -167,17 +170,17 @@ hr {
 }
 
 #content > .wrap {
-    padding-top: 60px;
+    padding-top: 20px;
     background: white;
     min-height: 100%;
-    margin-bottom: -64px;
+    margin-bottom: -24px;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     max-width: 958px;
 }
 
 #content > .wrap > .eod {
-    padding: 20px 0 100px 0;
+    padding: 20px 0 60px 0;
     color: white;
     text-align: center;
 }
@@ -342,10 +345,6 @@ section p img {
     padding: 0;
     margin: 0.8%;
     position: relative;
-    overflow: hidden;
-    border: 3px solid #ccc;
-    border-radius: 500px;
-    -webkit-border-radius: 500px;
 }
 
 .members li.expand {
@@ -354,28 +353,32 @@ section p img {
 .members li img {
     width: auto;
     height: 64px;
-    border: 5px solid white;
+    border: 3px solid white;
     border-radius: 500px;
     -webkit-border-radius: 500px;
     float: left;
+    box-shadow: #000 0 0px 6px;
 }
 
 .members li .desc {
-    background: #eaeaec;
     height: 64px;
-    padding-left: 74px;
-    border: 5px solid white;
-    border-radius: 500px;
-    -webkit-border-radius: 500px;
+    padding: 8px 10px 0px 80px;
+}
+
+.members li .desc .twitter {
+    font-size: 8pt;
+    font-weight: 400;
+    color: #889;
+    text-decoration: none;
 }
 
 .members li .desc .name {
-    font-size: 16pt;
-    font-weight: 900;
+    font-size: 14pt;
+    font-weight: 700;
 }
 
 .members li .desc .title {
-    font-size: 11pt;
+    font-size: 9pt;
     font-weight: 400;
 }
 

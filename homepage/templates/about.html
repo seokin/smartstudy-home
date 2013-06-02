@@ -34,7 +34,11 @@
         <li>
         <img src="{{ c.picture.url }}" alt="{{ c.name_eng }}">
             <div class="desc">
+                {% if c.twitter %}
+                <p class="name">{{ c.name_eng }} <a class="twitter" href="https://twitter.com/{{ c.twitter }}">@{{ c.twitter }}</a></p>
+                {% else %}
                 <p class="name">{{ c.name_eng }}</p>
+                {% endif %}
                 <p class="title">{{ c.title }}</p>
             </div>
         </li>
