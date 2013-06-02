@@ -75,6 +75,7 @@ section {
     display: inline-block;
     width: 28px;
     height: 28px;
+    background-size: 28px 28px;
     margin-bottom: 4px;
     vertical-align: middle;
     background-repeat: no-repeat;
@@ -85,10 +86,16 @@ section {
 
 .desc [class^="icon-"], .desc [class*=" icon-"] {
     opacity: 0.3;
-    width: 28px;
-    height: 28px;
-    background-size: 28px 28px;
     margin-right: -8px;
+}
+
+#footer [class^="icon-"], #footer [class*=" icon-"] {
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: text-top;
+    opacity: 0.7;
 }
 
 [class^="icon-"]:hover, [class*=" icon-"]:hover {
@@ -97,28 +104,22 @@ section {
 
 .icon-link {
     background-image: url("../image/icon/link.png");
-    background-size: 12px 12px;
-    margin: 3px 3px;
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
-    vertical-align: text-top;
-    opacity: 0.3;
 }
 
 .icon-about {
     background-image: url("../image/icon/about.png");
-    background-size: 28px 28px;
 }
 
 .icon-product {
     background-image: url("../image/icon/product.png");
-    background-size: 28px 28px;
 }
 
 .icon-contact {
     background-image: url("../image/icon/contact.png");
-    background-size: 28px 28px;
+}
+
+.icon-facebook {
+    background-image: url("../image/icon/facebook.png");
 }
 
 .icon-twitter {
@@ -127,6 +128,18 @@ section {
 
 .icon-github {
     background-image: url("../image/icon/github.png");
+}
+
+.icon-facebook-white {
+    background-image: url("../image/icon/facebook-white.png");
+}
+
+.icon-twitter-white {
+    background-image: url("../image/icon/twitter-white.png");
+}
+
+.icon-github-white {
+    background-image: url("../image/icon/github-white.png");
 }
 
 #navbar {
