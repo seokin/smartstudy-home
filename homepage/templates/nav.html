@@ -1,12 +1,12 @@
 <div id="navbar" class="box">
     <div class="wrap">
         <ul>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">PRODUCT</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="{% url 'about' %}"><i class="icon-about"></i> ABOUT</a></li>
+            <li><a href="{% url 'product' %}"><i class="icon-product"></i> PRODUCT</a></li>
+            <li><a href="{% url 'contact' %}"><i class="icon-contact"></i> CONTACT</a></li>
         </ul>
         <ul class="pull-right hidden-phone">
-            <li><a href="#"><span class="brand">SMARTSTUDY</span></a></li>
+            <li><a href="{% url 'index' %}"><span class="brand">SMARTSTUDY</span></a></li>
         </ul>
     </div>
 </div>
