@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load markup %}
 {% block content %}
 <!--
 <section id="featured">
@@ -23,6 +24,18 @@
 -->
 <section id="education">
     <h1>Education</h1>
+    {% for app in apps %}
+    <div class="app">
+        <img class="icon" src="{{ app.icon.url }}" alt="icon">
+        <h2>{{ app.title_eng }}</h2>
+        <h3>{{ app.subtitle_eng }}</h3>
+        <div class="desc">
+            {{ app.desc|markdown:"safe" }}
+        </div>
+        <button class="btn btn-ios" href="#">Available on <strong>iOS</strong></button>
+        <button class="btn btn-googleplay" href="#">Available on <strong>GooglePlay</strong></button>
+    </div>
+    {% endfor %}
     <div class="app">
         <img class="icon" src="{{ STATIC_URL }}image/app.png" alt="app">
         <h2>Best Kids Songs</h2>

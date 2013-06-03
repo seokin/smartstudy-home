@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Crew
+from .models import Crew, App
 
 
 def about(request):
@@ -10,7 +10,10 @@ def about(request):
 
 
 def product(request):
-    return render(request, 'product.html')
+    apps = App.objects.all()
+    return render(request, 'product.html', {
+        'apps': apps,
+    })
 
 
 def contact(request):
