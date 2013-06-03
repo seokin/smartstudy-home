@@ -386,6 +386,9 @@ section .app .icon {
     float: left;
     margin: 10px 12px 10px 0px;
     box-shadow: #333 0 1px 4px;
+
+    border-radius: 11px;
+    -webkit-border-radius: 11px;
 }
 
 section .app ul {

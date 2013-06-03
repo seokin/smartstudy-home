@@ -155,7 +155,7 @@
         "twitter": "J2P_", 
         "nick": "\uc30d\ud53c", 
         "facebook": "", 
-        "name_eng": "Jaepil Choi", 
+        "name_eng": "Jaepil Jung", 
         "home": "", 
         "email": "", 
         "name": "\uc815\uc7ac\ud544"
@@ -447,6 +447,56 @@
         "home": "", 
         "email": "", 
         "name": "\uc11c\uad11\uc6d0"
+    }
+},
+{
+    "pk": 1, 
+    "model": "homepage.appcategory", 
+    "fields": {
+        "app": [], 
+        "title_eng": "Games", 
+        "uid": "games", 
+        "title": "\uac8c\uc784"
+    }
+},
+{
+    "pk": 2, 
+    "model": "homepage.appcategory", 
+    "fields": {
+        "app": [], 
+        "title_eng": "Education", 
+        "uid": "education", 
+        "title": "\uad50\uc721"
+    }
+},
+{
+    "pk": 3, 
+    "model": "homepage.appcategory", 
+    "fields": {
+        "app": [], 
+        "title_eng": "Mobile VOD", 
+        "uid": "mobilevod", 
+        "title": "\ubaa8\ubc14\uc77cVOD"
+    }
+},
+{
+    "pk": 4, 
+    "model": "homepage.appcategory", 
+    "fields": {
+        "app": [], 
+        "title_eng": "Comics", 
+        "uid": "comics", 
+        "title": "\ub9cc\ud654"
+    }
+},
+{
+    "pk": 5, 
+    "model": "homepage.appcategory", 
+    "fields": {
+        "app": [], 
+        "title_eng": "Utilities", 
+        "uid": "utilities", 
+        "title": "\uc720\ud2f8\ub9ac\ud2f0"
     }
 }
 ]

@@ -37,17 +37,22 @@ class App(models.Model):
     title = models.CharField(verbose_name=u'제목', max_length=100,
                              null=True, blank=True)
     title_eng = models.CharField(verbose_name=u'영문 제목', max_length=100,
+
                                  null=True, blank=True)
     subtitle = models.CharField(verbose_name=u'부제', max_length=100,
                                 null=True, blank=True)
     subtitle_eng = models.CharField(verbose_name=u'영문 부제', max_length=100,
                                     null=True, blank=True)
+
     cms_id = models.CharField(verbose_name=u'앱 아이디', max_length=255)
     icon = models.ImageField(upload_to=uploaded_filepath)
     appid_ios = models.CharField(max_length=255, null=True, blank=True)
     appid_googleplay = models.CharField(max_length=255, null=True, blank=True)
+
     desc = models.TextField(verbose_name=u'짧은 소개', blank=True)
     desc_more = models.TextField(verbose_name=u'추가로 긴 소개', blank=True)
+    desc_eng = models.TextField(verbose_name=u'짧은 영문 소개', blank=True)
+    desc_more_eng = models.TextField(verbose_name=u'추가로 긴 영문 소개', blank=True)
 
     launched = models.DateField(auto_now_add=True)
 
@@ -64,4 +69,4 @@ class AppCategory(models.Model):
     uid = models.CharField(max_length=255)
     title = models.CharField(verbose_name=u'카테고리 명', max_length=255, null=True, blank=True)
     title_eng = models.CharField(verbose_name=u'카테고리 영문명', max_length=255, null=True, blank=True)
-    app = models.ManyToManyField(App)
+    app = models.ManyToManyField(App, blank=True)
