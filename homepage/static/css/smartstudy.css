@@ -17,6 +17,7 @@ p {
     color: #445;
     text-align: justify;
     line-height: 160%;
+    margin-bottom: 5px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,6 +49,12 @@ h2 {
     font-size: 24pt;
     font-weight: 400;
     color: #333;
+}
+
+h3 {
+    font-size: 18pt;
+    font-weight: 300;
+    color: #777;
 }
 
 hr {
@@ -160,9 +167,7 @@ section {
     color: white;
     height: 50px;
 
-    box-shadow: #fff 0 12px 6px -3px;
     overflow: hidden;
-
     border-bottom: 1px solid #111;
 }
 
@@ -365,6 +370,34 @@ section .icon {
     margin: -2px;
 }
 
+section .app {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+section .app .icon {
+    width: 64px;
+    height: auto;
+
+    position: relative;
+    float: left;
+    margin: 10px 12px 10px 0px;
+    box-shadow: #333 0 1px 4px;
+}
+
+section .app ul {
+    margin: 18px;
+}
+
+section .app h2 {
+    margin-left: 77px;
+}
+
+section .app h3 {
+    margin-top: -20px;
+    margin-left: 77px;
+}
+
 section p img {
     float: left;
     width: 48px;
@@ -428,6 +461,12 @@ section p img {
     font-size: 9pt;
     font-weight: 400;
     line-height: 100%;
+}
+
+.carousel-inner .item {
+    width: 100%;
+    height: 480px;
+    background: gray;
 }
 
 @media (max-width: 1000px) {

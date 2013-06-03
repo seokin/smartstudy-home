@@ -8,7 +8,7 @@
                     <li><a href="{% url 'about' %}#vision">Vision</a></li>
                     <li><a href="{% url 'about' %}#technique">Technique</a></li>
                     <li><a href="{% url 'about' %}#crew">Crew</a></li>
-                    <li><a href="{% url 'about' %}#license">License</a></li>
+                    <!--<li><a href="{% url 'about' %}#license">License</a></li>-->
                     <li><a href="{% url 'about' %}#privacy">Privacy</a></li>
                 </ul>
             </li>
@@ -17,7 +17,8 @@
                 <ul class="submenu">
                     <li><a href="{% url 'product' %}#featured">Featured</a></li>
                     <li><a href="{% url 'product' %}#education">Education</a></li>
-                    <li><a href="{% url 'product' %}#mobile">Mobile VOD</a></li>
+                    <li><a href="{% url 'product' %}#mobilevod">Mobile VOD</a></li>
+                    <li><a href="{% url 'product' %}#games">Games</a></li>
                     <li><a href="{% url 'product' %}#comics">Comics</a></li>
                     <li><a href="{% url 'product' %}#utilities">Utilities</a></li>
                 </ul>
@@ -44,7 +45,11 @@
     </div>
     <div class="clear"></div>
     <div class="wrap credit">
+        <p>
+            <a href="http://www.joeharrison.co.uk/projects/icons_by_hour.html">Icons by Hour</a>
+            by <a href="http://www.joeharrison.co.uk/">Joe Harrison</a>
+            via <a href="http://thenounproject.com/">The Noun Project</a>
+        </p>
         <p>Designed and published by © SMARTSTUDY 2010-{% now "Y" %}</p>
-        <p>Powered by <a href="http://www.djangoproject.com/">Django</a></p>
     </div>
 </div>
