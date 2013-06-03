@@ -29,15 +29,13 @@ class Crew(models.Model):
         return self.name_eng.partition(' ')[2]
 
 
+class App(models.Model):
+    name = models.CharField(verbose_name=u'이름', max_length=50,
+                            null=True, blank=True)
+    name_eng = models.CharField(verbose_name=u'영문 이름', max_length=100,
+                                null=True, blank=True)
+    cms_id = models.CharField(verbose_name=u'앱 아이디', max_length=255)
+    icon = models.ImageField(upload_to='app')
 
-#
-#class App(models.Model):
-#    name = models.CharField(verbose_name=u'이름', max_length=50,
-#                            null=True, blank=True)
-#    name_eng = models.CharField(verbose_name=u'영문 이름', max_length=100,
-#                                null=True, blank=True)
-#    uid = models.CharField(verbose_name=u'앱 아이디', max_length=255,
-#                           null=True, blank=True)
-#    appid_ios = models.ImageField(verbose_name=u'사진', upload_to='crew')
-#    appid_android = models.ImageField(verbose_name=u'사진', upload_to='crew')
-#    twitter = models.CharField(verbose_name=u'트위터', null=True, blank=True, max_length=50)
+    appid_ios = models.CharField(max_length=255, null=True, blank=True)
+    appid_googleplay = models.CharField(max_length=255, null=True, blank=True)

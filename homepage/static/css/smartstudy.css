@@ -204,7 +204,7 @@ section {
     text-shadow: #111 0 0 5px;
 }
 
-#navbar li a:hover {
+#navbar li a:hover, #navbar li a.active {
     color: #fff;
     background: #666;
 }
