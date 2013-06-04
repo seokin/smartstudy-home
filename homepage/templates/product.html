@@ -32,8 +32,6 @@
         <div class="desc">
             {{ app.desc|markdown:"safe" }}
         </div>
-        <button class="btn btn-ios" href="#">Available on <strong>iOS</strong></button>
-        <button class="btn btn-googleplay" href="#">Available on <strong>GooglePlay</strong></button>
     </div>
     {% endfor %}
     <div class="app">
@@ -43,8 +41,8 @@
         <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </p>
-        <button class="btn btn-ios" href="#">Available on <strong>iOS</strong></button>
-        <button class="btn btn-googleplay" href="#">Available on <strong>GooglePlay</strong></button>
+        <button class="btn btn-large btn-appstore" href="#"><i class="icon-appstore"></i> AppStore</button>
+        <button class="btn btn-large btn-playstore" href="#"><i class="icon-playstore"></i> PlayStore</button>
     </div>
     <div class="app">
         <img class="icon" src="{{ STATIC_URL }}image/app.png" alt="app">

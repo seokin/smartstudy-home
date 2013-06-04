@@ -31,8 +31,8 @@ class AppImageInline(admin.TabularInline):
 
 
 class AppAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'title_eng', 'cms_id', 'appid_ios', 'appid_googleplay', 'launched')
-    list_editable = ('title', 'title_eng', 'appid_ios', 'appid_googleplay',)
+    list_display = ('id', 'title', 'title_eng', 'cms_id', 'launched', 'appid_appstore', 'appid_playstore',)
+    list_editable = ('title', 'title_eng', 'appid_appstore', 'appid_playstore',)
     inlines = [AppImageInline, ]
     search_fields = ['title', 'title_eng', 'cms_id', ]
     ordering = ('-id',)

@@ -46,8 +46,8 @@ class App(models.Model):
 
     cms_id = models.CharField(verbose_name=u'앱 아이디', max_length=255)
     icon = models.ImageField(upload_to=uploaded_filepath)
-    appid_ios = models.CharField(max_length=255, null=True, blank=True)
-    appid_googleplay = models.CharField(max_length=255, null=True, blank=True)
+    appid_appstore = models.CharField(max_length=255, null=True, blank=True)
+    appid_playstore = models.CharField(max_length=255, null=True, blank=True)
 
     desc = models.TextField(verbose_name=u'짧은 소개', blank=True)
     desc_more = models.TextField(verbose_name=u'추가로 긴 소개', blank=True)

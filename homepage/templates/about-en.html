@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="company">
+    <h1><img class="icon" src="{{ STATIC_URL }}image/icon/company.png" alt="company"><span>SMART</span><span>STUDY</span></h1>
+    <h2>Create everything whatever can be designed.</h2>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+</section>
+<hr>
+<section id="vision">
+    <img class="icon" src="{{ STATIC_URL }}image/icon/vision.png" alt="vision">
+    <h1>Vision</h1>
+    <h2>Content rules platform.</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <h2>We, human make it works.</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</section>
+<hr>
+<section id="technique">
+    <img class="icon" src="{{ STATIC_URL }}image/icon/technique.png" alt="technique">
+    <h1>Technique</h1>
+    <h2>Built on Open Source eco systems.</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</section>
+<hr>
+<section id="crew">
+    <img class="icon" src="{{ STATIC_URL }}image/icon/crew.png" alt="crew">
+    <h1>Crew</h1>
+    <h2>We're not on a rocket.</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <ul class="members">
+        {% for c in crew %}
+        <li>
+            <div class="photo">
+                <img src="{{ c.picture.url }}" alt="{{ c.name_eng }}">
+            </div>
+            <div class="desc">
+                <p>
+                    <span class="firstname">{{ c.firstname_eng }}</span>
+                    <span class="lastname">{{ c.lastname_eng }}</span>
+                    {% if c.twitter %}
+                    <a href="https://twitter.com/{{ c.twitter }}"><i class="icon-twitter"></i></a>
+                    {% endif %}
+                    {% if c.github %}
+                    <a href="https://github.com/{{ c.github }}"><i class="icon-github"></i></a>
+                    {% endif %}
+                </p>
+                <p class="title">{{ c.title }}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="clear"></div>
+</section>
+{% endblock %}

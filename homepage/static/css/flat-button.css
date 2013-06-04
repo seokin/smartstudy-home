@@ -1,18 +1,10 @@
-.btn strong {
-    margin-left: 5px;
-    font-size: 15px;
-    font-weight: 700;
-    text-shadow: #333 0 0px 3px;
-}
 .btn,
 .btn-group > .btn,
 .btn-group > .dropdown-menu,
 .btn-group > .popover {
     cursor: pointer;
-    font-size: 12px;
-    /* 15px */
-
-    font-weight: 300;
+    font-size: 13.5px;
+    font-weight: 400;
 }
 .btn {
     border: none;
@@ -22,9 +14,9 @@
     line-height: 22px;
     text-decoration: none;
     text-shadow: none;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -33,6 +25,7 @@
     -o-transition: 0.25s;
     transition: 0.25s;
     -webkit-backface-visibility: hidden;
+    margin-right: 5px;
 }
 .btn:hover,
 .btn:focus,
@@ -78,29 +71,29 @@
 .btn.btn-large > [class^="fui-"].pull-right {
     margin-right: -2px;
 }
-.btn.btn-ios {
-    background-color: #5b90b4;
+.btn.btn-appstore {
+    background-color: #3386d4;
 }
-.btn.btn-ios:hover,
-.btn.btn-ios:focus,
-.btn-group:focus .btn.btn-ios.dropdown-toggle {
-    background-color: #5a9dca;
+.btn.btn-appstore:hover,
+.btn.btn-appstore:focus,
+.btn-group:focus .btn.btn-appstore.dropdown-toggle {
+    background-color: #5dade2;
 }
-.btn.btn-ios:active,
-.btn-group.open .btn.btn-ios.dropdown-toggle,
-.btn.btn-ios.active {
+.btn.btn-appstore:active,
+.btn-group.open .btn.btn-appstore.dropdown-toggle,
+.btn.btn-appstore.active {
     background-color: #2c81ba;
 }
-.btn.btn-googleplay {
-    background-color: #72a854;
+.btn.btn-playstore {
+    background-color: #3fabba;
 }
-.btn.btn-googleplay:hover,
-.btn.btn-googleplay:focus,
-.btn-group:focus .btn.btn-googleplay.dropdown-toggle {
-    background-color: #6fc042;
+.btn.btn-playstore:hover,
+.btn.btn-playstore:focus,
+.btn-group:focus .btn.btn-playstore.dropdown-toggle {
+    background-color: #48c9b0;
 }
-.btn.btn-googleplay:active,
-.btn-group.open .btn.btn-googleplay.dropdown-toggle,
-.btn.btn-googleplay.active {
-    background-color: #279d60;
+.btn.btn-playstore:active,
+.btn-group.open .btn.btn-playstore.dropdown-toggle,
+.btn.btn-playstore.active {
+    background-color: #16a085;
 }
