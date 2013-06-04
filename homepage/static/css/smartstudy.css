@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: 'Lato', 'Helvetica Neue', 'Nanum Gothic', 'Arial', sans-serif;
     font-weight: 300;
     line-height: 180%;
 }
@@ -13,18 +13,29 @@ html, body {
     background: #ddd;
 }
 
-p {
-    color: #667;
-    line-height: 180%;
-    margin: 10px 0;
+a {
+    text-decoration: none;
+}
 
-    font-family: 'Nanum Gothic', 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+a:hover {
+    text-decoration: underline;
+}
+
+p, li, span {
+    color: #667;
+    font-family: 'Nanum Gothic', 'Open Sans', 'Helvetica Neue', 'Arial', 'Apple Gothic', sans-serif;
     font-size: 11.8pt;
     font-style: normal;
     font-weight: 400;
 }
 
+p {
+    line-height: 180%;
+    margin: 10px 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
+    color: black;
     line-height: 120%;
     padding: 10px 0;
 }
@@ -35,6 +46,8 @@ h1 {
 }
 
 h1 span {
+    color: black;
+    font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
     font-size: 36pt;
     font-weight: 900;
     display: inline-block;
@@ -58,7 +71,14 @@ h2 {
 h3 {
     font-size: 18pt;
     font-weight: 300;
+    color: #666;
+}
+
+h4 {
+    font-size: 14pt;
+    font-weight: 300;
     color: #777;
+    padding: 5px 0;
 }
 
 hr {
@@ -69,6 +89,7 @@ hr {
 
 section {
     padding-top: 52px;
+    position: relative;
 }
 
 .pull-right {
@@ -224,6 +245,7 @@ section {
 }
 
 #navbar li .brand {
+    font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
     color: #fff;
     font-weight: 600;
     line-height: 50px;
@@ -417,8 +439,16 @@ section .app .icon {
     -webkit-border-radius: 11px;
 }
 
-section .app ul {
-    margin: 18px;
+section ul, section ol {
+    margin: 8px 8px 14px 32px;
+}
+
+section ul p {
+    margin: 0;
+}
+
+section ul ul, section ul ol, section ol ul, section ol ol {
+    margin: 0px 0px 8px 32px;
 }
 
 section .app h2 {
@@ -439,6 +469,7 @@ section p img {
 
 .members {
     padding: 20px 0;
+    margin: 0;
     font-size: 0;
 }
 
@@ -475,7 +506,12 @@ section p img {
     margin: 0;
 }
 
-.members li .desc .firstname {
+.members li .desc .nick {
+    font-size: 8pt;
+    font-weight: 400;
+}
+
+.members li .desc .firstname, .members li .desc .name {
     font-size: 13.5pt;
     font-weight: 700;
 }
@@ -490,6 +526,12 @@ section p img {
     font-size: 8pt;
     font-weight: 400;
     line-height: 100%;
+}
+
+.map {
+    width: 100%;
+    height: 480px;
+    border: 1px solid #667;
 }
 
 .carousel-inner .item {

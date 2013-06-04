@@ -18,3 +18,15 @@ def product(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+
+def withyou(request):
+    return render(request, 'withyou.html')
+
+
+def license(request):
+    return render(request, 'license.html')
+
+
+def privacy(request):
+    return render(request, 'privacy.html')
