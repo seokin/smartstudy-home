@@ -24,6 +24,7 @@
     <p>
         우리가 만드는 서비스는 바로 이 지점에서 시작합니다. 늘 공부하는 우리는 그래서 스마트스터디입니다.
     </p>
+{% include "facebook.html" %}
 </section>
 <hr>
 <section id="vision">
@@ -92,7 +93,8 @@
         대신, 우리는 좋은 제품을 만드는 데 집중합니다. 다양한 분야에 관심을 두고 많은 대화를 주고받으며, 지금 만들고 있는 것을 더 좋게 만들기 위해 노력합니다.
     </p>
     <p>
-        로켓도 아니고 멋진 리무진도 아니지만, 옆 사람과 소란스럽게 떠들며 목적지를 향해 덜컹거리며 가는 미니 버스라면 좋을 것 같습니다.
+    로켓도 아니고 멋진 리무진도 아니지만, 옆 사람과 소란스럽게 떠들며 목적지를 향해 덜컹거리며 가는 미니 버스라면 좋을 것 같습니다.
+    <br><a href="{% url 'withyou' %}">마음에 드시나요?</a>
     </p>
     <ul class="members">
         {% for c in crew %}
@@ -102,8 +104,8 @@
             </div>
             <div class="desc">
                 <p>
-                    <span class="firstname">{{ c.firstname_eng }}</span>
-                    <span class="lastname">{{ c.lastname_eng }}</span>
+                    <span class="name">{{ c.name }}</span>
+                    <span class="nick">{{ c.nick }}</span>
                     {% if c.twitter %}
                     <a href="https://twitter.com/{{ c.twitter }}"><i class="icon-twitter"></i></a>
                     {% endif %}
