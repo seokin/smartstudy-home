@@ -1,8 +1,10 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
 <section id="company">
     <h1><img class="icon" src="{{ STATIC_URL }}image/icon/company.png" alt="company"><span>SMART</span><span>STUDY</span></h1>
     <h2>Big things have small beginnings.</h2>
+    {% trans "Hello" %}
     <p>
         스마트스터디는 한국에 모바일 앱 개발 바람이 불기 시작하던, 2010년 6월에 설립되었습니다.
     </p>
