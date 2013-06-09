@@ -5,7 +5,7 @@ from models import Crew, App, AppImage, AppCategory
 
 class CrewAdmin(admin.ModelAdmin):
     def picture(self):
-        return '<a href="%s"><img src="%s" width="50" /></a>' % (self.id, self.picture.url)
+        return '<a href="%s"><img src="%s" width="24" /></a>' % (self.id, self.picture.url)
 
     picture.short_description = u'사진'
     picture.allow_tags = True

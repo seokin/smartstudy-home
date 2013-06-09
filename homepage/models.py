@@ -5,7 +5,7 @@ from library import uploaded_filepath
 
 class Crew(models.Model):
     class Meta:
-        ordering = ['name_eng']
+        ordering = ['name']
 
     nick = models.CharField(verbose_name=u'별명', max_length=50)
     title = models.CharField(verbose_name=u'역할', max_length=50)

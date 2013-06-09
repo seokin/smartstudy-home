@@ -36,6 +36,49 @@
     </div>
     {% include "footer.html" %}
 </div>
+<div class="topmost">
+    <div id="dimmer"></div>
+    <div id="box">
+    </div>
+</div>
+<script>
+var topmost = null;
+function dimmer_on()
+{
+    if( null == topmost ) topmost = $('.topmost');
+
+    topmost.css({
+        'height': $(document).height(),
+        'top': 0,
+        'z-index': '100'
+    }).show();
+
+    document.ontouchmove = function (event) {
+        if (!event.elementIsEnabled) {
+            event.preventDefault();
+        }
+    };
+
+    $(document).keyup(function(e) {
+        if (e.keyCode == 27) { 
+            dimmer_off();
+        }
+    });
+
+    topmost.find('#dimmer, #box').click(function(e) {
+        dimmer_off();
+    });
+}
+
+function dimmer_off()
+{
+    if( null != topmost ) topmost.hide();
+
+    document.ontouchmove = function (event) {
+        event.elementIsEnabled = true;
+    };
+}
+</script>
 {% block script %}{% endblock %}
 </body>
 </html>

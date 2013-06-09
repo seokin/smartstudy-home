@@ -102,7 +102,7 @@
         {% for c in crew %}
         <li>
             <div class="photo">
-                <img src="{{ c.picture.url }}" alt="{{ c.name_eng }}">
+                <img src="{{ c.picture.url }}" alt="{{ c.name_eng }}" data-original="{{ c.picture.url }}" onclick="show_enlarge(this);">
             </div>
             <div class="desc">
                 <p>
@@ -122,4 +122,16 @@
     </ul>
     <div class="clear"></div>
 </section>
+{% endblock %}
+{% block script %}
+<script>
+function show_enlarge(e)
+{
+    $(".topmost #box").html(
+        '<img class="enlarge-photo" src="'+$(e).data('original')+'">'
+    );
+    $(".enlarge-photo").fadeIn(300);
+    dimmer_on();
+}
+</script>
 {% endblock %}
