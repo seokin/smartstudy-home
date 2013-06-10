@@ -9,8 +9,6 @@
                     <li><a href="{% url 'about' %}#vision">{% trans "Vision" %}</a></li>
                     <li><a href="{% url 'about' %}#technique">{% trans "Technique" %}</a></li>
                     <li><a href="{% url 'about' %}#crew">{% trans "Crew" %}</a></li>
-                    <li><a href="{% url 'license' %}#">{% trans "License" %}</a></li>
-                    <li><a href="{% url 'privacy' %}#">{% trans "Privacy" %}</a></li>
                 </ul>
             </li>
             <li>
@@ -44,6 +42,12 @@
                 </ul>
             </li>
             <li>
+                <a>{% trans "INFORMATION" %}</a>
+                <ul class="submenu">
+                    <li><a href="{% url 'license' %}#">{% trans "License" %}</a></li>
+                    <li><a href="{% url 'privacy' %}#">{% trans "Privacy" %}</a></li>
+                </ul>
+                <hr>
                 <a>{% trans "LANGUAGE" %}</a>
                 <ul class="submenu">
                 {% include "i18n.html" %}
@@ -53,11 +57,6 @@
     </div>
     <div class="clear"></div>
     <div class="wrap credit">
-        <p>
-            <a href="http://www.joeharrison.co.uk/projects/icons_by_hour.html">' Icons by Hour '</a>
-            by <a href="http://www.joeharrison.co.uk/">Joe Harrison</a>
-            via <a href="http://thenounproject.com/">The Noun Project</a>
-        </p>
         <p>Designed and published by © SMARTSTUDY 2010-{% now "Y" %}</p>
     </div>
 </div>

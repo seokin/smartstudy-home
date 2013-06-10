@@ -2,29 +2,25 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-10 13:51+0900\n"
+"POT-Creation-Date: 2013-06-10 18:30+0900\n"
 "PO-Revision-Date: 2013-06-10 13:52+0900\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "X-Translated-Using: django-rosetta 0.7.2\n"
 
 #: settings.py:41
 msgid "Korean"
 msgstr "한국어"
-
-#: settings.py:42
-msgid "English"
-msgstr "English"
 
 #: templates/about.html:7
 msgid "<span>SMART</span><span>STUDY</span>"
@@ -37,6 +33,34 @@ msgstr "Big things have small beginnings."
 #: templates/about.html:9
 msgid "section-company-1"
 msgstr ""
+"<p>\n"
+"SMARTSTUDY was established at Jun, 2010. It was the time that many "
+"enterpreneurs in Korea change focus to the mobile market.\n"
+"</p>\n"
+"<p>\n"
+"다년간 온라인 게임/웹 서비스를 제작하고 운영하던 이들이 뭉쳐, 모바일 플랫폼에"
+"서 새로운 기회를 찾아 나섰습니다.\n"
+"하지만 이런 뻔한 경력이나 이력을 가진 팀은 발에 챌 정도로 많을 뿐 아니라, 새"
+"로운 플랫폼의 출발점은 누구에게나 같습니다.\n"
+"게다가 호흡이 긴 기존의 개발과 서비스 운영과는 전혀 다른 형태와 반응을 보이"
+"는 모바일 시장은 낯설기만 합니다.\n"
+"같이 시작했던 다른 조직들이 크게 성공하는 것을 보며 마음이 조급해지기도 하"
+"고, 소리소문없이 사라지는 스타트업들의 이야기가 꼭 우리 일만 같습니다.\n"
+"</p>\n"
+"<p>\n"
+"숨을 한 번 크게 들이마시고, 내뱉은 후에 고민해봅니다.\n"
+"</p>\n"
+"<p>\n"
+"많은 팀이 그러하듯, 우리만의 새롭고 참신한 것을 쫓아 헤맬 수도 있습니다.\n"
+"하지만 우리는 무심코 지나친 일상을 가만히 앉아 돌아보며, 조금이나마 개선할 "
+"수 있는 것을 찾아봅니다.\n"
+"당연하다고 여겨왔던 것들을 다시 한 번 꺼내봅니다.\n"
+"길고 긴 생각의 끝에 우리를 불편하게 만들었던 것이 무엇이었는지, 조금씩 보이"
+"기 시작합니다.\n"
+"</p>\n"
+"<p>\n"
+"우리가 만드는 서비스는 바로 이 지점에서 시작합니다.\n"
+"</p>"
 
 #: templates/about.html:15 templates/footer.html:9
 msgid "Vision"
@@ -99,22 +123,26 @@ msgid "BUSINESS"
 msgstr "BUSINESS"
 
 #: templates/contact.html:14
+msgid "To infinity and beyond."
+msgstr ""
+
+#: templates/contact.html:15
 msgid "section-business-1"
 msgstr ""
 
-#: templates/contact.html:19
+#: templates/contact.html:20
 msgid "PRESS"
 msgstr "PRESS"
 
-#: templates/contact.html:20
+#: templates/contact.html:21
 msgid "section-press-1"
 msgstr ""
 
-#: templates/contact.html:25
+#: templates/contact.html:26
 msgid "LOCATION"
 msgstr "LOCATION"
 
-#: templates/contact.html:26
+#: templates/contact.html:27
 msgid "section-location-1"
 msgstr ""
 
@@ -126,78 +154,197 @@ msgstr "ABOUT"
 msgid "Company"
 msgstr "Company"
 
-#: templates/footer.html:12
-msgid "License"
-msgstr "License"
-
-#: templates/footer.html:13
-msgid "Privacy"
-msgstr "Privacy"
-
-#: templates/footer.html:17 templates/nav.html:9
+#: templates/footer.html:15 templates/nav.html:9
 msgid "PRODUCT"
 msgstr "PRODUCT"
 
-#: templates/footer.html:19
+#: templates/footer.html:17
 msgid "Featured"
 msgstr "Featured"
 
-#: templates/footer.html:20
+#: templates/footer.html:18
 msgid "Education"
 msgstr "Education"
 
-#: templates/footer.html:21
+#: templates/footer.html:19
 msgid "Mobile VOD"
 msgstr "Mobile VOD"
 
-#: templates/footer.html:22
+#: templates/footer.html:20
 msgid "Games"
 msgstr "Games"
 
-#: templates/footer.html:23
+#: templates/footer.html:21
 msgid "Comics"
 msgstr "Comics"
 
-#: templates/footer.html:24
+#: templates/footer.html:22
 msgid "Utilities"
 msgstr "Utilities"
 
-#: templates/footer.html:28 templates/nav.html:12
+#: templates/footer.html:26 templates/nav.html:12
 msgid "CONTACT"
 msgstr "CONTACT"
 
-#: templates/footer.html:30
+#: templates/footer.html:28
 msgid "Support"
 msgstr "Support"
 
-#: templates/footer.html:31
+#: templates/footer.html:29
 msgid "Business"
 msgstr "Business"
 
-#: templates/footer.html:32
+#: templates/footer.html:30
 msgid "Press"
 msgstr "Press"
 
-#: templates/footer.html:33
+#: templates/footer.html:31
 msgid "Location"
 msgstr "Location"
 
-#: templates/footer.html:34
+#: templates/footer.html:32 templates/withyou.html:6
 msgid "We're hiring!"
 msgstr "We're hiring!"
 
-#: templates/footer.html:38
+#: templates/footer.html:36
 msgid "LINK"
 msgstr "LINK"
 
-#: templates/footer.html:43
+#: templates/footer.html:41
 msgid "Tech Blog"
 msgstr "Tech Blog"
 
+#: templates/footer.html:45
+#, fuzzy
+msgid "INFORMATION"
+msgstr "LOCATION"
+
 #: templates/footer.html:47
+msgid "License"
+msgstr "License"
+
+#: templates/footer.html:48
+msgid "Privacy"
+msgstr "Privacy"
+
+#: templates/footer.html:51
 msgid "LANGUAGE"
 msgstr "LANGUAGE"
+
+#: templates/license.html:5
+msgid "LICENSE"
+msgstr ""
+
+#: templates/license.html:6
+#, fuzzy
+msgid "section-license-1"
+msgstr ""
+"<p>\n"
+"SMARTSTUDY was established at Jun, 2010. It was the time that many "
+"enterpreneurs in Korea change focus to the mobile market.\n"
+"</p>\n"
+"<p>\n"
+"다년간 온라인 게임/웹 서비스를 제작하고 운영하던 이들이 뭉쳐, 모바일 플랫폼에"
+"서 새로운 기회를 찾아 나섰습니다.\n"
+"하지만 이런 뻔한 경력이나 이력을 가진 팀은 발에 챌 정도로 많을 뿐 아니라, 새"
+"로운 플랫폼의 출발점은 누구에게나 같습니다.\n"
+"게다가 호흡이 긴 기존의 개발과 서비스 운영과는 전혀 다른 형태와 반응을 보이"
+"는 모바일 시장은 낯설기만 합니다.\n"
+"같이 시작했던 다른 조직들이 크게 성공하는 것을 보며 마음이 조급해지기도 하"
+"고, 소리소문없이 사라지는 스타트업들의 이야기가 꼭 우리 일만 같습니다.\n"
+"</p>\n"
+"<p>\n"
+"숨을 한 번 크게 들이마시고, 내뱉은 후에 고민해봅니다.\n"
+"</p>\n"
+"<p>\n"
+"많은 팀이 그러하듯, 우리만의 새롭고 참신한 것을 쫓아 헤맬 수도 있습니다.\n"
+"하지만 우리는 무심코 지나친 일상을 가만히 앉아 돌아보며, 조금이나마 개선할 "
+"수 있는 것을 찾아봅니다.\n"
+"당연하다고 여겨왔던 것들을 다시 한 번 꺼내봅니다.\n"
+"길고 긴 생각의 끝에 우리를 불편하게 만들었던 것이 무엇이었는지, 조금씩 보이"
+"기 시작합니다.\n"
+"</p>\n"
+"<p>\n"
+"우리가 만드는 서비스는 바로 이 지점에서 시작합니다.\n"
+"</p>"
 
 #: templates/nav.html:17
 msgid "SMARTSTUDY"
 msgstr "SMARTSTUDY"
+
+#: templates/privacy.html:5
+msgid "PRIVACY"
+msgstr ""
+
+#: templates/privacy.html:6
+#, fuzzy
+msgid "section-privacy-1"
+msgstr ""
+"<p>\n"
+"SMARTSTUDY was established at Jun, 2010. It was the time that many "
+"enterpreneurs in Korea change focus to the mobile market.\n"
+"</p>\n"
+"<p>\n"
+"다년간 온라인 게임/웹 서비스를 제작하고 운영하던 이들이 뭉쳐, 모바일 플랫폼에"
+"서 새로운 기회를 찾아 나섰습니다.\n"
+"하지만 이런 뻔한 경력이나 이력을 가진 팀은 발에 챌 정도로 많을 뿐 아니라, 새"
+"로운 플랫폼의 출발점은 누구에게나 같습니다.\n"
+"게다가 호흡이 긴 기존의 개발과 서비스 운영과는 전혀 다른 형태와 반응을 보이"
+"는 모바일 시장은 낯설기만 합니다.\n"
+"같이 시작했던 다른 조직들이 크게 성공하는 것을 보며 마음이 조급해지기도 하"
+"고, 소리소문없이 사라지는 스타트업들의 이야기가 꼭 우리 일만 같습니다.\n"
+"</p>\n"
+"<p>\n"
+"숨을 한 번 크게 들이마시고, 내뱉은 후에 고민해봅니다.\n"
+"</p>\n"
+"<p>\n"
+"많은 팀이 그러하듯, 우리만의 새롭고 참신한 것을 쫓아 헤맬 수도 있습니다.\n"
+"하지만 우리는 무심코 지나친 일상을 가만히 앉아 돌아보며, 조금이나마 개선할 "
+"수 있는 것을 찾아봅니다.\n"
+"당연하다고 여겨왔던 것들을 다시 한 번 꺼내봅니다.\n"
+"길고 긴 생각의 끝에 우리를 불편하게 만들었던 것이 무엇이었는지, 조금씩 보이"
+"기 시작합니다.\n"
+"</p>\n"
+"<p>\n"
+"우리가 만드는 서비스는 바로 이 지점에서 시작합니다.\n"
+"</p>"
+
+#: templates/withyou.html:5
+msgid "WITH YOU"
+msgstr ""
+
+#: templates/withyou.html:7
+#, fuzzy
+msgid "section-withyou-1"
+msgstr ""
+"<p>\n"
+"SMARTSTUDY was established at Jun, 2010. It was the time that many "
+"enterpreneurs in Korea change focus to the mobile market.\n"
+"</p>\n"
+"<p>\n"
+"다년간 온라인 게임/웹 서비스를 제작하고 운영하던 이들이 뭉쳐, 모바일 플랫폼에"
+"서 새로운 기회를 찾아 나섰습니다.\n"
+"하지만 이런 뻔한 경력이나 이력을 가진 팀은 발에 챌 정도로 많을 뿐 아니라, 새"
+"로운 플랫폼의 출발점은 누구에게나 같습니다.\n"
+"게다가 호흡이 긴 기존의 개발과 서비스 운영과는 전혀 다른 형태와 반응을 보이"
+"는 모바일 시장은 낯설기만 합니다.\n"
+"같이 시작했던 다른 조직들이 크게 성공하는 것을 보며 마음이 조급해지기도 하"
+"고, 소리소문없이 사라지는 스타트업들의 이야기가 꼭 우리 일만 같습니다.\n"
+"</p>\n"
+"<p>\n"
+"숨을 한 번 크게 들이마시고, 내뱉은 후에 고민해봅니다.\n"
+"</p>\n"
+"<p>\n"
+"많은 팀이 그러하듯, 우리만의 새롭고 참신한 것을 쫓아 헤맬 수도 있습니다.\n"
+"하지만 우리는 무심코 지나친 일상을 가만히 앉아 돌아보며, 조금이나마 개선할 "
+"수 있는 것을 찾아봅니다.\n"
+"당연하다고 여겨왔던 것들을 다시 한 번 꺼내봅니다.\n"
+"길고 긴 생각의 끝에 우리를 불편하게 만들었던 것이 무엇이었는지, 조금씩 보이"
+"기 시작합니다.\n"
+"</p>\n"
+"<p>\n"
+"우리가 만드는 서비스는 바로 이 지점에서 시작합니다.\n"
+"</p>"
+
+#~ msgid "English"
+#~ msgstr "English"

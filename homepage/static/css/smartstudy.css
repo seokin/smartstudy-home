@@ -15,6 +15,7 @@ html, body {
 
 a {
     text-decoration: none;
+    font-weight: 400;
 }
 
 a:hover {
@@ -90,6 +91,11 @@ hr {
 section {
     padding-top: 52px;
     position: relative;
+}
+
+pre {
+    word-break: break-all;
+    white-space: pre-line;
 }
 
 .pull-right {
@@ -351,6 +357,14 @@ section {
     background: #666;
 }
 
+#footer .sitemap hr {
+    border: 0;
+    margin: 8px 12px;
+    padding: 0;
+    border-top: 1px solid #1C1C1F;
+    border-bottom: 1px solid #444450;
+}
+
 #footer .submenu {
 }
 
@@ -409,6 +423,18 @@ section {
 
 section {
     position :relative;
+}
+
+section a {
+    font-size: 11.8pt;
+}
+
+section .desc {
+    font-size: 10pt;
+}
+
+section .desc a {
+    font-size: 10pt;
 }
 
 section .icon {

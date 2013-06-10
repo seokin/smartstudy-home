@@ -1,6 +1,76 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
 <section id="support">
-<h1>LICENSE</h1>
+    <h1>{% trans "LICENSE" %}</h1>
+    <h2>{% trans "SOFTWARE" %}</h2>
+    <ul>
+        <li>
+            <a href="https://www.djangoproject.com/">Django</a>
+            <span class="desc">
+                - A high-level Python Web framework  
+                / <a href="https://github.com/django/django/blob/master/LICENSE">BSD license</a>
+            </span>
+        </li>
+        <li>
+            <a href="https://github.com/mbi/django-rosetta/">Rosetta</a>
+            <span class="desc">
+                - Eases the translation process of your Django projects.
+                / <a href="https://github.com/mbi/django-rosetta/blob/develop/LICENSE">MIT license</a>
+            </span>
+        </li>
+        <li>
+            <a href="https://jquery.org">jQuery</a>
+            <span class="desc">
+                - Supporting the advancement of the web through JavaScript
+                / <a href="https://jquery.org/license/">MIT license</a>
+            </span>
+        </li>
+        <li>
+            <a href="https://github.com/lqez/shy-navbar">shy-navbar</a>
+            <span class="desc">
+                - Add "shyness" into your navigation bar.
+                / <a href="https://github.com/lqez/shy-navbar/blob/master/LICENSE">MIT license</a>
+            </span>
+        </li>
+    </ul>
+    <h2>{% trans "FONTS" %}</h2>
+    <ul>
+        <li>
+            <a href="http://hangeul.naver.com/font"><font style="font-family:'Nanum Gothic'- sans-serif; font-weight:700;">나눔고딕</font></a>
+            <span class="desc">
+                - <a href="http://www.nhncorp.com">NHN Corporation</a>
+                / <a href="http://scripts.sil.org/OFL">SIL Open Font License- 1.1</a>
+            </span>
+        </li>
+        <li>
+            <a href="http://www.google.com/fonts/specimen/Lato"><font style="font-family:'Lato'- sans-serif; font-weight:700;">Lato</font></a> 
+            <span class="desc">
+                - <a href="https://plus.google.com/106163021290874968147/about">Łukasz Dziedzic</a>
+                / <a href="http://scripts.sil.org/OFL">SIL Open Font License- 1.1</a>
+            </span>
+        </li>
+        <li>
+            <a href="http://www.google.com/fonts/specimen/Open+Sans"><font style="font-family:'Open Sans'- sans-serif; font-weight:700;">Open Sans</font></a>
+            <span class="desc">
+                - <a href="https://profiles.google.com/107777320916704234605/about">Steve Matteson</a>
+                / <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License- version 2.0</a>
+            </span>
+        </li>
+
+    </ul>
+    <h2>{% trans "ICONS" %}</h2>
+    <ul>
+        <li>
+            <a href="http://www.joeharrison.co.uk/projects/icons_by_hour.html">Icons by Hour</a>
+            <span class="desc">
+                - <a href="http://www.joeharrison.co.uk/">Joe Harrison</a>
+                / <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons - Attribution (CC BY 3.0)</a>
+            </span>
+        </li>
+        <li>
+            {% trans "All trademarks are property of their respective owners." %}
+        </li>
+    </ul>
 </section>
 {% endblock %}

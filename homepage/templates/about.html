@@ -40,8 +40,14 @@
             </div>
             <div class="desc">
                 <p>
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% if LANGUAGE_CODE == 'ko' %}
                     <span class="name">{{ c.name }}</span>
                     <span class="nick">{{ c.nick }}</span>
+                    {% else %}
+                    <span class="firstname">{{ c.firstname_eng }}</span>
+                    <span class="lastname">{{ c.lastname_eng }}</span>
+                    {% endif %}
                     {% if c.twitter %}
                     <a href="https://twitter.com/{{ c.twitter }}"><i class="icon-twitter"></i></a>
                     {% endif %}

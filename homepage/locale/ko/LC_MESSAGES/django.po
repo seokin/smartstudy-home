@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-10 13:47+0900\n"
-"PO-Revision-Date: 2013-06-10 13:49+0900\n"
+"POT-Creation-Date: 2013-06-10 18:30+0900\n"
+"PO-Revision-Date: 2013-06-10 18:30+0900\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,10 +22,6 @@ msgstr ""
 #: settings.py:41
 msgid "Korean"
 msgstr "한국어"
-
-#: settings.py:42
-msgid "English"
-msgstr "English"
 
 #: templates/about.html:7
 msgid "<span>SMART</span><span>STUDY</span>"
@@ -177,11 +173,15 @@ msgstr ""
 "    <li>고객 상담 전화 : 080-470-3000, 월요일-금요일, 오전 9시부터 오후 6시까지 가능합니다.</li>\n"
 "</ul>"
 
-#: templates/contact.html:22
+#: templates/contact.html:13
 msgid "BUSINESS"
 msgstr "업무 문의"
 
-#: templates/contact.html:23
+#: templates/contact.html:14
+msgid "To infinity and beyond."
+msgstr "혼자서는 할 수 없는 일이 있습니다."
+
+#: templates/contact.html:15
 msgid "section-business-1"
 msgstr ""
 "<p>\n"
@@ -197,11 +197,11 @@ msgstr ""
 "    <li>사업 제휴 메일 : <a href=\"mailto:with@smartstudy.co.kr\">with@smartstudy.co.kr</a></li>\n"
 "</ul>"
 
-#: templates/contact.html:40
+#: templates/contact.html:20
 msgid "PRESS"
 msgstr "기사 및 자료"
 
-#: templates/contact.html:41
+#: templates/contact.html:21
 msgid "section-press-1"
 msgstr ""
 "<p>\n"
@@ -211,11 +211,11 @@ msgstr ""
 "    <li>홍보 관련 메일 : <a href=\"mailto:press@smartstudy.co.kr\">press@smartstudy.co.kr</a></li>\n"
 "</ul>"
 
-#: templates/contact.html:52
+#: templates/contact.html:26
 msgid "LOCATION"
 msgstr "위치"
 
-#: templates/contact.html:53
+#: templates/contact.html:27
 msgid "section-location-1"
 msgstr ""
 "<ul>\n"
@@ -247,78 +247,278 @@ msgstr "우리는"
 msgid "Company"
 msgstr "회사"
 
-#: templates/footer.html:12
-msgid "License"
-msgstr "저작권"
-
-#: templates/footer.html:13
-msgid "Privacy"
-msgstr "개인정보"
-
-#: templates/footer.html:17 templates/nav.html:9
+#: templates/footer.html:15 templates/nav.html:9
 msgid "PRODUCT"
 msgstr "무엇을"
 
-#: templates/footer.html:19
+#: templates/footer.html:17
 msgid "Featured"
-msgstr ""
+msgstr "추천"
 
-#: templates/footer.html:20
+#: templates/footer.html:18
 msgid "Education"
 msgstr "교육"
 
-#: templates/footer.html:21
+#: templates/footer.html:19
 msgid "Mobile VOD"
 msgstr "모바일 VOD"
 
-#: templates/footer.html:22
+#: templates/footer.html:20
 msgid "Games"
 msgstr "게임"
 
-#: templates/footer.html:23
+#: templates/footer.html:21
 msgid "Comics"
 msgstr "코믹스"
 
-#: templates/footer.html:24
+#: templates/footer.html:22
 msgid "Utilities"
 msgstr "유틸리티"
 
-#: templates/footer.html:28 templates/nav.html:12
+#: templates/footer.html:26 templates/nav.html:12
 msgid "CONTACT"
 msgstr "어디서"
 
-#: templates/footer.html:30
+#: templates/footer.html:28
 msgid "Support"
 msgstr "고객 지원"
 
-#: templates/footer.html:31
+#: templates/footer.html:29
 msgid "Business"
 msgstr "업무 문의"
 
-#: templates/footer.html:32
+#: templates/footer.html:30
 msgid "Press"
 msgstr "기사 및 자료"
 
-#: templates/footer.html:33
+#: templates/footer.html:31
 msgid "Location"
 msgstr "위치"
 
-#: templates/footer.html:34
+#: templates/footer.html:32 templates/withyou.html:6
 msgid "We're hiring!"
-msgstr "같이해요!"
+msgstr "함께 해요!"
 
-#: templates/footer.html:38
+#: templates/footer.html:36
 msgid "LINK"
 msgstr "링크"
 
-#: templates/footer.html:43
+#: templates/footer.html:41
 msgid "Tech Blog"
 msgstr "기술 블로그"
 
+#: templates/footer.html:45
+msgid "INFORMATION"
+msgstr "정보"
+
 #: templates/footer.html:47
+msgid "License"
+msgstr "저작권"
+
+#: templates/footer.html:48
+msgid "Privacy"
+msgstr "개인정보"
+
+#: templates/footer.html:51
 msgid "LANGUAGE"
 msgstr "언어"
+
+#: templates/license.html:5
+msgid "LICENSE"
+msgstr "저작권"
+
+#: templates/license.html:6
+msgid "section-license-1"
+msgstr ""
 
 #: templates/nav.html:17
 msgid "SMARTSTUDY"
 msgstr "스마트스터디"
+
+#: templates/privacy.html:5
+msgid "PRIVACY"
+msgstr "개인정보 취급방침"
+
+#: templates/privacy.html:6
+msgid "section-privacy-1"
+msgstr ""
+"<pre>\n"
+"개인정보 취급방침\n"
+"\n"
+"(주)스마트스터디(이하 \"회사\" 또는 \"스마트스터디\"라 함)은 통신비밀보호법, 전기통신사업법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 정보통신서비스제공자가 준수하여야 할 관련 법령상의 개인정보보호 규정을 준수하며, 관련 법령에 의거한 개인정보취급방침을 정하여 이용자 권익 보호에 최선을 다하고 있습니다. \n"
+"\n"
+"1. 수집하는 개인정보의 항목 및 수집방법\n"
+"\n"
+"가. 수집하는 개인정보의 항목\n"
+"첫째, 회사는 회원가입, 원활한 고객상담, 각종 서비스의 제공을 위해 최초 회원가입 당시 아래와 같은 개인정보를 수집하고 있습니다.\n"
+"기기고유번호 (디바이스 아이디 또는 IMEI), 지역포맷 \n"
+"둘째, 서비스 이용과정에서 아래와 같은 정보들이 생성되어 수집될 수 있습니다.\n"
+"이용자 상태정보, 사진, 쿠키, 방문 일시, 서비스 이용 기록, 불량 이용 기록\n"
+"\n"
+"나. 개인정보 수집방법\n"
+"회사는 다음과 같은 방법으로 개인정보를 수집합니다.\n"
+"- 스마트스터디 프로그램을 실행 또는 사용함으로써 자동으로 수집 \n"
+"- 서비스 가입이나 사용 중 이용자의 자발적 제공을 통한 수집\n"
+"\n"
+"2. 개인정보의 수집 및 이용목적 \n"
+"\n"
+"가. 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산\n"
+"컨텐츠 제공, 특정 맞춤 서비스 제공, 물품배송 또는 청구서 등 발송, 본인인증, 구매 및 요금 결제, 요금추심\n"
+"\n"
+"나. 회원관리\n"
+"회원제 서비스 이용 및 제한적 본인 확인제에 따른 본인확인, 개인식별, 불량회원의 부정 이용방지와 비인가 사용방지, 가입의사 확인, 가입 및 가입횟수 제한, 만14세 미만 아동 개인정보 수집 시 법정 대리인 동의여부 확인, 추후 법정 대리인 본인확인, 분쟁 조정을 위한 기록보존, 불만처리 등 민원처리, 고지사항 전달\n"
+"\n"
+"다. 신규 서비스 개발 및 마케팅·광고에의 활용\n"
+"신규 서비스 개발 및 맞춤 서비스 제공, 통계학적 특성에 따른 서비스 제공 및 광고 게재, 서비스의 유효성 확인, 이벤트 및 광고성 정보 제공 및 참여기회 제공, 접속빈도 파악, 회원의 서비스 이용에 대한 통계\n"
+"\n"
+"3. 개인정보의 공유 및 제공 \n"
+"\n"
+"회사는 이용자들의 개인정보를 \"2. 개인정보의 수집목적 및 이용목적\"에서 고지한 범위 내에서 사용하며, 이용자의 사전 동의 없이는 동 범위를 초과하여 이용하거나 원칙적으로 이용자의 개인정보를 외부에 공개하지 않습니다. 다만, 아래의 경우에는 예외로 합니다.\n"
+"- 이용자들이 사전에 공개에 동의한 경우\n"
+"- 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우\n"
+"\n"
+"4. 개인정보의 취급위탁 \n"
+"\n"
+"가. 회사는 서비스 향상을 위해 아래와 같이 개인정보를 위탁하고 있으며, 관계 법령에 따라 위탁 계약 시 개인정보가 안전하게 관리될 수 있도록 필요한 사항을 규정하고 있습니다. 회사의 개인정보 위탁처리 기관 및 위탁업무 내용은 아래와 같습니다.\n"
+"　　　　-수탁업체 : 스마트스터디 -위탁업무 내용 : 서비스 제공을 위한 시스템 구축 및 운영 \n"
+"　　　　-개인정보의 보유 및 이용 기간 : 서비스 종료 또는 회원 탈퇴, 또는 위탁 계약 종료 시까지\n"
+"\n"
+"나. 본 서비스는 위탁업무계약서 등을 통해 개인정보보호 관련 법규의 준수, 개인정보에 관한 비밀 유지, 제3자 제공에 대한 금지, 사고 시의 책임 부담, 위탁 기간, 처리 종료 후의 개인정보의 반환 또는 파기 의무 등을 규정하고 이를 준수하도록 관리하고 있습니다.\n"
+"\n"
+"5. 개인정보의 보유 및 이용기간 \n"
+"\n"
+"이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체 없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.\n"
+"\n"
+"가. 회사 내부 방침에 의한 정보보유 사유\n"
+"- 부정이용기록 \n"
+"보존 이유 : 부정 이용 방지\n"
+"보존 기간 : 1년\n"
+"\n"
+"나. 관련법령에 의한 정보보유 사유\n"
+"상법, 전자상거래 등에서의 소비자보호에 관한 법률 등 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 아래와 같습니다.\n"
+"- 계약 또는 청약철회 등에 관한 기록 \n"
+"보존 이유 : 전자상거래 등에서의 소비자보호에 관한 법률 \n"
+"보존 기간 : 5년 \n"
+"- 대금결제 및 재화 등의 공급에 관한 기록 \n"
+"보존 이유 : 전자상거래 등에서의 소비자보호에 관한 법률 \n"
+"보존 기간 : 5년 \n"
+"- 소비자의 불만 또는 분쟁처리에 관한 기록 \n"
+"보존 이유 : 전자상거래 등에서의 소비자보호에 관한 법률 \n"
+"보존 기간 : 3년\n"
+"- 본인확인에 관한 기록\n"
+"보존 이유 : 정보통신망 이용촉진 및 정보보호 등에 관한 법률 \n"
+"보존 기간 : 6개월\n"
+"- 방문에 관한 기록 \n"
+"보존 이유 : 통신비밀보호법\n"
+"보존 기간 : 3개월\n"
+"\n"
+"6. 개인정보 파기절차 및 방법 \n"
+"\n"
+"이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체 없이 파기합니다. 회사의 개인정보 파기절차 및 방법은 다음과 같습니다.\n"
+"\n"
+"가. 파기절차\n"
+"- 이용자가 회원가입 등을 위해 입력한 정보는 목적이 달성된 후 별도의 DB로 옮겨져(종이의 경우 별도의 서류함) 내부 방침 및 기타 관련 법령에 의한 정보보호 사유에 따라(보유 및 이용기간 참조)일정 기간 저장된 후 파기됩니다.\n"
+"- 동 개인정보는 법률에 의한 경우가 아니고서는 보유되는 이외의 다른 목적으로 이용되지 않습니다.\n"
+"\n"
+"나. 파기방법\n"
+"- 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.\n"
+"- 전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다. \n"
+"\n"
+"7. 이용자 및 법정대리인의 권리와 그 행사방법 \n"
+"\n"
+"- 이용자 및 법정 대리인은 언제든지 등록되어 있는 자신 혹은 당해 만 14세 미만 아동의 개인정보를 조회하거나 수정할 수 있으며 가입해지를 요청할 수도 있습니다.\n"
+"- 이용자 혹은 만 14세 미만 아동의 개인정보 조회, 수정을 위해서는 서비스내 \"내 프로필\" 변경을, 가입해지(동의철회)를 위해서는 서비스내 \"계정삭제\"를 클릭하여 직접 열람, 정정 또는 탈퇴가 가능합니다.\n"
+"- 혹은 개인정보관리책임자에게 서면, 전화 또는 이메일로 연락하시면 지체 없이 조치하겠습니다.\n"
+"- 이용자가 개인정보의 오류에 대한 정정을 요청하신 경우에는 정정을 완료하기 전까지 당해 개인정보를 이용 또는 제공하지 않습니다. 또한 잘못된 개인정보를 제3 자에게 이미 제공한 경우에는 정정 처리결과를 제3자에게 지체 없이 통지하여 정정이 이루어지도록 하겠습니다. \n"
+"- 회사는 이용자 혹은 법정 대리인의 요청에 의해 해지 또는 삭제된 개인정보는 \"5. 개인정보의 보유 및 이용기간\"에 명시된 바에 따라 처리하고 그 외의 용도로 열람 또는 이용할 수 없도록 처리하고 있습니다.\n"
+"\n"
+"8. 개인정보 자동 수집 장치의 설치/운영 및 거부에 관한 사항 \n"
+"\n"
+"회사는 계정정보를 생성하기 위해 이용자가 스마트스터디 서비스 실행 시 기기식별번호 (디바이스 아이디 또는 IMEI)를 자동으로 수집하게 됩니다.\n"
+"이용자가 기기식별번호를 자동으로 수집하는 것을 거부하는 경우 스마트스터디 서비스를 이용할 수 없습니다. \n"
+"\n"
+"9. 개인정보의 기술적/관리적 보호 대책 \n"
+"\n"
+"회사는 이용자들의 개인정보를 취급함에 있어 개인정보가 분실, 도난, 누출, 변조 또는 훼손되지 않도록 안전성 확보를 위하여 다음과 같은 기술적/관리적 대책을 강구하고 있습니다.\n"
+"\n"
+"가. 해킹 등에 대비한 대책\n"
+"회사는 해킹이나 컴퓨터 바이러스 등에 의해 회원의 개인정보가 유출되거나 훼손되는 것을 막기 위해 최선을 다하고 있습니다. 개인정보의 훼손에 대비해서 자료를 수시로 백업하고 있고, 최신 백신프로그램을 이용하여 이용자들의 개인정보나 자료가 누출되거나 손상되지 않도록 방지하고 있으며, 암호화통신 등을 통하여 네트워크상에서 개인정보를 안전하게 전송할 수 있도록 하고 있습니다. 그리고 침입차단시스템을 이용하여 외부로부터의 무단 접근을 통제하고 있으며, 기타 시스템적으로 보안성을 확보하기 위한 가능한 모든 기술적 장치를 갖추려 노력하고 있습니다.\n"
+"\n"
+"나. 취급 직원의 최소화 및 교육\n"
+"회사의 개인정보관련 취급 직원은 담당자에 한정시키고 있고 이를 위한 별도의 비밀번호를 부여하여 정기적으로 갱신하고 있으며, 담당자에 대한 수시 교육을 통하여 스마트스터디 개인정보취급방침의 준수를 항상 강조하고 있습니다. \n"
+"다. 개인정보보호전담기구의 운영\n"
+"그리고 사내 개인정보보호전담기구 등을 통하여 스마트스터디 개인정보취급방침의 이행사항 및 담당자의 준수여부를 확인하여 문제가 발견될 경우 즉시 수정하고 바로 잡을 수 있도록 노력하고 있습니다. 단, 이용자 본인의 부주의나 인터넷상의 문제로 개인정보가 유출되어 발생한 문제에 대해 회사는 일체의 책임을 지지 않습니다.\n"
+"\n"
+"10. 개인정보관리책임자 및 담당자의 연락처 \n"
+"\n"
+"귀하께서는 회사의 서비스를 이용하시며 발생하는 모든 개인정보보호 관련 민원을 개인정보관리책임자 혹은 담당부서로 신고하실 수 있습니다. 회사는 이용자들의 신고사항에 대해 신속하게 충분한 답변을 드릴 것입니다.\n"
+"\n"
+"개인정보 관리책임자\n"
+"이 름 : 윤성국  소 속 : 스마트스터디서비스팀\n"
+"직 위 : 실장\n"
+"메 일 : app@smartstudy.co.kr\n"
+"\n"
+"개인정보 관리담당자\n"
+"이 름 : 박현우  소 속 : 스마트스터디서비스팀 \n"
+"전 화 : 02-3470-6807 \n"
+"메 일 : app@smartstudy.co.kr\n"
+"\n"
+"기타 개인정보침해에 대한 신고나 상담이 필요하신 경우에는 아래 기관에 문의하시기 바랍니다.\n"
+"\n"
+"- 개인정보침해신고센터 (www.118.or.kr / 118)\n"
+"- 정보보호마크인증위원회 (www.eprivacy.or.kr / 02-580-0533~4) \n"
+"- 대검찰청 첨단범죄수사과 (http://www.spo.go.kr / 02-3480-2000) \n"
+"- 경찰청 사이버테러대응센터 (www.ctrc.go.kr / 02-392-0330) \n"
+"\n"
+"11. 고지의 의무 \n"
+"\n"
+"현 개인정보취급방침의 내용이 변경될 경우에는 변경 내용을 스마트스터디 애플리케이션의 공지 팝업을 통해 공고하고, 지정된 시행일자를 따를 것입니다.\n"
+"\n"
+"공고일자 : 2012년 4월 1일\n"
+"시행일자 : 2012년 4월 1일\n"
+"</pre>"
+
+#: templates/withyou.html:5
+msgid "WITH YOU"
+msgstr "당신과, 우리가 같이"
+
+#: templates/withyou.html:7
+msgid "section-withyou-1"
+msgstr ""
+"<h3>스마트스터디는 넥슨/네오위즈/NHN 등에서 인터넷과 게임산업의 발전을 주도한 최고의 인재들로 구성되어 있습니다.</h3>\n"
+"<ol>\n"
+"    <li>\n"
+"        <h4>스마트스터디는 안정적인 사업구조로 산업을 주도하고 있습니다.</h4>\n"
+"        <ul>\n"
+"            <li>60년 전통의 대한민국 No.1 출판사인 삼성출판사의 자회사로 각종 교육/도서/게임/인터넷 서비스의 기반이 되는 다양한 콘텐츠를 확보하고 있습니다.</li>\n"
+"            <li>2010년 6월 설립부터 다양한 타이틀을 출시하고 있으며, 앱스토어/티스토어 교육분야 매출 1위 보들북을 중심으로 안정적인 사업을 운용하고 있습니다.</li>\n"
+"        </ul>\n"
+"    </li>\n"
+"    <li>\n"
+"        <h4>스마트스터디는 웃고 떠들 수 있는 곳입니다.</h4>\n"
+"        <ul>\n"
+"            <li>창의력과 자율성은 사용자의 마음을 움직이는 날카로운 기획, 감동을 주는 디자인, 퀄리티 높은 개발로 이어집니다.</li>\n"
+"            <li>마음껏 생각과 아이디어를 공유하고, 이를 자신의 직무에 맞춰 재미있는 결과물로 만들어주세요.</li>\n"
+"        </ul>\n"
+"    </li>\n"
+"    <li>\n"
+"        <h4>단, 스마트스터디는 이런 분들은 정중히 사양합니다.</h4>\n"
+"        <ul>\n"
+"            <li>저건 안돼, 재미 없어, 시시해 등을 남발하는 비관적인 사고를 가지신 분.</li>\n"
+"            <li>사회/문화/IT 등의 분야에서 나타나는 다양한 사건이나 현상에 대한 호기심을 잃어버리신 분.</li>\n"
+"            <li>휴가를 휴가답게 쓰지 않고 하루 단위로 쓰시는 분.</li>\n"
+"        </ul>\n"
+"    </li>\n"
+"    <li>\n"
+"        <h4>반면, 스마트스터디는 이런 분들을 환영합니다.</h4>\n"
+"        <ul>\n"
+"            <li>아이디어를 공유하기 좋아하며, 이를 실제로 만들어 보고 싶은 욕구가 넘치시는 분.</li>\n"
+"            <li>새로운 서비스나 앱이 출시되면 사용하는 것에 그치지 않고, 장단점과 발전 가능성에 대한 토론을 즐기시는 분.</li>\n"
+"            <li>집중해서 열심히 일한 후에, 19박 20일 유럽 휴가를 다녀오고 싶으신 분.</li>\n"
+"        </ul>\n"
+"    </li>\n"
+"</ol>\n"
+"<p>저희와 함께 일해보고 싶으신 분은 주저하지 말고 <a href=\"mailto:recruit@smartstudy.co.kr\">recruit@smartstudy.co.kr</a>로 간단한 자기소개, 이력서, 포트폴리오를 보내주세요.</p>"
+
+#~ msgid "English"
+#~ msgstr "English"

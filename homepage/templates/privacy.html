@@ -1,6 +1,8 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
 <section id="support">
-<h1>PRIVACY</h1>
+    <h1>{% trans "PRIVACY" %}</h1>
+    {% blocktrans %}section-privacy-1{% endblocktrans %}
 </section>
 {% endblock %}
