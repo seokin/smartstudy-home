@@ -2,22 +2,323 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-09 22:18+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-06-10 13:47+0900\n"
+"PO-Revision-Date: 2013-06-10 13:49+0900\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Translated-Using: django-rosetta 0.7.2\n"
+
+#: settings.py:41
+msgid "Korean"
+msgstr "한국어"
+
+#: settings.py:42
+msgid "English"
+msgstr "English"
 
 #: templates/about.html:7
-msgid "Hello"
-msgstr "Hello in KO"
+msgid "<span>SMART</span><span>STUDY</span>"
+msgstr "<span>스마트</span><span>스터디</span>"
+
+#: templates/about.html:8
+msgid "Big things have small beginnings."
+msgstr "큰 일은 작은 일로부터 시작됩니다."
+
+#: templates/about.html:9
+msgid "section-company-1"
+msgstr ""
+"<p>\n"
+"스마트스터디는 한국에 모바일 앱 개발 바람이 불기 시작하던, 2010년 6월에 설립되었습니다.\n"
+"</p>\n"
+"<p>\n"
+"다년간 온라인 게임/웹 서비스를 제작하고 운영하던 이들이 뭉쳐, 모바일 플랫폼에서 새로운 기회를 찾아 나섰습니다.\n"
+"하지만 이런 뻔한 경력이나 이력을 가진 팀은 발에 챌 정도로 많을 뿐 아니라, 새로운 플랫폼의 출발점은 누구에게나 같습니다.\n"
+"게다가 호흡이 긴 기존의 개발과 서비스 운영과는 전혀 다른 형태와 반응을 보이는 모바일 시장은 낯설기만 합니다.\n"
+"같이 시작했던 다른 조직들이 크게 성공하는 것을 보며 마음이 조급해지기도 하고, 소리소문없이 사라지는 스타트업들의 이야기가 꼭 우리 일만 같습니다.\n"
+"</p>\n"
+"<p>\n"
+"숨을 한 번 크게 들이마시고, 내뱉은 후에 고민해봅니다.\n"
+"</p>\n"
+"<p>\n"
+"많은 팀이 그러하듯, 우리만의 새롭고 참신한 것을 쫓아 헤맬 수도 있습니다.\n"
+"하지만 우리는 무심코 지나친 일상을 가만히 앉아 돌아보며, 조금이나마 개선할 수 있는 것을 찾아봅니다.\n"
+"당연하다고 여겨왔던 것들을 다시 한 번 꺼내봅니다.\n"
+"길고 긴 생각의 끝에 우리를 불편하게 만들었던 것이 무엇이었는지, 조금씩 보이기 시작합니다.\n"
+"</p>\n"
+"<p>\n"
+"우리가 만드는 서비스는 바로 이 지점에서 시작합니다.\n"
+"</p>"
+
+#: templates/about.html:15 templates/footer.html:9
+msgid "Vision"
+msgstr "비전"
+
+#: templates/about.html:16
+msgid "Content rules platform."
+msgstr "콘텐츠는 플랫폼에 구애받지 않습니다."
+
+#: templates/about.html:17
+msgid "section-vision-1"
+msgstr ""
+"<p>\n"
+"    플랫폼을 만드는 일은 참 힘들지만, 한 번 제대로 구축하면 플랫폼을 이용하는 수많은 사람들을 통해 새로운 서비스를 내보내기가 쉬워집니다. \n"
+"    이 때문에 많은 기업이 플랫폼을 구축하려고 합니다. 하지만 매체의 특성을 올바로 이해하지 못한 채 무작정 접근하는 집단이 많아 보입니다. \n"
+"    이렇게 만든 그릇으로는 좋은 음식을 담아 소비자에게 올바르게 전달할 수 없습니다. \n"
+"    그릇을 만들기 전에 소비자를 이해해야 하고, 음식을 이해해야 합니다. 누가 어떤 음식을 찾는지, 왜 좋은 그릇이 필요한지에 대한 더 많은 고민이\n"
+"</p>\n"
+"<p>\n"
+"    단순한 다단 사진의 나열이, 커다란 책이나 잡지로 보던 내용을 그대로 손 안에 넣어주는 일이, '좋아요' 숫자를 세는 일이 전부라고 생각하지 않>\n"
+"    우리는 왜 콘텐츠를 필요로 하는가? 우리는 시간을 어떻게 보내고 있는가? 우리가 다루는 콘텐츠와 경쟁하는 대상은 누구인가? \n"
+"    우리는 왜 수 백 년 전 음악을 아직도 듣고 있고, 리메이크한 가요를 듣고 있는가? 오래된 명화를 보기 위해 미술관에 돈을 내고 들어가는 이유는 \n"
+"</p>\n"
+"<p>\n"
+"    콘텐츠와 플랫폼을 사용하는 사람에 대한 근본적인 고민이 좋은 서비스의 시작이라고 생각합니다. \n"
+"</p>"
+
+#: templates/about.html:18
+msgid "We, human make it works."
+msgstr "우리가, 사람이 합니다."
+
+#: templates/about.html:19
+msgid "section-vision-2"
+msgstr ""
+"<p>\n"
+"    이제는 적다고 말하기 어려운 인원이지만, 다양한 서비스를 모두 인력으로 처리하기엔 한계가 있습니다. \n"
+"    적은 자원으로 효과적으로 운영될 수 있는 시스템을 구성하고, 부족하나마 자동화 가능한 부분을 찾아 사람의 손이 덜 가도록 합니다. \n"
+"    이러한 노력을 통해 우리가 원하는 것은, 사람이 더 사람다운 일을 하도록 하는 것입니다. \n"
+"    컴퓨터는 컴퓨터가 잘할 수 있는 일을 하고, 사람은 사람만이 할 수 있는 일을 합니다. \n"
+"</p>\n"
+"<p>\n"
+"    우리가, 사람이 합니다. \n"
+"</p>"
+
+#: templates/about.html:24 templates/footer.html:10
+msgid "Technique"
+msgstr "기술"
+
+#: templates/about.html:25
+msgid "Built on Open Source eco systems."
+msgstr "오픈소스를 통해 이루어져 있습니다."
+
+#: templates/about.html:26
+msgid "section-technique-1"
+msgstr ""
+"<p>\n"
+"    오픈 소스는 단순한 코드 공유나 라이센스의 문제가 아닙니다. 그리고 단순히 무료이기 때문에 사용하는 것만은 아닙니다.\n"
+"    오픈 소스는 개발자들의 문화 그 자체이며, 열고 공유함으로써 지속적인 발전과 공동 문제 해결을 가능하게 합니다.\n"
+"    따라서, 문제가 발생했을 때, 문제의 원인을 스스로 찾고 분석하여 직접 문제를 해결할 수 있도록 늘 준비하고 학습해야 합니다.\n"
+"    이러한 일이 당장 자신에게 도움이 될 뿐 아니라, 같은 업계에 있는 동료에게 작으나마 점진적으로 도움이 된다고 생각합니다.\n"
+"</p>\n"
+"<p>\n"
+"    오픈 소스를 사용하여 제품을 만들고 서비스를 진행할 뿐 아니라, 내부 라이브러리나 도구를 만들 때에도 오픈 소스로 진행하는 것을 권장합니다.\n"
+"    내가 아닌 다른 사람, 특히 내 의사를 코드로만 전달해야 한다면 코드 품질이나 문서화에 대해 신경을 써야 합니다.\n"
+"    이는 자연스럽게 개발자 본인의 역량 향상으로 이어지며, 이런 문화에 동의하는 수준 높은 개발자와 함께 일할 수 있는 계기가 됩니다.\n"
+"</p>\n"
+"<p>\n"
+"    우리는 오픈 소스를 사용하며 그 결과나 후기를 공유하는 소극적인 활동으로부터 시작해,\n"
+"    회사 외부에서도 사용할 가치가 있는 모듈의 오픈 소스화 작업을 권장하고 있으며,\n"
+"    우리가 사용하고 있는 오픈 소스 프로젝트에 대한 실습 세션을 지속적으로 열어 공동체에 기여하고자 합니다.\n"
+"</p>"
+
+#: templates/about.html:31 templates/footer.html:11
+msgid "Crew"
+msgstr "구성원"
+
+#: templates/about.html:32
+msgid "We're not on a rocket."
+msgstr "우리는 로켓에 타고 있지 않습니다."
+
+#: templates/about.html:34
+msgid "section-crew-1"
+msgstr ""
+"<p>\n"
+"    스마트스터디는 가장 빠른 조직도, 가장 똑똑한 사람이 모인 조직도, 가장 돈이 많은 조직도 아닙니다.\n"
+"    빠르게 변화하는 인터넷, 모바일 시장에서 흐름에 휩쓸리지 않고, 다른 팀보다 우리가 했을 때 더 잘할 수 있는 일을 하고 있습니다.\n"
+"    느리지만 지속 가능한 발전, 그리고 다양한 분야에 하나씩 하나씩 발을 들이는 우리의 방향을 로켓에 올라타는 것에 비유할 수는 없습니다.\n"
+"</p>\n"
+"<p>\n"
+"    단기간에 당장 성공할 것처럼 보이는 일에도 관심은 있지만, 다른 사람이 하는 것보다 우리가 더 잘할 수 있는 일이 아니라면 내려놓습니다.\n"
+"    대신, 우리는 좋은 제품을 만드는 데 집중합니다. 다양한 분야에 관심을 두고 많은 대화를 주고받으며, 지금 만들고 있는 것을 더 좋게 만들기 위>\n"
+"</p>\n"
+"<p>\n"
+"로켓도 아니고 멋진 리무진도 아니지만, 옆 사람과 소란스럽게 떠들며 목적지를 향해 덜컹거리며 가는 미니 버스라면 좋을 것 같습니다.\n"
+"<br><a href=\"{{ recruit_link }}\">마음에 드시나요?</a>\n"
+"</p>"
+
+#: templates/contact.html:6
+msgid "SUPPORT"
+msgstr "고객 지원"
+
+#: templates/contact.html:7
+msgid "We focus on your voice."
+msgstr "귀 기울여 듣겠습니다."
+
+#: templates/contact.html:8
+msgid "section-support-1"
+msgstr ""
+"<p>\n"
+"    데이터와 통계로 파악할 수 없는 문제점과 개선점은 늘 있습니다.\n"
+"    사용자의 의견을 주의 깊게 들어, 더 나은 서비스를 만들고자 합니다.\n"
+"    서비스 이용 문의나 환불 관련 문의는 이메일로 받고 있습니다.\n"
+"</p>\n"
+"<ul>\n"
+"    <li>고객 상담 메일 : <a href=\"mailto:cs@smartstudy.co.kr\">cs@smartstudy.co.kr</a></li>\n"
+"    <li>고객 상담 전화 : 080-470-3000, 월요일-금요일, 오전 9시부터 오후 6시까지 가능합니다.</li>\n"
+"</ul>"
+
+#: templates/contact.html:22
+msgid "BUSINESS"
+msgstr "업무 문의"
+
+#: templates/contact.html:23
+msgid "section-business-1"
+msgstr ""
+"<p>\n"
+"    좋은 서비스를 만들기 위해서는 많은 사람의 시간과 노력이 들어갑니다.\n"
+"    성공을 위해서는 한 분야라도 빼놓지 않고 최고 수준으로 작업해야 하지만, 정말 어려운 일입니다.\n"
+"    그래서 우리가 잘할 수 있는 일이 무엇인지, 잘 못하는 일은 무엇인지 그리고 섣불리 손대면 안되는 일이 무엇인지 구별하여 최선의 선택을 하고 >\n"
+"    좋은 서비스를 만들기 위해 만드시 필요한 부분이지만, 우리가 잘할 수 없는 일이거나 이미 좋은 경험과 콘텐츠를 가진 조직과 같이 일하고 싶습니\n"
+"</p>\n"
+"<p>\n"
+"    우리는 당신과 함께 일하고 싶습니다.\n"
+"</p>\n"
+"<ul>\n"
+"    <li>사업 제휴 메일 : <a href=\"mailto:with@smartstudy.co.kr\">with@smartstudy.co.kr</a></li>\n"
+"</ul>"
+
+#: templates/contact.html:40
+msgid "PRESS"
+msgstr "기사 및 자료"
+
+#: templates/contact.html:41
+msgid "section-press-1"
+msgstr ""
+"<p>\n"
+"    언론에 발표된 회사의 기사와 자료를 정리하고 있습니다. 필요하신 분은 아래의 메일 주소로 요청해주세요.\n"
+"</p>\n"
+"<ul>\n"
+"    <li>홍보 관련 메일 : <a href=\"mailto:press@smartstudy.co.kr\">press@smartstudy.co.kr</a></li>\n"
+"</ul>"
+
+#: templates/contact.html:52
+msgid "LOCATION"
+msgstr "위치"
+
+#: templates/contact.html:53
+msgid "section-location-1"
+msgstr ""
+"<ul>\n"
+"    <li>본사 주소 : 서울시 서초구 서초동 1516-2번지 삼성출판사 5층 스마트스터디 (우)135-871</li>\n"
+"    <li>\n"
+"        <p>오시는 방법 (2013년 6월 기준)</p>\n"
+"        <ul>\n"
+"            <li>\n"
+"                <p>서울 지하철 2호선 이용시,</p>\n"
+"                <ol>\n"
+"                    <li>서초역 5번 출구에서 도보로 750m (3, 4번 출구 공사중)</li>\n"
+"                    <li>서초역 5번 출구에서 13번 마을버스 탑승 후, 미켈란 아파트에서 하차</li>\n"
+"                    <li>방배역 4번 출구에서 도보로 900m</li>\n"
+"                    <li>방배역 1번 출구에서 13번 마을버스 탑승 후, 미켈란 아파트에서 하차</li>\n"
+"                </ol>\n"
+"            </li>\n"
+"            <li>\n"
+"                주차장 이용도 가능하나, 주차 공간의 여유가 없으므로 가급적 대중 교통을 통해 오시는 것을 권장합니다.\n"
+"            </li>\n"
+"        </ul>\n"
+"    </li>\n"
+"</ul>"
+
+#: templates/footer.html:6 templates/nav.html:6
+msgid "ABOUT"
+msgstr "우리는"
+
+#: templates/footer.html:8
+msgid "Company"
+msgstr "회사"
+
+#: templates/footer.html:12
+msgid "License"
+msgstr "저작권"
+
+#: templates/footer.html:13
+msgid "Privacy"
+msgstr "개인정보"
+
+#: templates/footer.html:17 templates/nav.html:9
+msgid "PRODUCT"
+msgstr "무엇을"
+
+#: templates/footer.html:19
+msgid "Featured"
+msgstr ""
+
+#: templates/footer.html:20
+msgid "Education"
+msgstr "교육"
+
+#: templates/footer.html:21
+msgid "Mobile VOD"
+msgstr "모바일 VOD"
+
+#: templates/footer.html:22
+msgid "Games"
+msgstr "게임"
+
+#: templates/footer.html:23
+msgid "Comics"
+msgstr "코믹스"
+
+#: templates/footer.html:24
+msgid "Utilities"
+msgstr "유틸리티"
+
+#: templates/footer.html:28 templates/nav.html:12
+msgid "CONTACT"
+msgstr "어디서"
+
+#: templates/footer.html:30
+msgid "Support"
+msgstr "고객 지원"
+
+#: templates/footer.html:31
+msgid "Business"
+msgstr "업무 문의"
+
+#: templates/footer.html:32
+msgid "Press"
+msgstr "기사 및 자료"
+
+#: templates/footer.html:33
+msgid "Location"
+msgstr "위치"
+
+#: templates/footer.html:34
+msgid "We're hiring!"
+msgstr "같이해요!"
+
+#: templates/footer.html:38
+msgid "LINK"
+msgstr "링크"
+
+#: templates/footer.html:43
+msgid "Tech Blog"
+msgstr "기술 블로그"
+
+#: templates/footer.html:47
+msgid "LANGUAGE"
+msgstr "언어"
+
+#: templates/nav.html:17
+msgid "SMARTSTUDY"
+msgstr "스마트스터디"

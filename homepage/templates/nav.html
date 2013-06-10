@@ -1,19 +1,20 @@
+{% load i18n %}
 <div id="navbar" class="box">
     <div class="wrap">
         <ul>
             <li><a href="{% url 'about' %}"{% if view == 'about' %} class="active"{% endif %}>
-                <i class="icon-about"></i> ABOUT</a>
+                <i class="icon-about"></i> {% trans "ABOUT" %}</a>
             </li>
             <li><a href="{% url 'product' %}"{% if view == 'product' %} class="active"{% endif %}>
-                <i class="icon-product"></i> PRODUCT</a>
+                <i class="icon-product"></i> {% trans "PRODUCT" %}</a>
             </li>
             <li><a href="{% url 'contact' %}"{% if view == 'contact' %} class="active"{% endif %}>
-                <i class="icon-contact"></i> CONTACT</a>
+                <i class="icon-contact"></i> {% trans "CONTACT" %}</a>
             </li>
         </ul>
         <ul class="pull-right hidden-phone">
             <li><a href="{% url 'index' %}"{% if view == 'index' %} class="active"{% endif %}>
-                <span class="brand">SMARTSTUDY</span></a>
+                <span class="brand">{% trans "SMARTSTUDY" %}</span></a>
             </li>
         </ul>
     </div>

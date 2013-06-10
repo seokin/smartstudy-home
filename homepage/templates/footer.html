@@ -1,49 +1,50 @@
+{% load i18n %}
 <div id="footer">
     <div class="wrap">
         <ul class="sitemap">
             <li>
-                <a href="{% url 'contact' %}">ABOUT</a>
+                <a href="{% url 'contact' %}">{% trans "ABOUT" %}</a>
                 <ul class="submenu">
-                    <li><a href="{% url 'about' %}#company">Company</a></li>
-                    <li><a href="{% url 'about' %}#vision">Vision</a></li>
-                    <li><a href="{% url 'about' %}#technique">Technique</a></li>
-                    <li><a href="{% url 'about' %}#crew">Crew</a></li>
-                    <li><a href="{% url 'license' %}#">License</a></li>
-                    <li><a href="{% url 'privacy' %}#">Privacy</a></li>
+                    <li><a href="{% url 'about' %}#company">{% trans "Company" %}</a></li>
+                    <li><a href="{% url 'about' %}#vision">{% trans "Vision" %}</a></li>
+                    <li><a href="{% url 'about' %}#technique">{% trans "Technique" %}</a></li>
+                    <li><a href="{% url 'about' %}#crew">{% trans "Crew" %}</a></li>
+                    <li><a href="{% url 'license' %}#">{% trans "License" %}</a></li>
+                    <li><a href="{% url 'privacy' %}#">{% trans "Privacy" %}</a></li>
                 </ul>
             </li>
             <li>
-                <a href="{% url 'product' %}">PRODUCT</a>
+                <a href="{% url 'product' %}">{% trans "PRODUCT" %}</a>
                 <ul class="submenu">
-                    <!--<li><a href="{% url 'product' %}#featured">Featured</a></li>-->
-                    <li><a href="{% url 'product' %}#education">Education</a></li>
-                    <li><a href="{% url 'product' %}#mobilevod">Mobile VOD</a></li>
-                    <li><a href="{% url 'product' %}#games">Games</a></li>
-                    <li><a href="{% url 'product' %}#comics">Comics</a></li>
-                    <li><a href="{% url 'product' %}#utilities">Utilities</a></li>
+                    <!--<li><a href="{% url 'product' %}#featured">{% trans "Featured" %}</a></li>-->
+                    <li><a href="{% url 'product' %}#education">{% trans "Education" %}</a></li>
+                    <li><a href="{% url 'product' %}#mobilevod">{% trans "Mobile VOD" %}</a></li>
+                    <li><a href="{% url 'product' %}#games">{% trans "Games" %}</a></li>
+                    <li><a href="{% url 'product' %}#comics">{% trans "Comics" %}</a></li>
+                    <li><a href="{% url 'product' %}#utilities">{% trans "Utilities" %}</a></li>
                 </ul>
             </li>
             <li>
-                <a href="{% url 'contact' %}">CONTACT</a>
+                <a href="{% url 'contact' %}">{% trans "CONTACT" %}</a>
                 <ul class="submenu">
-                    <li><a href="{% url 'contact' %}#support">Support</a></li>
-                    <li><a href="{% url 'contact' %}#business">Business</a></li>
-                    <li><a href="{% url 'contact' %}#press">Press</a></li>
-                    <li><a href="{% url 'contact' %}#location">Location</a></li>
-                    <li><a href="{% url 'withyou' %}#">We're hiring!</a></li>
+                    <li><a href="{% url 'contact' %}#support">{% trans "Support" %}</a></li>
+                    <li><a href="{% url 'contact' %}#business">{% trans "Business" %}</a></li>
+                    <li><a href="{% url 'contact' %}#press">{% trans "Press" %}</a></li>
+                    <li><a href="{% url 'contact' %}#location">{% trans "Location" %}</a></li>
+                    <li><a href="{% url 'withyou' %}#">{% trans "We're hiring!" %}</a></li>
                 </ul>
             </li>
             <li>
-                <a>LINK</a>
+                <a>{% trans "LINK" %}</a>
                 <ul class="submenu">
                     <li><a href="https://www.facebook.com/SmartStudyKR" target="_blank"><i class="icon-facebook-white"></i> Facebook</a></li>
                     <li><a href="https://twitter.com/smartstudy_kr" target="_blank"><i class="icon-twitter-white"></i> Twitter</a></li>
                     <li><a href="https://github.com/smartstudy" target="_blank"><i class="icon-github-white"></i> Github</a></li>
-                    <li><a class="disabled">Tech. Blog</a></li>
+                    <li><a class="disabled">{% trans "Tech Blog" %}</a></li>
                 </ul>
             </li>
             <li>
-                <a>LANGUAGE</a>
+                <a>{% trans "LANGUAGE" %}</a>
                 <ul class="submenu">
                 {% include "i18n.html" %}
                 </ul>

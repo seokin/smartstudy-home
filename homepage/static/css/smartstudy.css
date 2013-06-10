@@ -47,7 +47,7 @@ h1 {
 
 h1 span {
     color: black;
-    font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: 'Lato', 'Helvetica Neue', 'Nanum Gothic', 'Arial', sans-serif;
     font-size: 36pt;
     font-weight: 900;
     display: inline-block;
@@ -245,7 +245,7 @@ section {
 }
 
 #navbar li .brand {
-    font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: 'Lato', 'Helvetica Neue', 'Nanum Gothic', 'Arial', sans-serif;
     color: #fff;
     font-weight: 600;
     line-height: 50px;
