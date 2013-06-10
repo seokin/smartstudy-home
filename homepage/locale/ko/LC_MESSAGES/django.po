@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-10 18:30+0900\n"
-"PO-Revision-Date: 2013-06-10 18:30+0900\n"
+"POT-Creation-Date: 2013-06-10 19:10+0900\n"
+"PO-Revision-Date: 2013-06-10 19:12+0900\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -328,8 +328,20 @@ msgid "LICENSE"
 msgstr "저작권"
 
 #: templates/license.html:6
-msgid "section-license-1"
-msgstr ""
+msgid "SOFTWARE"
+msgstr "소프트웨어"
+
+#: templates/license.html:37
+msgid "FONTS"
+msgstr "글자체"
+
+#: templates/license.html:62
+msgid "ICONS"
+msgstr "아이콘"
+
+#: templates/license.html:72
+msgid "All trademarks are property of their respective owners."
+msgstr "모든 상표명, 제품명 또는 상표는 해당 소유자의 재산입니다."
 
 #: templates/nav.html:17
 msgid "SMARTSTUDY"
