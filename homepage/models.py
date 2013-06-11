@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 from django.db import models
+from easymode.i18n.decorators import I18n
 from library import uploaded_filepath
 
 
+@I18n('name', 'title', 'nick', 'comment', )
 class Crew(models.Model):
-    class Meta:
-        ordering = ['name']
-
+#    class Meta:
+#        ordering = ['name']
+#
     nick = models.CharField(verbose_name=u'별명', max_length=50)
     title = models.CharField(verbose_name=u'역할', max_length=50)
     name = models.CharField(verbose_name=u'이름', max_length=50,
                             null=True, blank=True)
-    name_eng = models.CharField(verbose_name=u'영문 이름', max_length=100,
-                                null=True, blank=True)
     uid = models.CharField(verbose_name=u'아이디', max_length=50,
                            null=True, blank=True)
     picture = models.ImageField(verbose_name=u'사진', upload_to=uploaded_filepath)
@@ -34,17 +34,12 @@ class Crew(models.Model):
         return self.name
 
 
+@I18n('title', 'subtitle', 'desc', 'desc_more', )
 class App(models.Model):
     title = models.CharField(verbose_name=u'제목', max_length=100,
                              null=True, blank=True)
-    title_eng = models.CharField(verbose_name=u'영문 제목', max_length=100,
-
-                                 null=True, blank=True)
     subtitle = models.CharField(verbose_name=u'부제', max_length=100,
                                 null=True, blank=True)
-    subtitle_eng = models.CharField(verbose_name=u'영문 부제', max_length=100,
-                                    null=True, blank=True)
-
     cms_id = models.CharField(verbose_name=u'앱 아이디', max_length=255)
     icon = models.ImageField(upload_to=uploaded_filepath)
     appid_appstore = models.CharField(max_length=255, null=True, blank=True)
@@ -52,8 +47,6 @@ class App(models.Model):
 
     desc = models.TextField(verbose_name=u'짧은 소개', blank=True)
     desc_more = models.TextField(verbose_name=u'추가로 긴 소개', blank=True)
-    desc_eng = models.TextField(verbose_name=u'짧은 영문 소개', blank=True)
-    desc_more_eng = models.TextField(verbose_name=u'추가로 긴 영문 소개', blank=True)
 
     launched = models.DateField(auto_now_add=True)
 
@@ -66,8 +59,8 @@ class AppImage(models.Model):
     image = models.ImageField(upload_to=uploaded_filepath)
 
 
+@I18n('title', )
 class AppCategory(models.Model):
     uid = models.CharField(max_length=255)
     title = models.CharField(verbose_name=u'카테고리 명', max_length=255, null=True, blank=True)
-    title_eng = models.CharField(verbose_name=u'카테고리 영문명', max_length=255, null=True, blank=True)
     app = models.ManyToManyField(App, blank=True)
