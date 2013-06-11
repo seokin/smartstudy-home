@@ -16,6 +16,7 @@ class Crew(models.Model):
     uid = models.CharField(verbose_name=u'아이디', max_length=50,
                            null=True, blank=True)
     picture = models.ImageField(verbose_name=u'사진', upload_to=uploaded_filepath)
+    picture_big = models.ImageField(verbose_name=u'큰사진', upload_to=uploaded_filepath)
     comment = models.TextField(verbose_name=u'한마디', blank=True)
     email = models.EmailField(verbose_name=u'이메일', null=True, blank=True)
     home = models.URLField(verbose_name=u'홈페이지', null=True, blank=True)

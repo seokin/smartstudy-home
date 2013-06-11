@@ -510,49 +510,50 @@ section p img {
     position: relative;
 }
 
-.members li .photo {
-    float: left;
-    overflow: hide;
-}
-
-.members li .photo img {
+.members .member .photo {
     width: 64px;
     height: 64px;
     border-radius: 500px;
     -webkit-border-radius: 500px;
     box-shadow: #333 0 2px 3px -1px;
     cursor: pointer;
+    float: left;
+    overflow: hide;
 }
 
-.members li .desc {
+.members .member .desc {
     height: 64px;
     padding: 8px 0px 0px 74px;
 }
 
-.members li .desc p {
+.members .member .desc p {
     margin: 0;
 }
 
-.members li .desc .nick {
+.members .member .desc .nick {
     font-size: 8pt;
     font-weight: 400;
 }
 
-.members li .desc .firstname, .members li .desc .name {
+.members .member .desc .firstname, .members .member .desc .name {
     font-size: 13.5pt;
     font-weight: 700;
 }
 
-.members li .desc .lastname {
+.members .member .desc .lastname {
     font-size: 13.5pt;
     font-weight: 400;
 }
 
-.members li .desc .title {
+.members .member .desc .title {
     margin-top: -4px;
     font-size: 8pt;
     font-weight: 400;
     line-height: 100%;
+}
+
+.members .member .desc .comment {
+    display: none;
 }
 
 .map {
@@ -590,14 +591,50 @@ section p img {
     text-align: center;
 }
 
-.enlarge-photo {
+.enlarge {
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
     height: auto;
     display: none;
+    position: relative;
     border-radius: 500px;
     -webkit-border-radius: 500px;
+    overflow: hidden;
+}
+
+.enlarge img {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.enlarge .desc {
+    background: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 23%;
+    min-height: 25px;
+    position: absolute;
+    bottom: 0;
+}
+
+.enlarge .desc span, .enlarge .desc p {
+    width: 60%;
+    display: inline-block;
+    color: #ccc;
+    margin: 5px 0 0 0;
+    font-size: 10pt;
+}
+
+.enlarge .desc .name {
+    font-weight: 700;
+    font-size: 20pt;
+    color: white;
+    margin: 0;
+}
+
+.enlarge .desc .title, .enlarge .desc .badges, .enlarge .desc .nick {
+    display: none;
 }
 
 
@@ -638,5 +675,9 @@ section p img {
     .members li {
         width: 92%;
         margin: 2%;
+    }
+
+    .enlarge .desc {
+        display: none;
     }
 }

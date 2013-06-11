@@ -39,7 +39,7 @@ LANGUAGE_CODE = 'ko'
 _ = lambda s: s
 LANGUAGES = (
     ('ko', _('Korean')),
-    #('en', _('English')),
+    ('en', _('English')),
 )
 
 SITE_ID = 1

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-10 19:10+0900\n"
+"POT-Creation-Date: 2013-06-10 19:20+0900\n"
 "PO-Revision-Date: 2013-06-10 13:52+0900\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,15 +22,15 @@ msgstr ""
 msgid "Korean"
 msgstr "한국어"
 
-#: templates/about.html:7
+#: templates/about.html:6
 msgid "<span>SMART</span><span>STUDY</span>"
 msgstr "<span>SMART</span><span>STUDY</span>"
 
-#: templates/about.html:8
+#: templates/about.html:7
 msgid "Big things have small beginnings."
 msgstr "Big things have small beginnings."
 
-#: templates/about.html:9
+#: templates/about.html:8
 msgid "section-company-1"
 msgstr ""
 "<p>\n"
@@ -62,47 +62,47 @@ msgstr ""
 "우리가 만드는 서비스는 바로 이 지점에서 시작합니다.\n"
 "</p>"
 
-#: templates/about.html:15 templates/footer.html:9
+#: templates/about.html:14 templates/footer.html:10
 msgid "Vision"
 msgstr "Vision"
 
-#: templates/about.html:16
+#: templates/about.html:15
 msgid "Content rules platform."
 msgstr "Content rules platform."
 
-#: templates/about.html:17
+#: templates/about.html:16
 msgid "section-vision-1"
 msgstr ""
 
-#: templates/about.html:18
+#: templates/about.html:17
 msgid "We, human make it works."
 msgstr "We, human make it works."
 
-#: templates/about.html:19
+#: templates/about.html:18
 msgid "section-vision-2"
 msgstr ""
 
-#: templates/about.html:24 templates/footer.html:10
+#: templates/about.html:23 templates/footer.html:11
 msgid "Technique"
 msgstr "Technique"
 
-#: templates/about.html:25
+#: templates/about.html:24
 msgid "Built on Open Source eco systems."
 msgstr "Built on Open Source eco systems."
 
-#: templates/about.html:26
+#: templates/about.html:25
 msgid "section-technique-1"
 msgstr ""
 
-#: templates/about.html:31 templates/footer.html:11
+#: templates/about.html:30 templates/footer.html:12
 msgid "Crew"
 msgstr "Crew"
 
-#: templates/about.html:32
+#: templates/about.html:31
 msgid "We're not on a rocket."
 msgstr "We're not on a rocket."
 
-#: templates/about.html:34
+#: templates/about.html:33
 msgid "section-crew-1"
 msgstr ""
 
@@ -146,90 +146,107 @@ msgstr "LOCATION"
 msgid "section-location-1"
 msgstr ""
 
-#: templates/footer.html:6 templates/nav.html:6
+#: templates/footer.html:7 templates/nav.html:6
 msgid "ABOUT"
 msgstr "ABOUT"
 
-#: templates/footer.html:8
+#: templates/footer.html:9
 msgid "Company"
 msgstr "Company"
 
-#: templates/footer.html:15 templates/nav.html:9
+#: templates/footer.html:16 templates/nav.html:9
 msgid "PRODUCT"
 msgstr "PRODUCT"
 
-#: templates/footer.html:17
+#: templates/footer.html:18
 msgid "Featured"
 msgstr "Featured"
 
-#: templates/footer.html:18
+#: templates/footer.html:19
 msgid "Education"
 msgstr "Education"
 
-#: templates/footer.html:19
+#: templates/footer.html:20
 msgid "Mobile VOD"
 msgstr "Mobile VOD"
 
-#: templates/footer.html:20
+#: templates/footer.html:21
 msgid "Games"
 msgstr "Games"
 
-#: templates/footer.html:21
+#: templates/footer.html:22
 msgid "Comics"
 msgstr "Comics"
 
-#: templates/footer.html:22
-msgid "Utilities"
-msgstr "Utilities"
+#: templates/footer.html:23
+msgid "Photo"
+msgstr ""
 
-#: templates/footer.html:26 templates/nav.html:12
+#: templates/footer.html:27 templates/nav.html:12
 msgid "CONTACT"
 msgstr "CONTACT"
 
-#: templates/footer.html:28
+#: templates/footer.html:29
 msgid "Support"
 msgstr "Support"
 
-#: templates/footer.html:29
+#: templates/footer.html:30
 msgid "Business"
 msgstr "Business"
 
-#: templates/footer.html:30
+#: templates/footer.html:31
 msgid "Press"
 msgstr "Press"
 
-#: templates/footer.html:31
+#: templates/footer.html:32
 msgid "Location"
 msgstr "Location"
 
-#: templates/footer.html:32 templates/withyou.html:6
+#: templates/footer.html:33 templates/withyou.html:6
 msgid "We're hiring!"
 msgstr "We're hiring!"
 
-#: templates/footer.html:36
+#: templates/footer.html:37
 msgid "LINK"
 msgstr "LINK"
 
+#: templates/footer.html:39
+msgid "Facebook"
+msgstr ""
+
+#: templates/footer.html:40
+msgid "Twitter"
+msgstr ""
+
 #: templates/footer.html:41
+msgid "Github"
+msgstr ""
+
+#: templates/footer.html:42
 msgid "Tech Blog"
 msgstr "Tech Blog"
 
-#: templates/footer.html:45
+#: templates/footer.html:46
 #, fuzzy
 msgid "INFORMATION"
 msgstr "LOCATION"
 
-#: templates/footer.html:47
+#: templates/footer.html:48
 msgid "License"
 msgstr "License"
 
-#: templates/footer.html:48
+#: templates/footer.html:49
 msgid "Privacy"
 msgstr "Privacy"
 
-#: templates/footer.html:51
+#: templates/footer.html:52
 msgid "LANGUAGE"
 msgstr "LANGUAGE"
+
+#: templates/footer.html:62
+#, python-format
+msgid "Designed and published by © SMARTSTUDY 2010-%(year)s"
+msgstr ""
 
 #: templates/license.html:5
 msgid "LICENSE"
@@ -328,6 +345,9 @@ msgstr ""
 "<p>\n"
 "우리가 만드는 서비스는 바로 이 지점에서 시작합니다.\n"
 "</p>"
+
+#~ msgid "Utilities"
+#~ msgstr "Utilities"
 
 #, fuzzy
 #~ msgid "section-license-1"

@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load capture %}
-
 {% block content %}
 <section id="company">
     <h1><img class="icon" src="{{ STATIC_URL }}image/icon/company.png" alt="company">{% blocktrans %}<span>SMART</span><span>STUDY</span>{% endblocktrans %}</h1>
@@ -35,27 +34,26 @@
     <ul class="members">
         {% for c in crew %}
         <li>
-            <div class="photo">
-                <img src="{{ c.picture.url }}" alt="{{ c.name_eng }}" data-original="{{ c.picture.url }}" onclick="show_enlarge(this);">
-            </div>
-            <div class="desc">
-                <p>
-                    {% get_current_language as LANGUAGE_CODE %}
-                    {% if LANGUAGE_CODE == 'ko' %}
-                    <span class="name">{{ c.name }}</span>
-                    <span class="nick">{{ c.nick }}</span>
-                    {% else %}
-                    <span class="firstname">{{ c.firstname_eng }}</span>
-                    <span class="lastname">{{ c.lastname_eng }}</span>
-                    {% endif %}
-                    {% if c.twitter %}
-                    <a href="https://twitter.com/{{ c.twitter }}"><i class="icon-twitter"></i></a>
-                    {% endif %}
-                    {% if c.github %}
-                    <a href="https://github.com/{{ c.github }}"><i class="icon-github"></i></a>
-                    {% endif %}
-                </p>
-                <p class="title">{{ c.title }}</p>
+            <div class="member">
+                <img class="photo" src="{{ c.picture.url }}"
+                    alt="{{ c.name }}"
+                    data-original="{{ c.picture_big.url }}">
+                <div class="desc">
+                    <p class="comment">{{ c.comment }}</p>
+                    <p>
+                        <span class="name">{{ c.name }}</span>
+                        <span class="nick">{{ c.nick }}</span>
+                        <span class="badges">
+                            {% if c.twitter %}
+                            <a href="https://twitter.com/{{ c.twitter }}"><i class="icon-twitter"></i></a>
+                            {% endif %}
+                            {% if c.github %}
+                            <a href="https://github.com/{{ c.github }}"><i class="icon-github"></i></a>
+                            {% endif %}
+                        </span>
+                    </p>
+                    <p class="title">{{ c.title }}</p>
+                </div>
             </div>
         </li>
         {% endfor %}
@@ -67,11 +65,13 @@
 <script>
 function show_enlarge(e)
 {
-    $(".topmost #box").html(
-        '<img class="enlarge-photo" src="'+$(e).data('original')+'">'
-    );
-    $(".enlarge-photo").fadeIn(300);
+    var $member = $(e).parent().clone();
+    $(".topmost #box").empty().append( $member );
+    $member.find(".photo").attr("src", $member.find(".photo").data("original"));
+    $member.removeClass("member").addClass("enlarge");
+    $member.fadeIn(300);
     dimmer_on();
 }
+$(".member .photo").click( function() { show_enlarge(this) } );
 </script>
 {% endblock %}
