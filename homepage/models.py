@@ -6,9 +6,9 @@ from library import uploaded_filepath
 
 @I18n('name', 'title', 'nick', 'comment', )
 class Crew(models.Model):
-#    class Meta:
-#        ordering = ['name']
-#
+    class Meta:
+        ordering = ['name_ko']
+
     nick = models.CharField(verbose_name=u'별명', max_length=50)
     title = models.CharField(verbose_name=u'역할', max_length=50)
     name = models.CharField(verbose_name=u'이름', max_length=50,
@@ -24,11 +24,11 @@ class Crew(models.Model):
     twitter = models.CharField(verbose_name=u'트위터', null=True, blank=True, max_length=50)
     github = models.CharField(verbose_name=u'깃허브', null=True, blank=True, max_length=50)
 
-    def firstname_eng(self):
-        return self.name_eng.partition(' ')[0]
+    def firstname(self):
+        return self.name.partition(' ')[0]
 
-    def lastname_eng(self):
-        return self.name_eng.partition(' ')[2]
+    def lastname(self):
+        return self.name.partition(' ')[2]
 
     def __unicode__(self):
         return self.name

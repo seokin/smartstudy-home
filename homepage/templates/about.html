@@ -41,7 +41,10 @@
                 <div class="desc">
                     <p class="comment">{{ c.comment }}</p>
                     <p>
-                        <span class="name">{{ c.name }}</span>
+                        <span class="name">
+                            <span class="firstname">{{ c.firstname }}</span>
+                            <span class="lastname">{{ c.lastname }}</span>
+                        </span>
                         <span class="nick">{{ c.nick }}</span>
                         <span class="badges">
                             {% if c.twitter %}

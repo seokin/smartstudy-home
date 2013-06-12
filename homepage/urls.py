@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url, include
 from django.conf import settings
-from .views import about, product, contact, withyou, license, privacy
+from .views import about, product, contact, withyou, license, privacy, setlang
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -15,13 +15,13 @@ urlpatterns = patterns(
     url(r'^contact/withyou/$', withyou, name='withyou'),
     url(r'^license/$', license, name='license'),
     url(r'^privacy/$', privacy, name='privacy'),
+    url(r'^lang/(?P<lang_code>.*)/$', setlang, name='setlang'),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^i18n/', include('django.conf.urls.i18n')),
 )
 
 # for development
@@ -36,6 +36,7 @@ if settings.DEBUG:
 
 # for rosetta
 if 'rosetta' in settings.INSTALLED_APPS:
-    urlpatterns += patterns('',
+    urlpatterns += patterns(
+        '',
         url(r'^rosetta/', include('rosetta.urls')),
     )

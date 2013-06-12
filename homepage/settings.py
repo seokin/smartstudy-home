@@ -180,3 +180,7 @@ LOGGING = {
 
 # for django-easymode
 PROJECT_DIR = os.path.dirname(__file__)
+FALLBACK_LANGUAGES = {
+    'en': [],
+    'ko': ['en'],
+}

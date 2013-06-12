@@ -3,20 +3,6 @@
 {% get_language_info_list for LANGUAGES as languages %}
 {% for language in languages %}
 <li>
-    <a href="#" onclick="setlang('{{ language.code }}');">{{ language.name_local }}</a>
+    <a href="{% url 'setlang' language.code %}">{{ language.name_local }}</a>
 </li>
 {% endfor %}
-<form id="setlang" action="{% url 'set_language' %}" method="post">
-    {% csrf_token %}
-    <input name="next" type="hidden" value="{{ redirect_to }}" />
-    <input name="language" id="language_code" type="hidden" value="" />
-</form>
-<script>
-function setlang(lang)
-{
-    var $form = $("#setlang");
-    $form.find("#language_code").val(lang);
-    $form.submit();
-    return false;
-}
-</script>

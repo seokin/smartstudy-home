@@ -4,10 +4,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/joongom.png", 
-        "github": null, 
+        "github": "", 
         "uid": "joongom", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\uc900\uacf0", 
         "twitter": "joongom", 
         "title_en": "Lead Software Engineer", 
@@ -15,8 +15,8 @@
         "facebook": "", 
         "name_ko": "\ubc15\uc900\ucca0", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\uc5b4\ud750\uc751\r\n", 
+        "name_en": "Jooncheol Park", 
+        "comment_ko": "\uc2a4\ub9c8\ud2b8\uc2a4\ud130\ub514 \ub2dd\uac90\ub178 \uc11c\ube44\uc2a4\uc640 \ud2bc\ud2bc\ub370\uc2a4\ub124.", 
         "picture_big": "crew/big/joongom.jpg", 
         "comment_en": null
     }
@@ -26,10 +26,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/ws.png", 
-        "github": null, 
+        "github": "", 
         "uid": "ws", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\uc74c\uadf8\ub798", 
         "twitter": "", 
         "title_en": "Software Engineer", 
@@ -37,8 +37,8 @@
         "facebook": "", 
         "name_ko": "\uae40\uc6b0\uc11d", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\uc73c\uc74c..", 
+        "name_en": "Wooseok Kim", 
+        "comment_ko": "\uc5b4...\uc74c...\uadf8\ub798", 
         "picture_big": "crew/big/ws.jpg", 
         "comment_en": null
     }
@@ -48,10 +48,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/b.png", 
-        "github": null, 
+        "github": "", 
         "uid": "b", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\ubc25\ucc28", 
         "twitter": "", 
         "title_en": "Software Engineer", 
@@ -59,8 +59,8 @@
         "facebook": "", 
         "name_ko": "\ud558\uc7ac\ud6c8", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ubc25 \uc2dc\ud0a4\uc2e4\ubd84!", 
+        "name_en": "Jaehoon Ha", 
+        "comment_ko": "\uc548\ub4dc\ub85c\uc774\ub4dc\ub294 \ud584\ubcf5\ud560\uc218\uac00\uc5c4\uc11c", 
         "picture_big": "crew/big/b.jpg", 
         "comment_en": null
     }
@@ -70,10 +70,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/choi.png", 
-        "github": null, 
+        "github": "", 
         "uid": "choi", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uadf8\ub798\ud53d \ub514\uc790\uc774\ub108", 
         "nick_ko": "\ud3ec\ub514", 
         "twitter": "", 
         "title_en": "Graphic Designer", 
@@ -81,8 +81,8 @@
         "facebook": "", 
         "name_ko": "\ucd5c\uadfc\uc601", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\uae00\uc384\uc694.", 
+        "name_en": "Geunyoung Choi", 
+        "comment_ko": "\ub0b4\uac00 \ubc14\ub85c \ucc28\uc6d0\uc758 \ud2c8\uc774\ub2e4!", 
         "picture_big": "crew/big/choi.jpg", 
         "comment_en": null
     }
@@ -92,10 +92,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/dg.png", 
-        "github": null, 
+        "github": "", 
         "uid": "dg", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\uae30\uacc4", 
         "twitter": "", 
         "title_en": "Software Engineer", 
@@ -103,8 +103,8 @@
         "facebook": "", 
         "name_ko": "\uae40\ub3d9\uac74", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ub2dd\uac90\ub4e4\uacfc \uc77c\ud558\uae30 \ud798\ub4e4\uc5b4\uc694 \uc2f8\uc7a5\ub2d8", 
+        "name_en": "Donggun Kim", 
+        "comment_ko": "\uc815\uc2e0\uc77c\ub3c4 \ud558\uc0ac\ubd88\uc131", 
         "picture_big": "crew/big/dg.jpg", 
         "comment_en": null
     }
@@ -114,10 +114,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/endorand.png", 
-        "github": null, 
+        "github": "", 
         "uid": "endorand", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4 \uacb8 \ubc14\ub9ac\uc2a4\ud0c0", 
         "nick_ko": "\uc885\uc0ac\ub9c8", 
         "twitter": "endorand81", 
         "title_en": "Software Engineer, Barista", 
@@ -125,8 +125,8 @@
         "facebook": "", 
         "name_ko": "\uc784\uc885\ud718", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ub0b4\uc77c \uc9c0\uad6c\uac00 \uba78\ub9dd\ud574\ub3c4 \ub098\ub294 \uc624\ub298 \ucee4\ud53c\ub97c \ub0b4\ub9ac\uaca0\ub2e4", 
+        "name_en": "Jonghwi Lim", 
+        "comment_ko": "... ? ! \u2665", 
         "picture_big": "crew/big/endorand.jpg", 
         "comment_en": null
     }
@@ -139,7 +139,7 @@
         "github": "lqez", 
         "uid": "ez", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "CTO", 
         "nick_ko": "\ub9e4\uc0dd\uc774", 
         "twitter": "lqez", 
         "title_en": "CTO", 
@@ -147,8 +147,8 @@
         "facebook": "", 
         "name_ko": "\ubc15\ud604\uc6b0", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ub9e4\uc0dd\uc774\ub294 \ub9e4\uc0dd\ub9e4\uc0dd\ud558\uace0 \uc6c1\ub2c8\ub2e4", 
+        "name_en": "Hyunwoo Park", 
+        "comment_ko": "Content rules platform, time rules talent.", 
         "picture_big": "crew/big/ez.jpg", 
         "comment_en": null
     }
@@ -161,7 +161,7 @@
         "github": "evoka", 
         "uid": "h", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \ubc0f \uc2dc\uc2a4\ud15c \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\ub9c8\uc5d0", 
         "twitter": "neoevoke", 
         "title_en": "Software & System Engineer", 
@@ -169,8 +169,8 @@
         "facebook": "", 
         "name_ko": "\uc190\ub3d9\uc6b0", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ub0ae\uc5d0\ub294 \ub9c8\uc5d0, \ubc24\uc5d0\ub294 ...", 
+        "name_en": "Dongwoo Son", 
+        "comment_ko": "Do not pull back when we should be leaning in.", 
         "picture_big": "crew/big/h.jpg", 
         "comment_en": null
     }
@@ -183,7 +183,7 @@
         "github": "J2P", 
         "uid": "j2p", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\uc30d\ud53c", 
         "twitter": "J2P_", 
         "title_en": "Software Engineer", 
@@ -191,8 +191,8 @@
         "facebook": "", 
         "name_ko": "\uc815\uc7ac\ud544", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\uc800, \ub4a4\ub05d \uc788\uc2b5\ub2c8\ub2e4.", 
+        "name_en": "Jaepil Jung", 
+        "comment_ko": "\uc0dd\uac01\ud558\uc2dc\ub294 \uadf8 \uc30d\ud53c\uac00 \uc544\ub2d9\ub2c8\ub2e4...", 
         "picture_big": "crew/big/j2p.jpg", 
         "comment_en": null
     }
@@ -202,10 +202,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/je.png", 
-        "github": null, 
+        "github": "", 
         "uid": "je", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\ub514\ub809\ud130", 
         "nick_ko": "\ucd5c\uc9f1", 
         "twitter": "", 
         "title_en": "Director", 
@@ -213,8 +213,8 @@
         "facebook": "", 
         "name_ko": "\ucd5c\uc815\uc740", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ub098\ub294\uc57c \ubd84\ub2f9\ucd5c\uace0\ubbf8\ub140", 
+        "name_en": "Jungeun Choi", 
+        "comment_ko": "\uc544\uc774\ub4e4\uc744 \uc704\ud55c \uc990\uac70\uc6b4 \uc0c1\uc0c1", 
         "picture_big": "crew/big/je.jpg", 
         "comment_en": null
     }
@@ -224,10 +224,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/jey.png", 
-        "github": null, 
+        "github": "", 
         "uid": "jey", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\ube44\ub514\uc624 \ubc0f \ud6a8\uacfc \uc544\ud2f0\uc2a4\ud2b8", 
         "nick_ko": "\uc7a5\uac10\ub3c5", 
         "twitter": "", 
         "title_en": "Video & FX Artist", 
@@ -235,8 +235,8 @@
         "facebook": "", 
         "name_ko": "\uc7a5\uc740\uc601", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\uc5b8\uc820\uac04 \uac10\ub3c5\uc774 \ub418\uaca0\uc9c0", 
+        "name_en": "Eunyoung Jang", 
+        "comment_ko": "\uc778\uc0dd\uc740 \ubbf8\uc644\uc131", 
         "picture_big": "crew/big/jey.jpg", 
         "comment_en": null
     }
@@ -246,10 +246,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/joo.png", 
-        "github": null, 
+        "github": "", 
         "uid": "joo", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc11c\ube44\uc2a4 \uae30\ud68d \ubc0f \uc6b4\uc601", 
         "nick_ko": "\uba4d\uc9c0", 
         "twitter": "", 
         "title_en": "Project Manager", 
@@ -257,8 +257,8 @@
         "facebook": "", 
         "name_ko": "\uc815\uc9c0\uc6b0", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\uba38\uc5c9....", 
+        "name_en": "Jiwoo Jeong", 
+        "comment_ko": "\uba38\uc5b4\uc5b4\uc5b4\uc5b4\uc5b4\uc5c9... (\u3147\u3141\u3147)", 
         "picture_big": "crew/big/joo.jpg", 
         "comment_en": null
     }
@@ -271,7 +271,7 @@
         "github": "Kroisse", 
         "uid": "kroisse", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \ubc0f \uc2dc\uc2a4\ud15c \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\uac00\uc81c\ud2b8", 
         "twitter": "eunchong_yu", 
         "title_en": "Software & System Engineer", 
@@ -279,7 +279,7 @@
         "facebook": "", 
         "name_ko": "\uc720\uc740\ucd1d", 
         "home": "", 
-        "name_en": null, 
+        "name_en": "Eunchong Yu", 
         "comment_ko": "\uc81c \uba38\ub9bf\uc18d\uc744 \uad81\uae08\ud574\ud558\uc9c0 \ub9c8\uc138\uc694", 
         "picture_big": "crew/big/kroisse.jpg", 
         "comment_en": null
@@ -290,10 +290,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/m.png", 
-        "github": null, 
+        "github": "", 
         "uid": "m", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "CEO", 
         "nick_ko": "\uc871\uc7a5", 
         "twitter": "_tinysky", 
         "title_en": "CEO", 
@@ -301,8 +301,8 @@
         "facebook": "", 
         "name_ko": "\uae40\ubbfc\uc11d", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\uc6b0\uac00\uc6b0\uac00", 
+        "name_en": "Minseok Kim", 
+        "comment_ko": "", 
         "picture_big": "crew/big/m.jpg", 
         "comment_en": null
     }
@@ -312,10 +312,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/mj.png", 
-        "github": null, 
+        "github": "", 
         "uid": "mj", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uadf8\ub798\ud53d \ub514\uc790\uc774\ub108", 
         "nick_ko": "\ub9c8\uc694", 
         "twitter": "", 
         "title_en": "Graphic Designer", 
@@ -323,8 +323,8 @@
         "facebook": "", 
         "name_ko": "\uae40\ubbfc\uc8fc", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ub9c8\uc694\ub9c8\uc694 ", 
+        "name_en": "Minjoo Kim", 
+        "comment_ko": "", 
         "picture_big": "crew/big/mj.jpg", 
         "comment_en": null
     }
@@ -334,10 +334,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/new.png", 
-        "github": null, 
+        "github": "", 
         "uid": "new", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uadf8\ub798\ud53d \ub514\uc790\uc774\ub108", 
         "nick_ko": "\ud1a0\ub9c8\ud1a0", 
         "twitter": "", 
         "title_en": "Graphic Designer", 
@@ -345,8 +345,8 @@
         "facebook": "", 
         "name_ko": "\uad8c\uc720\uc9c4", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ub098\ub97c \ud2b8\uba54\uc774\ub904\ub77c \ubd80\ub974\uc9c0 \ub9d0\uc544\ub2ec\ub77c", 
+        "name_en": "Eujene Kwon", 
+        "comment_ko": "\ubcfc\ub9e4 \ud1a0\ub9c8\ud1a0", 
         "picture_big": "crew/big/new.jpg", 
         "comment_en": null
     }
@@ -359,7 +359,7 @@
         "github": "perhapsspy", 
         "uid": "py", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\ud30c\uc774", 
         "twitter": "PerhapsSPY", 
         "title_en": "Software Engineer", 
@@ -367,8 +367,8 @@
         "facebook": "", 
         "name_ko": "\uc815\uacbd\uc5c5", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ud30c\uc774\ud30c\uc774\ub294 \uc81c\uac00 \ub9cc\ub4e0\uac8c \uc544\ub2d9\ub2c8\ub2e4.", 
+        "name_en": "Kyoungup Jung", 
+        "comment_ko": "\uc120\uc0ac\uace0 \ud6c4\uc218\uc2b5", 
         "picture_big": "crew/big/py.jpg", 
         "comment_en": null
     }
@@ -378,10 +378,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/shkang.png", 
-        "github": null, 
+        "github": "", 
         "uid": "shkang", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc11c\ube44\uc2a4 \uae30\ud68d \ubc0f \uc6b4\uc601", 
         "nick_ko": "\ud6bd\ub2d8", 
         "twitter": "", 
         "title_en": "Project Manager", 
@@ -389,8 +389,8 @@
         "facebook": "", 
         "name_ko": "\uac15\uc2b9\ud558", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "9\ucd08 11\ucd08 \uc548\ub41c\ub2e4 10\ucd08", 
+        "name_en": "Seungha Kang", 
+        "comment_ko": "\ub09c\ub2e4 \uace0\ub798!", 
         "picture_big": "crew/big/shkang.jpg", 
         "comment_en": null
     }
@@ -400,10 +400,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/skyun40.png", 
-        "github": null, 
+        "github": "", 
         "uid": "skyun40", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "CCO, \ub514\ub809\ud130", 
         "nick_ko": "\ucd1d\uc0ac\ub839\uad00", 
         "twitter": "", 
         "title_en": "CCO, Director", 
@@ -411,8 +411,8 @@
         "facebook": "", 
         "name_ko": "\uc724\uc131\uad6d", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ucd1d\uc0ac\ub839\uad00 \uc774\ub77c\uace0 \uc4f0\uace0 \uace8\uace8\uc774\ub77c\uace0 \uc77d\ub294\ub2e4", 
+        "name_en": "Sungkuk Yun", 
+        "comment_ko": "\uc544\uc774\ud15c \ud30c\ubc0d 36\ub144, \ud604\uc7ac\ub294 \ub808\uc5b4\ud15c \ubc1c\uad74\uc911~", 
         "picture_big": "crew/big/skyun40.jpg", 
         "comment_en": null
     }
@@ -422,10 +422,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/stella.png", 
-        "github": null, 
+        "github": "", 
         "uid": "stella", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\ucf58\ud150\uce20 \uae30\ud68d", 
         "nick_ko": "\ub9c8\ub140", 
         "twitter": "", 
         "title_en": "Project Manager", 
@@ -433,8 +433,8 @@
         "facebook": "", 
         "name_ko": "\uc724\ud61c\ubbf8", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ubc18\uc9dd\ubc18\uc9dd \ub9c8\ub140", 
+        "name_en": "Haimee Yoon", 
+        "comment_ko": "Abracadabra\u2605", 
         "picture_big": "crew/big/stella.jpg", 
         "comment_en": null
     }
@@ -444,10 +444,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/sys.png", 
-        "github": null, 
+        "github": "", 
         "uid": "sys", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\ub9e4\ub4dc\ubabd\ud0a4", 
         "twitter": "", 
         "title_en": "Software Engineer", 
@@ -455,8 +455,8 @@
         "facebook": "", 
         "name_ko": "\uc1a1\uc2dc\uc601", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ud06c\ud06c\ud06c.. \ud750\ucf70\ub41c\ub2e4", 
+        "name_en": "Siyoung Song", 
+        "comment_ko": "", 
         "picture_big": "crew/big/sys.jpg", 
         "comment_en": null
     }
@@ -466,10 +466,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/wing.png", 
-        "github": null, 
+        "github": "", 
         "uid": "wing", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\ub514\ub809\ud130", 
         "nick_ko": "\uc719", 
         "twitter": "", 
         "title_en": "Director", 
@@ -477,8 +477,8 @@
         "facebook": "", 
         "name_ko": "\uc724\ud61c\uacbd", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\uc544\uc784 \uc719.", 
+        "name_en": "Hyekyoung Yun", 
+        "comment_ko": "\uc9c0\uc18d \uac00\ub2a5\ud55c \ubc1c\uc804", 
         "picture_big": "crew/big/wing.jpg", 
         "comment_en": null
     }
@@ -488,10 +488,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/wix.png", 
-        "github": null, 
+        "github": "", 
         "uid": "wix", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\ub514\uc9c0\ud138 \uc544\ud2f0\uc2a4\ud2b8", 
         "nick_ko": "\ub9c8\ube14", 
         "twitter": "", 
         "title_en": "Typography & Digital Artist", 
@@ -499,8 +499,8 @@
         "facebook": "", 
         "name_ko": "\ubc15\uc9c0\uc740", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ub0b4 \ub514\uc790\uc778\uc5d0 \ud1a0\ub97c \ub2e4\ub294 \ub188\ub4e4, \ub3c4\ub959\ud574\ubc84\ub9b4\uae4c.", 
+        "name_en": "Jieun Park", 
+        "comment_ko": "\ub0b4 \ub514\uc790\uc778\uc5d0 \ud1a0\ub2e4\ub294 \ub188\ub4e4, \ub3c4\ub959\ud574\ubc84\ub9b4\uae4c.", 
         "picture_big": "crew/big/wix.jpg", 
         "comment_en": null
     }
@@ -510,10 +510,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/young.png", 
-        "github": null, 
+        "github": "", 
         "uid": "young", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc11c\ube44\uc2a4 \uae30\ud68d \ubc0f \uc6b4\uc601", 
         "nick_ko": "\ud669\uc7a5\uad70", 
         "twitter": "", 
         "title_en": "Project Manager", 
@@ -521,8 +521,8 @@
         "facebook": "", 
         "name_ko": "\ud669\ud61c\uc601", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\ub2c8\ub4e4\uc774 \uc571 \ub9db\uc744 \uc54c\uc544?", 
+        "name_en": "Hyeyoung Hwang", 
+        "comment_ko": "\ud06c\uc545! \uc624\ub298 \ud558\ub8e8\ub3c4 \uc798 \uc811\uc218\ud558\uaca0\ub2e4\uc544~!", 
         "picture_big": "crew/big/young.jpg", 
         "comment_en": null
     }
@@ -532,10 +532,10 @@
     "model": "homepage.crew", 
     "fields": {
         "picture": "crew/iconic/z.png", 
-        "github": null, 
+        "github": "", 
         "uid": "z", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\uad11\uc778", 
         "twitter": "", 
         "title_en": "Software Engineer", 
@@ -543,8 +543,8 @@
         "facebook": "", 
         "name_ko": "\uc11c\uad11\uc6d0", 
         "home": "", 
-        "name_en": null, 
-        "comment_ko": "\uad11\uc778\uc774\ub2e4", 
+        "name_en": "Kwangwon Seo", 
+        "comment_ko": "\uc774\uaca8\ub3c4 \ubcd1\uc2e0 \uc838\ub3c4 \ubcd1\uc2e0\uc774\uba74 \uc774\uae34 \ubcd1\uc2e0\uc774 \ub3fc\ub77c.", 
         "picture_big": "crew/big/z.jpg", 
         "comment_en": null
     }
@@ -557,7 +557,7 @@
         "github": "", 
         "uid": "sakim", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uadf8\ub798\ud53d \ub514\uc790\uc774\ub108", 
         "nick_ko": "\uc2dc\ub098\ubaac", 
         "twitter": "", 
         "title_en": "Graphic Designer", 
@@ -565,7 +565,7 @@
         "facebook": "", 
         "name_ko": "\uae40\uc2e0\uc544", 
         "home": "", 
-        "name_en": null, 
+        "name_en": "Sina Kim", 
         "comment_ko": "", 
         "picture_big": "crew/big/sakim.jpg", 
         "comment_en": null
@@ -579,7 +579,7 @@
         "github": "", 
         "uid": "bonchic", 
         "nick_en": null, 
-        "title_ko": null, 
+        "title_ko": "\uc11c\ube44\uc2a4 \uae30\ud68d \ubc0f \uc6b4\uc601", 
         "nick_ko": "\ubaa9\ub3cc", 
         "twitter": "", 
         "title_en": "Project Manager", 
@@ -587,7 +587,7 @@
         "facebook": "", 
         "name_ko": "\ubc15\uc815\ud604", 
         "home": "", 
-        "name_en": null, 
+        "name_en": "Junghyun Park", 
         "comment_ko": "", 
         "picture_big": "crew/big/bonchic.jpg", 
         "comment_en": null
