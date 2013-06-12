@@ -6,7 +6,7 @@
         "picture": "crew/iconic/joongom.png", 
         "github": "", 
         "uid": "joongom", 
-        "nick_en": null, 
+        "nick_en": "Bear", 
         "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\uc900\uacf0", 
         "twitter": "joongom", 
@@ -18,7 +18,7 @@
         "name_en": "Jooncheol Park", 
         "comment_ko": "\uc2a4\ub9c8\ud2b8\uc2a4\ud130\ub514 \ub2dd\uac90\ub178 \uc11c\ube44\uc2a4\uc640 \ud2bc\ud2bc\ub370\uc2a4\ub124.", 
         "picture_big": "crew/big/joongom.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -28,7 +28,7 @@
         "picture": "crew/iconic/ws.png", 
         "github": "", 
         "uid": "ws", 
-        "nick_en": null, 
+        "nick_en": "Umm", 
         "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\uc74c\uadf8\ub798", 
         "twitter": "", 
@@ -40,7 +40,7 @@
         "name_en": "Wooseok Kim", 
         "comment_ko": "\uc5b4...\uc74c...\uadf8\ub798", 
         "picture_big": "crew/big/ws.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -50,7 +50,7 @@
         "picture": "crew/iconic/b.png", 
         "github": "", 
         "uid": "b", 
-        "nick_en": null, 
+        "nick_en": "Ninja", 
         "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\ubc25\ucc28", 
         "twitter": "", 
@@ -62,7 +62,7 @@
         "name_en": "Jaehoon Ha", 
         "comment_ko": "\uc548\ub4dc\ub85c\uc774\ub4dc\ub294 \ud584\ubcf5\ud560\uc218\uac00\uc5c4\uc11c", 
         "picture_big": "crew/big/b.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -72,7 +72,7 @@
         "picture": "crew/iconic/choi.png", 
         "github": "", 
         "uid": "choi", 
-        "nick_en": null, 
+        "nick_en": "4D", 
         "title_ko": "\uadf8\ub798\ud53d \ub514\uc790\uc774\ub108", 
         "nick_ko": "\ud3ec\ub514", 
         "twitter": "", 
@@ -84,7 +84,7 @@
         "name_en": "Geunyoung Choi", 
         "comment_ko": "\ub0b4\uac00 \ubc14\ub85c \ucc28\uc6d0\uc758 \ud2c8\uc774\ub2e4!", 
         "picture_big": "crew/big/choi.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -94,7 +94,7 @@
         "picture": "crew/iconic/dg.png", 
         "github": "", 
         "uid": "dg", 
-        "nick_en": null, 
+        "nick_en": "T-1000", 
         "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\uae30\uacc4", 
         "twitter": "", 
@@ -106,7 +106,7 @@
         "name_en": "Donggun Kim", 
         "comment_ko": "\uc815\uc2e0\uc77c\ub3c4 \ud558\uc0ac\ubd88\uc131", 
         "picture_big": "crew/big/dg.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -116,11 +116,11 @@
         "picture": "crew/iconic/endorand.png", 
         "github": "", 
         "uid": "endorand", 
-        "nick_en": null, 
+        "nick_en": "Barista", 
         "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4 \uacb8 \ubc14\ub9ac\uc2a4\ud0c0", 
         "nick_ko": "\uc885\uc0ac\ub9c8", 
         "twitter": "endorand81", 
-        "title_en": "Software Engineer, Barista", 
+        "title_en": "Software Engineer", 
         "email": "", 
         "facebook": "", 
         "name_ko": "\uc784\uc885\ud718", 
@@ -128,7 +128,7 @@
         "name_en": "Jonghwi Lim", 
         "comment_ko": "... ? ! \u2665", 
         "picture_big": "crew/big/endorand.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -138,7 +138,7 @@
         "picture": "crew/iconic/ez.png", 
         "github": "lqez", 
         "uid": "ez", 
-        "nick_en": null, 
+        "nick_en": "SCV", 
         "title_ko": "CTO", 
         "nick_ko": "\ub9e4\uc0dd\uc774", 
         "twitter": "lqez", 
@@ -150,7 +150,7 @@
         "name_en": "Hyunwoo Park", 
         "comment_ko": "Content rules platform, time rules talent.", 
         "picture_big": "crew/big/ez.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -160,7 +160,7 @@
         "picture": "crew/iconic/h.png", 
         "github": "evoka", 
         "uid": "h", 
-        "nick_en": null, 
+        "nick_en": "Maestro", 
         "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \ubc0f \uc2dc\uc2a4\ud15c \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\ub9c8\uc5d0", 
         "twitter": "neoevoke", 
@@ -172,7 +172,7 @@
         "name_en": "Dongwoo Son", 
         "comment_ko": "Do not pull back when we should be leaning in.", 
         "picture_big": "crew/big/h.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -182,7 +182,7 @@
         "picture": "crew/iconic/j2p.png", 
         "github": "J2P", 
         "uid": "j2p", 
-        "nick_en": null, 
+        "nick_en": "Double P", 
         "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\uc30d\ud53c", 
         "twitter": "J2P_", 
@@ -194,7 +194,7 @@
         "name_en": "Jaepil Jung", 
         "comment_ko": "\uc0dd\uac01\ud558\uc2dc\ub294 \uadf8 \uc30d\ud53c\uac00 \uc544\ub2d9\ub2c8\ub2e4...", 
         "picture_big": "crew/big/j2p.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -204,7 +204,7 @@
         "picture": "crew/iconic/je.png", 
         "github": "", 
         "uid": "je", 
-        "nick_en": null, 
+        "nick_en": "ChoiZzang", 
         "title_ko": "\ub514\ub809\ud130", 
         "nick_ko": "\ucd5c\uc9f1", 
         "twitter": "", 
@@ -216,7 +216,7 @@
         "name_en": "Jungeun Choi", 
         "comment_ko": "\uc544\uc774\ub4e4\uc744 \uc704\ud55c \uc990\uac70\uc6b4 \uc0c1\uc0c1", 
         "picture_big": "crew/big/je.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -226,7 +226,7 @@
         "picture": "crew/iconic/jey.png", 
         "github": "", 
         "uid": "jey", 
-        "nick_en": null, 
+        "nick_en": "Director", 
         "title_ko": "\ube44\ub514\uc624 \ubc0f \ud6a8\uacfc \uc544\ud2f0\uc2a4\ud2b8", 
         "nick_ko": "\uc7a5\uac10\ub3c5", 
         "twitter": "", 
@@ -238,7 +238,7 @@
         "name_en": "Eunyoung Jang", 
         "comment_ko": "\uc778\uc0dd\uc740 \ubbf8\uc644\uc131", 
         "picture_big": "crew/big/jey.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -248,7 +248,7 @@
         "picture": "crew/iconic/joo.png", 
         "github": "", 
         "uid": "joo", 
-        "nick_en": null, 
+        "nick_en": "Hime", 
         "title_ko": "\uc11c\ube44\uc2a4 \uae30\ud68d \ubc0f \uc6b4\uc601", 
         "nick_ko": "\uba4d\uc9c0", 
         "twitter": "", 
@@ -260,7 +260,7 @@
         "name_en": "Jiwoo Jeong", 
         "comment_ko": "\uba38\uc5b4\uc5b4\uc5b4\uc5b4\uc5b4\uc5c9... (\u3147\u3141\u3147)", 
         "picture_big": "crew/big/joo.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -270,7 +270,7 @@
         "picture": "crew/iconic/kroisse.png", 
         "github": "Kroisse", 
         "uid": "kroisse", 
-        "nick_en": null, 
+        "nick_en": "Gadget", 
         "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \ubc0f \uc2dc\uc2a4\ud15c \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\uac00\uc81c\ud2b8", 
         "twitter": "eunchong_yu", 
@@ -282,7 +282,7 @@
         "name_en": "Eunchong Yu", 
         "comment_ko": "\uc81c \uba38\ub9bf\uc18d\uc744 \uad81\uae08\ud574\ud558\uc9c0 \ub9c8\uc138\uc694", 
         "picture_big": "crew/big/kroisse.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -292,7 +292,7 @@
         "picture": "crew/iconic/m.png", 
         "github": "", 
         "uid": "m", 
-        "nick_en": null, 
+        "nick_en": "M", 
         "title_ko": "CEO", 
         "nick_ko": "\uc871\uc7a5", 
         "twitter": "_tinysky", 
@@ -304,7 +304,7 @@
         "name_en": "Minseok Kim", 
         "comment_ko": "", 
         "picture_big": "crew/big/m.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -314,7 +314,7 @@
         "picture": "crew/iconic/mj.png", 
         "github": "", 
         "uid": "mj", 
-        "nick_en": null, 
+        "nick_en": "Mayo", 
         "title_ko": "\uadf8\ub798\ud53d \ub514\uc790\uc774\ub108", 
         "nick_ko": "\ub9c8\uc694", 
         "twitter": "", 
@@ -326,7 +326,7 @@
         "name_en": "Minjoo Kim", 
         "comment_ko": "", 
         "picture_big": "crew/big/mj.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -336,7 +336,7 @@
         "picture": "crew/iconic/new.png", 
         "github": "", 
         "uid": "new", 
-        "nick_en": null, 
+        "nick_en": "Tomato", 
         "title_ko": "\uadf8\ub798\ud53d \ub514\uc790\uc774\ub108", 
         "nick_ko": "\ud1a0\ub9c8\ud1a0", 
         "twitter": "", 
@@ -348,7 +348,7 @@
         "name_en": "Eujene Kwon", 
         "comment_ko": "\ubcfc\ub9e4 \ud1a0\ub9c8\ud1a0", 
         "picture_big": "crew/big/new.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -358,7 +358,7 @@
         "picture": "crew/iconic/py.png", 
         "github": "perhapsspy", 
         "uid": "py", 
-        "nick_en": null, 
+        "nick_en": "Spy", 
         "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\ud30c\uc774", 
         "twitter": "PerhapsSPY", 
@@ -370,7 +370,7 @@
         "name_en": "Kyoungup Jung", 
         "comment_ko": "\uc120\uc0ac\uace0 \ud6c4\uc218\uc2b5", 
         "picture_big": "crew/big/py.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -380,7 +380,7 @@
         "picture": "crew/iconic/shkang.png", 
         "github": "", 
         "uid": "shkang", 
-        "nick_en": null, 
+        "nick_en": "Brother", 
         "title_ko": "\uc11c\ube44\uc2a4 \uae30\ud68d \ubc0f \uc6b4\uc601", 
         "nick_ko": "\ud6bd\ub2d8", 
         "twitter": "", 
@@ -392,7 +392,7 @@
         "name_en": "Seungha Kang", 
         "comment_ko": "\ub09c\ub2e4 \uace0\ub798!", 
         "picture_big": "crew/big/shkang.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -402,7 +402,7 @@
         "picture": "crew/iconic/skyun40.png", 
         "github": "", 
         "uid": "skyun40", 
-        "nick_en": null, 
+        "nick_en": "Commander", 
         "title_ko": "CCO, \ub514\ub809\ud130", 
         "nick_ko": "\ucd1d\uc0ac\ub839\uad00", 
         "twitter": "", 
@@ -414,7 +414,7 @@
         "name_en": "Sungkuk Yun", 
         "comment_ko": "\uc544\uc774\ud15c \ud30c\ubc0d 36\ub144, \ud604\uc7ac\ub294 \ub808\uc5b4\ud15c \ubc1c\uad74\uc911~", 
         "picture_big": "crew/big/skyun40.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -424,7 +424,7 @@
         "picture": "crew/iconic/stella.png", 
         "github": "", 
         "uid": "stella", 
-        "nick_en": null, 
+        "nick_en": "Stella", 
         "title_ko": "\ucf58\ud150\uce20 \uae30\ud68d", 
         "nick_ko": "\ub9c8\ub140", 
         "twitter": "", 
@@ -436,7 +436,7 @@
         "name_en": "Haimee Yoon", 
         "comment_ko": "Abracadabra\u2605", 
         "picture_big": "crew/big/stella.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -446,7 +446,7 @@
         "picture": "crew/iconic/sys.png", 
         "github": "", 
         "uid": "sys", 
-        "nick_en": null, 
+        "nick_en": "Mad Monkey", 
         "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\ub9e4\ub4dc\ubabd\ud0a4", 
         "twitter": "", 
@@ -458,7 +458,7 @@
         "name_en": "Siyoung Song", 
         "comment_ko": "", 
         "picture_big": "crew/big/sys.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -468,7 +468,7 @@
         "picture": "crew/iconic/wing.png", 
         "github": "", 
         "uid": "wing", 
-        "nick_en": null, 
+        "nick_en": "Wing", 
         "title_ko": "\ub514\ub809\ud130", 
         "nick_ko": "\uc719", 
         "twitter": "", 
@@ -480,7 +480,7 @@
         "name_en": "Hyekyoung Yun", 
         "comment_ko": "\uc9c0\uc18d \uac00\ub2a5\ud55c \ubc1c\uc804", 
         "picture_big": "crew/big/wing.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -490,7 +490,7 @@
         "picture": "crew/iconic/wix.png", 
         "github": "", 
         "uid": "wix", 
-        "nick_en": null, 
+        "nick_en": "Wix", 
         "title_ko": "\ub514\uc9c0\ud138 \uc544\ud2f0\uc2a4\ud2b8", 
         "nick_ko": "\ub9c8\ube14", 
         "twitter": "", 
@@ -502,7 +502,7 @@
         "name_en": "Jieun Park", 
         "comment_ko": "\ub0b4 \ub514\uc790\uc778\uc5d0 \ud1a0\ub2e4\ub294 \ub188\ub4e4, \ub3c4\ub959\ud574\ubc84\ub9b4\uae4c.", 
         "picture_big": "crew/big/wix.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -512,7 +512,7 @@
         "picture": "crew/iconic/young.png", 
         "github": "", 
         "uid": "young", 
-        "nick_en": null, 
+        "nick_en": "Young", 
         "title_ko": "\uc11c\ube44\uc2a4 \uae30\ud68d \ubc0f \uc6b4\uc601", 
         "nick_ko": "\ud669\uc7a5\uad70", 
         "twitter": "", 
@@ -524,7 +524,7 @@
         "name_en": "Hyeyoung Hwang", 
         "comment_ko": "\ud06c\uc545! \uc624\ub298 \ud558\ub8e8\ub3c4 \uc798 \uc811\uc218\ud558\uaca0\ub2e4\uc544~!", 
         "picture_big": "crew/big/young.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -534,7 +534,7 @@
         "picture": "crew/iconic/z.png", 
         "github": "", 
         "uid": "z", 
-        "nick_en": null, 
+        "nick_en": "L.E.D", 
         "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\uad11\uc778", 
         "twitter": "", 
@@ -546,7 +546,7 @@
         "name_en": "Kwangwon Seo", 
         "comment_ko": "\uc774\uaca8\ub3c4 \ubcd1\uc2e0 \uc838\ub3c4 \ubcd1\uc2e0\uc774\uba74 \uc774\uae34 \ubcd1\uc2e0\uc774 \ub3fc\ub77c.", 
         "picture_big": "crew/big/z.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -556,7 +556,7 @@
         "picture": "crew/iconic/sakim.png", 
         "github": "", 
         "uid": "sakim", 
-        "nick_en": null, 
+        "nick_en": "Cinnamon", 
         "title_ko": "\uadf8\ub798\ud53d \ub514\uc790\uc774\ub108", 
         "nick_ko": "\uc2dc\ub098\ubaac", 
         "twitter": "", 
@@ -568,7 +568,7 @@
         "name_en": "Sina Kim", 
         "comment_ko": "", 
         "picture_big": "crew/big/sakim.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -578,7 +578,7 @@
         "picture": "crew/iconic/bonchic.png", 
         "github": "", 
         "uid": "bonchic", 
-        "nick_en": null, 
+        "nick_en": "Mokdol", 
         "title_ko": "\uc11c\ube44\uc2a4 \uae30\ud68d \ubc0f \uc6b4\uc601", 
         "nick_ko": "\ubaa9\ub3cc", 
         "twitter": "", 
@@ -590,7 +590,7 @@
         "name_en": "Junghyun Park", 
         "comment_ko": "", 
         "picture_big": "crew/big/bonchic.jpg", 
-        "comment_en": null
+        "comment_en": ""
     }
 },
 {
@@ -598,7 +598,7 @@
     "model": "homepage.appcategory", 
     "fields": {
         "app": [], 
-        "title_en": null, 
+        "title_en": "", 
         "uid": "games", 
         "title_ko": "\uac8c\uc784"
     }
@@ -608,7 +608,7 @@
     "model": "homepage.appcategory", 
     "fields": {
         "app": [], 
-        "title_en": null, 
+        "title_en": "", 
         "uid": "education", 
         "title_ko": "\uad50\uc721"
     }
@@ -618,7 +618,7 @@
     "model": "homepage.appcategory", 
     "fields": {
         "app": [], 
-        "title_en": null, 
+        "title_en": "", 
         "uid": "mobilevod", 
         "title_ko": "\ubaa8\ubc14\uc77cVOD"
     }
@@ -628,7 +628,7 @@
     "model": "homepage.appcategory", 
     "fields": {
         "app": [], 
-        "title_en": null, 
+        "title_en": "", 
         "uid": "comics", 
         "title_ko": "\ub9cc\ud654"
     }
@@ -638,7 +638,7 @@
     "model": "homepage.appcategory", 
     "fields": {
         "app": [], 
-        "title_en": null, 
+        "title_en": "", 
         "uid": "photo", 
         "title_ko": "\uc0ac\uc9c4"
     }

@@ -531,8 +531,7 @@ section p img {
 }
 
 .members .member .desc .nick {
-    font-size: 8pt;
-    font-weight: 400;
+    display: none;
 }
 
 .members .member .desc .firstname, .members .member .desc .name {
@@ -627,18 +626,12 @@ section p img {
     margin: 5px 0 0 0;
 }
 
-.enlarge .desc .firstname {
+.enlarge .desc .nick {
     font-weight: 700;
     font-size: 16pt;
     color: white;
     margin: 0;
-}
-
-.enlarge .desc .lastname {
-    font-size: 16pt;
-    font-weight: 400;
-    color: #ccc;
-    margin: 0 0 0 0;
+    display: inline-block;
 }
 
 .enlarge .desc .comment {
@@ -647,7 +640,7 @@ section p img {
 }
 
 
-.enlarge .desc .title, .enlarge .desc .badges, .enlarge .desc .nick {
+.enlarge .desc .title, .enlarge .desc .badges, .enlarge .desc .name {
     display: none;
 }
 
