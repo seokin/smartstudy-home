@@ -34,11 +34,11 @@ msgstr "Big things have small beginnings."
 msgid "section-company-1"
 msgstr ""
 "<p>\n"
-"SMARTSTUDY was established at Jun, 2010. It was the time that many enterpreneurs in Korea change focus to the mobile market.\n"
+"SMARTSTUDY was established at Jun, 2010. It was the time that many enterpreneurs in Korea changed their focuses to the mobile market.\n"
 "</p>\n"
 "<p>\n"
-"With 10y+ experienced seniors from the online multiplay game and web services, we were also finding a new opportunity in it.\n"
-"However, there were enormous number of experts and teams already in this ocean, and the starting line is very equal for all.\n"
+"With more than 10 years experienced seniors from the MMO games and web services, we also have been looking for a new opportunity there.\n"
+"But there were already enormous number of experts and teams in the ocean, and the starting line is very identical for all of them.\n"
 "</p>\n"
 "<p>\n"
 "Take a deep breath and start all over again.\n"
@@ -152,7 +152,7 @@ msgstr "To infinity and beyond."
 
 #: templates/contact.html:15
 msgid "section-business-1"
-msgstr ""
+msgstr "A lot of time and effort from our team should be taken to provide a fabulous service."
 
 #: templates/contact.html:20
 msgid "PRESS"
