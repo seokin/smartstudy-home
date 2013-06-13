@@ -530,11 +530,9 @@ section p img {
     margin: 0;
 }
 
-.members .member .desc .nick {
-    display: none;
-}
-
-.members .member .desc .firstname, .members .member .desc .name {
+.members .member .desc .nick, 
+.members .member .desc .firstname,
+.members .member .desc .name {
     font-size: 13.5pt;
     font-weight: 700;
 }
