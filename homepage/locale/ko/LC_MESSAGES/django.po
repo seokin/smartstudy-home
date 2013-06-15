@@ -338,7 +338,7 @@ msgstr "언어"
 #: templates/footer.html:62
 #, python-format
 msgid "Designed and published by © SMARTSTUDY 2010-%(year)s"
-msgstr "스마트스터디가 직접 꾸미고 발행했습니다. 주식회사 스마트스터디, 2010-%(year)s"
+msgstr "스마트스터디가 직접 꾸미고 발행했습니다. 주식회사 스마트스터디, © 2010-%(year)s"
 
 #: templates/license.html:5
 msgid "LICENSE"

@@ -141,6 +141,12 @@ msgstr "We focus on your voice."
 #: templates/contact.html:8
 msgid "section-support-1"
 msgstr ""
+"<p>\n"
+"    To request technical support or request a refund / cancellation, please contact us via an email.\n"
+"</p>\n"
+"<ul>\n"
+"    <li>Customer support : <a href=\"mailto:cs@smartstudy.co.kr\">cs@smartstudy.co.kr</a></li>\n"
+"</ul>"
 
 #: templates/contact.html:13
 msgid "BUSINESS"
@@ -152,7 +158,18 @@ msgstr "To infinity and beyond."
 
 #: templates/contact.html:15
 msgid "section-business-1"
-msgstr "A lot of time and effort from our team should be taken to provide a fabulous service."
+msgstr ""
+"<p>\n"
+"    A lot of time and effort from our team should be taken to provide a fabulous service. Furthermore, it's very hard to keep it consistently.\n"
+"    So, distinguishing between 'what can we do better' and 'cannot do better' is highly required and very important.\n"
+"    We've been trying to grasp ourselves objectively and the answer is : Do the best what we can do, and do it with partners what we cannot do best.\n"
+"</p>\n"
+"<p>\n"
+"    We want to talk and walk with you.\n"
+"</p>\n"
+"<ul>\n"
+"    <li>Business contact : <a href=\"mailto:with@smartstudy.co.kr\">with@smartstudy.co.kr</a></li>\n"
+"</ul>"
 
 #: templates/contact.html:20
 msgid "PRESS"
@@ -161,6 +178,12 @@ msgstr "PRESS"
 #: templates/contact.html:21
 msgid "section-press-1"
 msgstr ""
+"<p>\n"
+"    If you want our detailed information or brand images for press releases, please request us via email.\n"
+"</p>\n"
+"<ul>\n"
+"    <li>Press contact : <a href=\"mailto:press@smartstudy.co.kr\">press@smartstudy.co.kr</a></li>\n"
+"</ul>"
 
 #: templates/contact.html:26
 msgid "LOCATION"
@@ -169,6 +192,9 @@ msgstr "LOCATION"
 #: templates/contact.html:27
 msgid "section-location-1"
 msgstr ""
+"<ul>\n"
+"    <li>Address : SMARTSTUDY #1516-2, 5F Seocho-dong, Seocho-Gu, Seoul, Korea (zip:135-871)</li>\n"
+"</ul>"
 
 #: templates/footer.html:7 templates/nav.html:6
 msgid "ABOUT"
