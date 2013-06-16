@@ -33,10 +33,10 @@ class AppImageInline(admin.TabularInline):
 
 @L10n(App)
 class AppAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'cms_id', 'launched', 'appid_appstore', 'appid_playstore',)
-    list_editable = ('title', 'appid_appstore', 'appid_playstore',)
+    list_display = ('id', 'subtitle', 'title', 'appid_appstore', 'appid_playstore',)
+    list_editable = ('title', 'subtitle', 'appid_appstore', 'appid_playstore',)
     inlines = [AppImageInline, ]
-    search_fields = ['title', 'cms_id', ]
+    search_fields = ['title', ]
     ordering = ('-id',)
 
 admin.site.register(App, AppAdmin)

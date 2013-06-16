@@ -1,122 +1,50 @@
 {% extends "base.html" %}
 {% load markup %}
+{% load thumbnail %}
 {% block content %}
-<!--
-<section id="featured">
-    <h2>FEATURED</h2>
-    <div id="myCarousel" class="carousel slide">
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="active item">…</div>
-            <div class="item">…</div>
-            <div class="item">…</div>
-        </div>
-    </div>
-    <script>
-        $('.carousel').carousel();
-    </script>
-</section>
-<hr>
--->
-<section id="education">
-    <h1>Education</h1>
-    {% for app in apps %}
+{% for category in app_categories %}
+<section id="{{ category.uid }}">
+    <h1>{{ category.title }}</h1>
+    {% for app in category.app.all %}
     <div class="app">
-        <img class="icon" src="{{ app.icon.url }}" alt="icon">
-        <h2>{{ app.title_eng }}</h2>
-        <h3>{{ app.subtitle_eng }}</h3>
+        <img class="icon" src="{{ app.icon.icon.url }}" alt="icon">
+        <div class="preview-wrap hidden-phone">
+            <div class="preview {% if app.has_landscape_images %}preview-landscape{% endif %}" id="preview_{{ app.id }}">
+                <ul>
+                {% for image in app.images.all %}
+                    <li {% if forloop.first %}style="display:block"{% endif %}><img src="{{ image.image.thumbnail.url }}" alt="thumbnail"></li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <h2>{{ app.title }}</h2>
+        <h3>{{ app.subtitle }}</h3>
         <div class="desc">
             {{ app.desc|markdown:"safe" }}
         </div>
+        {% if app.appid_appstore %}
+        <button class="btn btn-appstore" onclick="location.href='{{ app.link_appstore }}'"><i class="icon-appstore"></i> AppStore</button>
+        {% endif %}
+        {% if app.appid_playstore %}
+        <button class="btn btn-playstore" onclick="location.href='{{ app.link_playstore }}'"><i class="icon-playstore"></i> PlayStore</button>
+        {% endif %}
     </div>
+    <div class="clear"></div>
     {% endfor %}
-    <div class="app">
-        <img class="icon" src="{{ STATIC_URL }}image/app.png" alt="app">
-        <h2>Best Kids Songs</h2>
-        <h3>Blah Blah application for kids.</h3>
-        <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-        <button class="btn btn-large btn-appstore" href="#"><i class="icon-appstore"></i> AppStore</button>
-        <button class="btn btn-large btn-playstore" href="#"><i class="icon-playstore"></i> PlayStore</button>
-    </div>
-    <div class="app">
-        <img class="icon" src="{{ STATIC_URL }}image/app.png" alt="app">
-        <h2>Wow! Coloring Book</h2>
-        <h3>Blah Blah application for kids.</h3>
-        <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-    </div>
-    <h2>My Preschool Words Deluxe</h2>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-    <h2>35 Playtime Songs</h2>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
 </section>
+{% if not forloop.last %}
 <hr>
-<section id="mobilevod">
-    <h1>Mobile VOD</h1>
-    <h2>Robocar Poli</h2>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-    <h2>EBS KongYa</h2>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-</section>
-<hr>
-<section id="games">
-    <h1>Games</h1>
-    <h2>TAMAGO Monsters</h2>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-    <div class="app">
-        <h2>Rhythm game party</h2>
-        <h3>It’s time to WIGGLE & JIGGLE with your favorite songs!</h3>
-        <p>Little dancing bunnies Ruru, Gogo and Baba are ready to dance to your rhythm! </p>
-        <p>This unique game is designed just everyone who loves music. The cute little bunnies fall from the top of the screen and the only thing kids need to do is to touch the bunnies on the right beat. Funny and adorable faces will tell you if you did great or not! While the bunnies fall, you can also enjoy the most loved animations from our No.1 Kids’ app [Best Kids Songs.Stories]. </p>
-        <ul>
-            <li>Amazing music, animation and fun sound effects</li>
-            <li>32 best-loved songs to sing along and play with </li>
-            <li>Three levels available- Choose the right one for you! </li>
-            <li>Enjoy the special effects and amazing fever mode </li>
-        </ul>
-        <button class="btn btn-ios" href="#">Available on <strong>iOS</strong></button>
-        <button class="btn btn-googleplay" href="#">Available on <strong>GooglePlay</strong></button>
-    </div>
-</section>
-<hr>
-<section id="comics">
-    <h1>Comics</h1>
-    <h2>Korea Comics 1300+</h2>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-    <h2>Romantic Comic Cafe</h2>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-</section>
-<hr>
-<section id="utilities">
-    <h1>Utilities</h1>
-    <h2>Cartoon Camera Pro</h2>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-    <h2>Pic Collage Editor</h2>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-</section>
+{% endif %}
+{% endfor %}
+{% endblock %}
+{% block script %}
+<script>
+$(".preview").each( function() {
+    var swipe = new Swipe(this, {
+        auto : 3000,
+        callbackBegin : function(index) {
+        }
+    });
+});
+</script>
 {% endblock %}

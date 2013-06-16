@@ -16,11 +16,9 @@
                 <a href="{% url 'product' %}">{% trans "PRODUCT" %}</a>
                 <ul class="submenu">
                     <!--<li><a href="{% url 'product' %}#featured">{% trans "Featured" %}</a></li>-->
-                    <li><a href="{% url 'product' %}#education">{% trans "Education" %}</a></li>
-                    <li><a href="{% url 'product' %}#mobilevod">{% trans "Mobile VOD" %}</a></li>
-                    <li><a href="{% url 'product' %}#games">{% trans "Games" %}</a></li>
-                    <li><a href="{% url 'product' %}#comics">{% trans "Comics" %}</a></li>
-                    <li><a href="{% url 'product' %}#photo">{% trans "Photo" %}</a></li>
+                    {% for c in app_categories %}
+                    <li><a href="{% url 'product' %}#{{ c.uid }}">{{ c.title }}</a></li>
+                    {% endfor %}
                 </ul>
             </li>
             <li>

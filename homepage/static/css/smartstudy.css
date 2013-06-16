@@ -452,6 +452,35 @@ section .app {
     margin-bottom: 32px;
 }
 
+section .app .preview-wrap {
+    float: right;
+    margin: 10px;
+}
+
+section .app .preview {
+    max-width: 180px;
+    height: auto;
+}
+
+section .app .preview img {
+    width: 100%;
+    height: auto;
+}
+
+section .app .preview li {
+    display: none;
+}
+
+section .app .preview-landscape {
+    float: right;
+    max-width: 240px;
+    height: auto;
+}
+
+section .app .preview ul {
+    margin: 0;
+}
+
 section .app .icon {
     width: 64px;
     height: auto;
@@ -642,6 +671,14 @@ section p img {
     display: none;
 }
 
+.phone-mock {
+    position: fixed;
+    right: 20px;
+    top: 60px;
+    width: 369px;
+    height: 717px;
+    background-image: url("../image/phone.png");
+}
 
 @media (max-width: 900px) {
     #footer .sitemap > li {
