@@ -455,6 +455,8 @@ section .app {
 section .app .preview-wrap {
     float: right;
     margin: 10px;
+    padding: 4px;
+    border: 1px solid #ccc;
 }
 
 section .app .preview {
@@ -469,6 +471,7 @@ section .app .preview img {
 
 section .app .preview li {
     display: none;
+    font-size: 0;
 }
 
 section .app .preview-landscape {

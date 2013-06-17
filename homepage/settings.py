@@ -183,6 +183,6 @@ FALLBACK_LANGUAGES = {
 THUMBNAIL_ALIASES = {
     '': {
         'icon': {'size': (128, 128)},
-        'thumbnail': {'size': (480, 480)},
+        'thumbnail': {'size': (360, 360)},
     }
 }

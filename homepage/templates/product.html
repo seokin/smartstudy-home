@@ -39,12 +39,12 @@
 {% endblock %}
 {% block script %}
 <script>
-$(".preview").each( function() {
-    var swipe = new Swipe(this, {
-        auto : 3000,
-        callbackBegin : function(index) {
-        }
+(function ($) {
+    $(".preview").each( function() {
+        var swipe = new Swipe(this, {
+            auto : 4000,
+        });
     });
-});
+}(jQuery));
 </script>
 {% endblock %}
