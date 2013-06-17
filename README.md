@@ -1,7 +1,8 @@
-smartstudy-home
-===============
+Homepage of SMARTSTUDY
+======================
 
-Draft for the homepage of SMARTSTUDY
+
+a yet another *flat* site.
 
 
 INSTALL
