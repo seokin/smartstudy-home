@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-10 19:20+0900\n"
-"PO-Revision-Date: 2013-06-13 03:33+0900\n"
+"POT-Creation-Date: 2013-06-18 02:25+0900\n"
+"PO-Revision-Date: 2013-06-18 02:28+0900\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,13 @@ msgstr ""
 "Language: \n"
 "X-Translated-Using: django-rosetta 0.7.2\n"
 
-#: settings.py:41
+#: settings.py:36
 msgid "Korean"
 msgstr "한국어"
+
+#: settings.py:37
+msgid "English"
+msgstr "English"
 
 #: templates/about.html:6
 msgid "<span>SMART</span><span>STUDY</span>"
@@ -101,7 +105,7 @@ msgstr "Built on Open Source eco systems."
 msgid "section-technique-1"
 msgstr ""
 "<p>\n"
-"Open source is not only sharing or license problem. It's a culture for hackers itself.\n" 
+"Open source is not only sharing or license problem. It's a culture for hackers itself.\n"
 "We use open sources not because of free cost, but its openness and free to use, free to build up together.\n"
 "This enables sustainable developments and collaborative problem solving.\n"
 "</p>\n"
@@ -212,87 +216,67 @@ msgstr "PRODUCT"
 msgid "Featured"
 msgstr "Featured"
 
-#: templates/footer.html:19
-msgid "Education"
-msgstr "Education"
-
-#: templates/footer.html:20
-msgid "Mobile VOD"
-msgstr "Mobile VOD"
-
-#: templates/footer.html:21
-msgid "Games"
-msgstr "Games"
-
-#: templates/footer.html:22
-msgid "Comics"
-msgstr "Comics"
-
-#: templates/footer.html:23
-msgid "Photo"
-msgstr "Photo"
-
-#: templates/footer.html:27 templates/nav.html:12
+#: templates/footer.html:25 templates/nav.html:12
 msgid "CONTACT"
 msgstr "CONTACT"
 
-#: templates/footer.html:29
+#: templates/footer.html:27
 msgid "Support"
 msgstr "Support"
 
-#: templates/footer.html:30
+#: templates/footer.html:28
 msgid "Business"
 msgstr "Business"
 
-#: templates/footer.html:31
+#: templates/footer.html:29
 msgid "Press"
 msgstr "Press"
 
-#: templates/footer.html:32
+#: templates/footer.html:30
 msgid "Location"
 msgstr "Location"
 
-#: templates/footer.html:33 templates/withyou.html:6
+#: templates/footer.html:31 templates/withyou.html:6
 msgid "We're hiring!"
 msgstr "We're hiring!"
 
-#: templates/footer.html:37
+#: templates/footer.html:35
 msgid "LINK"
 msgstr "LINK"
 
-#: templates/footer.html:39
+#: templates/footer.html:37
 msgid "Facebook"
 msgstr "Facebook"
 
-#: templates/footer.html:40
+#: templates/footer.html:38
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/footer.html:41
+#: templates/footer.html:39
 msgid "Github"
 msgstr "Github"
 
-#: templates/footer.html:42
+#: templates/footer.html:40
 msgid "Tech Blog"
 msgstr "Tech Blog"
 
-#: templates/footer.html:46
+#: templates/footer.html:44
 msgid "INFORMATION"
 msgstr "INFORMATION"
 
-#: templates/footer.html:48
+#: templates/footer.html:46
 msgid "License"
 msgstr "License"
 
-#: templates/footer.html:49
+#: templates/footer.html:47
 msgid "Privacy"
 msgstr "Privacy"
 
-#: templates/footer.html:52
+#: templates/footer.html:50
 msgid "LANGUAGE"
 msgstr "LANGUAGE"
 
-#: templates/footer.html:62
+#: templates/footer.html:60
 #, python-format
 msgid "Designed and published by © SMARTSTUDY 2010-%(year)s"
 msgstr "Designed and published by © SMARTSTUDY 2010-%(year)s"
@@ -302,18 +286,22 @@ msgid "LICENSE"
 msgstr "LICENSE"
 
 #: templates/license.html:6
+msgid "PROJECT"
+msgstr "PROJECT"
+
+#: templates/license.html:16
 msgid "SOFTWARE"
 msgstr "SOFTWARE"
 
-#: templates/license.html:37
+#: templates/license.html:68
 msgid "FONTS"
 msgstr "FONTS"
 
-#: templates/license.html:62
+#: templates/license.html:93
 msgid "ICONS"
 msgstr "ICONS"
 
-#: templates/license.html:72
+#: templates/license.html:103
 msgid "All trademarks are property of their respective owners."
 msgstr "All trademarks are property of their respective owners."
 
@@ -508,5 +496,17 @@ msgstr ""
 "</ol>\n"
 "<p>저희와 함께 일해보고 싶으신 분은 주저하지 말고 <a href=\"mailto:recruit@smartstudy.co.kr\">recruit@smartstudy.co.kr</a>로 간단한 자기소개, 이력서, 포트폴리오를 보내주세요.</p>"
 
-#~ msgid "English"
-#~ msgstr "English"
+#~ msgid "Education"
+#~ msgstr "Education"
+
+#~ msgid "Mobile VOD"
+#~ msgstr "Mobile VOD"
+
+#~ msgid "Games"
+#~ msgstr "Games"
+
+#~ msgid "Comics"
+#~ msgstr "Comics"
+
+#~ msgid "Photo"
+#~ msgstr "Photo"

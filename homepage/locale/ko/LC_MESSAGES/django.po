@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-10 19:20+0900\n"
-"PO-Revision-Date: 2013-06-12 00:22+0900\n"
+"POT-Creation-Date: 2013-06-18 02:25+0900\n"
+"PO-Revision-Date: 2013-06-18 02:28+0900\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,9 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Translated-Using: django-rosetta 0.7.2\n"
 
-#: settings.py:41
+#: settings.py:36
 msgid "Korean"
 msgstr "한국어"
+
+#: settings.py:37
+msgid "English"
+msgstr "English"
 
 #: templates/about.html:6
 msgid "<span>SMART</span><span>STUDY</span>"
@@ -255,87 +259,67 @@ msgstr "무엇을"
 msgid "Featured"
 msgstr "추천"
 
-#: templates/footer.html:19
-msgid "Education"
-msgstr "교육"
-
-#: templates/footer.html:20
-msgid "Mobile VOD"
-msgstr "모바일 VOD"
-
-#: templates/footer.html:21
-msgid "Games"
-msgstr "게임"
-
-#: templates/footer.html:22
-msgid "Comics"
-msgstr "만화"
-
-#: templates/footer.html:23
-msgid "Photo"
-msgstr "사진"
-
-#: templates/footer.html:27 templates/nav.html:12
+#: templates/footer.html:25 templates/nav.html:12
 msgid "CONTACT"
 msgstr "어디서"
 
-#: templates/footer.html:29
+#: templates/footer.html:27
 msgid "Support"
 msgstr "고객 지원"
 
-#: templates/footer.html:30
+#: templates/footer.html:28
 msgid "Business"
 msgstr "업무 문의"
 
-#: templates/footer.html:31
+#: templates/footer.html:29
 msgid "Press"
 msgstr "기사 및 자료"
 
-#: templates/footer.html:32
+#: templates/footer.html:30
 msgid "Location"
 msgstr "위치"
 
-#: templates/footer.html:33 templates/withyou.html:6
+#: templates/footer.html:31 templates/withyou.html:6
 msgid "We're hiring!"
 msgstr "같이 해요!"
 
-#: templates/footer.html:37
+#: templates/footer.html:35
 msgid "LINK"
 msgstr "링크"
 
-#: templates/footer.html:39
+#: templates/footer.html:37
 msgid "Facebook"
 msgstr "페이스북"
 
-#: templates/footer.html:40
+#: templates/footer.html:38
 msgid "Twitter"
 msgstr "트위터"
 
-#: templates/footer.html:41
+#: templates/footer.html:39
 msgid "Github"
 msgstr "깃허브"
 
-#: templates/footer.html:42
+#: templates/footer.html:40
 msgid "Tech Blog"
 msgstr "기술 블로그"
 
-#: templates/footer.html:46
+#: templates/footer.html:44
 msgid "INFORMATION"
 msgstr "정보"
 
-#: templates/footer.html:48
+#: templates/footer.html:46
 msgid "License"
 msgstr "저작권"
 
-#: templates/footer.html:49
+#: templates/footer.html:47
 msgid "Privacy"
 msgstr "개인정보"
 
-#: templates/footer.html:52
+#: templates/footer.html:50
 msgid "LANGUAGE"
 msgstr "언어"
 
-#: templates/footer.html:62
+#: templates/footer.html:60
 #, python-format
 msgid "Designed and published by © SMARTSTUDY 2010-%(year)s"
 msgstr "스마트스터디가 직접 꾸미고 발행했습니다. 주식회사 스마트스터디, © 2010-%(year)s"
@@ -345,18 +329,22 @@ msgid "LICENSE"
 msgstr "저작권"
 
 #: templates/license.html:6
+msgid "PROJECT"
+msgstr "프로젝트"
+
+#: templates/license.html:16
 msgid "SOFTWARE"
 msgstr "소프트웨어"
 
-#: templates/license.html:37
+#: templates/license.html:68
 msgid "FONTS"
 msgstr "글자체"
 
-#: templates/license.html:62
+#: templates/license.html:93
 msgid "ICONS"
 msgstr "아이콘"
 
-#: templates/license.html:72
+#: templates/license.html:103
 msgid "All trademarks are property of their respective owners."
 msgstr "모든 상표명, 제품명 또는 상표는 해당 소유자의 재산입니다."
 
@@ -549,5 +537,17 @@ msgstr ""
 "</ol>\n"
 "<p>저희와 함께 일해보고 싶으신 분은 주저하지 말고 <a href=\"mailto:recruit@smartstudy.co.kr\">recruit@smartstudy.co.kr</a>로 간단한 자기소개, 이력서, 포트폴리오를 보내주세요.</p>"
 
-#~ msgid "English"
-#~ msgstr "English"
+#~ msgid "Education"
+#~ msgstr "교육"
+
+#~ msgid "Mobile VOD"
+#~ msgstr "모바일 VOD"
+
+#~ msgid "Games"
+#~ msgstr "게임"
+
+#~ msgid "Comics"
+#~ msgstr "만화"
+
+#~ msgid "Photo"
+#~ msgstr "사진"

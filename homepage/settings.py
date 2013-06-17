@@ -189,8 +189,8 @@ THUMBNAIL_ALIASES = {
 THUMBNAIL_BASEDIR = 'thumbnails'
 
 # for cache
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
-    }
-}
+#CACHES = {
+#    'default': {
+#        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+#    }
+#}
