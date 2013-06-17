@@ -186,3 +186,10 @@ THUMBNAIL_ALIASES = {
         'thumbnail': {'size': (360, 360)},
     }
 }
+
+# for cache
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+    }
+}
