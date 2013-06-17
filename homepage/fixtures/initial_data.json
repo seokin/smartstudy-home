@@ -7,10 +7,10 @@
         "github": "", 
         "uid": "joongom", 
         "nick_en": "Bear", 
-        "title_ko": "\uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
+        "title_ko": "\uc218\uc11d \uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5d4\uc9c0\ub2c8\uc5b4", 
         "nick_ko": "\uc900\uacf0", 
         "twitter": "joongom", 
-        "title_en": "Lead Software Engineer", 
+        "title_en": "Chief Software Engineer", 
         "email": "", 
         "facebook": "", 
         "name_ko": "\ubc15\uc900\ucca0", 
@@ -597,7 +597,7 @@
     "pk": 30, 
     "model": "homepage.crew", 
     "fields": {
-        "picture": "crew/iconic/lono.png", 
+        "picture": "crew/iconic/lono_1.png", 
         "github": "", 
         "uid": "lono", 
         "nick_en": "Mr.Kim", 
@@ -611,7 +611,7 @@
         "home": "", 
         "name_en": "Soojae Kim", 
         "comment_ko": "\uc81c\u2197 \uc5c5\ubb34\uc785\ub2c8\ub2e4\u2198", 
-        "picture_big": "crew/big/lono.jpg", 
+        "picture_big": "crew/big/lono_1.jpg", 
         "comment_en": null
     }
 },
