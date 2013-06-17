@@ -7,7 +7,6 @@ from django.views.decorators.cache import cache_page
 from .models import Crew, App
 
 
-@cache_page(60 * 60)
 def about(request):
     crew = Crew.objects.all()
     return render(request, 'about.html', {
@@ -15,7 +14,6 @@ def about(request):
     })
 
 
-@cache_page(60 * 60)
 def product(request):
     apps = App.objects.all()
     return render(request, 'product.html', {
@@ -23,22 +21,18 @@ def product(request):
     })
 
 
-@cache_page(60 * 60)
 def contact(request):
     return render(request, 'contact.html')
 
 
-@cache_page(60 * 60)
 def withyou(request):
     return render(request, 'withyou.html')
 
 
-@cache_page(60 * 60)
 def license(request):
     return render(request, 'license.html')
 
 
-@cache_page(60 * 60)
 def privacy(request):
     return render(request, 'privacy.html')
 
