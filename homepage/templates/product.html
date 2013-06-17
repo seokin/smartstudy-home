@@ -12,7 +12,11 @@
             <div class="preview {% if app.has_landscape_images %}preview-landscape{% endif %}" id="preview_{{ app.id }}">
                 <ul>
                 {% for image in app.images.all %}
-                    <li {% if forloop.first %}style="display:block"{% endif %}><img src="{{ image.image.thumbnail.url }}" alt="thumbnail"></li>
+                    {% if forloop.first %}
+                    <li style="display:block"><img src="{{ image.image.thumbnail.url }}" alt="thumbnail"></li>
+                    {% else %}
+                    <li><img src="{{ app.images.all.0.image.thumbnail.url }}" data-original="{{ image.image.thumbnail.url }}" alt="thumbnail"></li>
+                    {% endif %}
                 {% endfor %}
                 </ul>
             </div>
@@ -45,6 +49,7 @@
             auto : 4000,
         });
     });
+    $(".preview img").lazyload({threshold:200});
 }(jQuery));
 </script>
 {% endblock %}
