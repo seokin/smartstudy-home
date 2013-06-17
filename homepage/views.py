@@ -51,3 +51,7 @@ def setlang(request, lang_code):
         else:
             response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
     return response
+
+
+def robots(request):
+    return render(request, 'robots.txt', content_type='text/plain')
