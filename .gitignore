@@ -3,6 +3,8 @@
 *.pyc
 *.db
 *.mo
+.AppleDouble
+.DS_Store
 
 media/
 collected_static/
