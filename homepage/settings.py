@@ -186,6 +186,7 @@ THUMBNAIL_ALIASES = {
         'thumbnail': {'size': (360, 360)},
     }
 }
+THUMBNAIL_BASEDIR = 'thumbnails'
 
 # for cache
 CACHES = {
