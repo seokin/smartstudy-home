@@ -23,6 +23,8 @@ urlpatterns = patterns(
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^robots.txt$', robots, name='robots'),
+
+    url('^markdown/', include('django_markdown.urls')),
 )
 
 # for development
