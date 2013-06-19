@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
+from django_markdown.admin import MarkdownModelAdmin
 from easymode.i18n.admin.decorators import L10n
 from models import Crew, App, AppImage, AppCategory
 
@@ -31,12 +32,10 @@ class AppImageInline(admin.TabularInline):
     extra = 5
 
 
-@L10n(App)
-class AppAdmin(admin.ModelAdmin):
-    list_display = ('id', 'subtitle', 'title', 'appid_appstore', 'appid_playstore',)
-    list_editable = ('title', 'subtitle', 'appid_appstore', 'appid_playstore',)
+class AppAdmin(MarkdownModelAdmin):
+    list_display = ('id', 'title_ko', 'title_en',)
     inlines = [AppImageInline, ]
-    search_fields = ['title', ]
+    search_fields = ['title_ko', 'title_en', ]
     ordering = ('-id',)
 
 admin.site.register(App, AppAdmin)
