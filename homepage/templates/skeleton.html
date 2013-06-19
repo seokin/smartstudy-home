@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{% block title %}SMARTSTUDY{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=0.82, maximum-scale=0.82, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,600,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ STATIC_URL }}image/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ STATIC_URL }}image/favicon.ico" type="image/x-icon">
+
+    <script src="{{ STATIC_URL }}lib/html5shiv/html5shiv.js"></script>
+    <script src="{{ STATIC_URL }}lib/jquery/jquery.js"></script>
+    <script src="{{ STATIC_URL }}lib/shy-navbar/shy-navbar.js"></script>
+    <script src="{{ STATIC_URL }}lib/swipe/swipe.js"></script>
+    <script src="{{ STATIC_URL }}lib/lazyload/jquery.lazyload.js"></script>
+
+    <!-- Loading project css -->
+    <link href="{{ STATIC_URL }}css/smartstudy.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/flat-button.css" rel="stylesheet">
+</head>
+<body>
+<div id="content" class="box">
+    <div class="wrap">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+</body>
+</html>
