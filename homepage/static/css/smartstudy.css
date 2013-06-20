@@ -5,6 +5,9 @@
     font-family: 'Lato', 'Helvetica Neue', 'Nanum Gothic', 'Arial', sans-serif;
     font-weight: 300;
     line-height: 180%;
+
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 html, body {
@@ -699,7 +702,7 @@ section p img {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .wrap {
         padding: 0 4%;
     }
@@ -733,5 +736,19 @@ section p img {
 
     .enlarge .desc {
         display: none;
+    }
+}
+
+@media screen and (max-device-width: 1024px) {
+    * {
+        font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+    }
+
+    p, li, span {
+        font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'Apple Gothic', sans-serif;
+    }
+
+    h1 span {
+        font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
     }
 }
