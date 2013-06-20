@@ -24,7 +24,7 @@
         <h2>{{ app.title }}</h2>
         <h3>{{ app.subtitle }}</h3>
         <div class="desc">
-            {{ app.desc|markdown:"safe" }}
+            {{ app.desc|safe }}
         </div>
         {% if app.appid_appstore %}
         <button class="btn btn-appstore" onclick="location.href='{{ app.link_appstore }}'"><i class="icon-appstore"></i> AppStore</button>
