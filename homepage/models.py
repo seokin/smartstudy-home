@@ -2,6 +2,7 @@
 from django.db import models
 from easymode.i18n.decorators import I18n
 from easy_thumbnails.fields import ThumbnailerImageField as ImageField
+from tinymce.models import HTMLField
 from library import uploaded_filepath
 
 
@@ -41,8 +42,8 @@ class App(models.Model):
     appid_appstore = models.CharField(max_length=255, null=True, blank=True)
     appid_playstore = models.CharField(max_length=255, null=True, blank=True)
 
-    desc = models.TextField(blank=True)
-    desc_more = models.TextField(blank=True)
+    desc = HTMLField(blank=True)
+    desc_more = HTMLField(blank=True)
 
     launched = models.DateField(auto_now_add=True)
 

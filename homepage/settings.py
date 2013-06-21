@@ -129,7 +129,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'easy_thumbnails',
     'rosetta',
-    'django_markdown',
+    'tinymce',
     'homepage',
 )
 
@@ -196,3 +196,12 @@ THUMBNAIL_BASEDIR = 'thumbnails'
 #        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
 #    }
 #}
+
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': 'advanced',
+    'plugins': '',
+    'height': 400,
+    'body_class': 'desc',
+    'content_css': '%s/css/tinymce.css' % STATIC_URL,
+    'cleanup_on_startup': True,
+}

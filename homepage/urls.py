@@ -24,7 +24,7 @@ urlpatterns = patterns(
 
     url(r'^robots.txt$', robots, name='robots'),
 
-    url('^markdown/', include('django_markdown.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
 )
 
 # for development
