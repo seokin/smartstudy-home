@@ -4,6 +4,8 @@ Homepage of SMARTSTUDY
 
 a yet another *flat* site.
 
+Demo : <http://www.smartstudy.co.kr>
+
 
 INSTALL
 -------
