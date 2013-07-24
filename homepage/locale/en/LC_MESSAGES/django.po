@@ -197,7 +197,11 @@ msgstr "LOCATION"
 msgid "section-location-1"
 msgstr ""
 "<ul>\n"
-"    <li>Address : SMARTSTUDY #1516-2, 5F Seocho-dong, Seocho-Gu, Seoul, Korea (zip:135-871)</li>\n"
+"    <li>SMARTSTUDY Address</li>\n"
+"    5th floor<br>\n"
+"    94 Myeongdal-ro<br>\n"
+"    Seocho-Gu, Seoul 137-871<br>\n"
+"    Korea\n"
 "</ul>"
 
 #: templates/footer.html:7 templates/nav.html:6
