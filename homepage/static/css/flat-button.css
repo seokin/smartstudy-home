@@ -97,3 +97,16 @@
 .btn.btn-playstore.active {
     background-color: #16a085;
 }
+.btn.btn-join {
+    background-color: #3fabba;
+}
+.btn.btn-join:hover,
+.btn.btn-join:focus,
+.btn-group:focus .btn.btn-join.dropdown-toggle {
+    background-color: #48c9b0;
+}
+.btn.btn-join:active,
+.btn-group.open .btn.btn-join.dropdown-toggle,
+.btn.btn-join.active {
+    background-color: #16a085;
+}

@@ -129,7 +129,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'easy_thumbnails',
     'rosetta',
-    'tinymce',
+    'django_summernote',
     'homepage',
 )
 

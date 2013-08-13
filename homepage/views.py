@@ -1,10 +1,13 @@
 from django import http
 from django.conf import settings
+from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import render
 from django.utils.http import is_safe_url
 from django.utils.translation import check_for_language
 from django.views.decorators.cache import cache_page
-from .models import Crew, App
+from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
+from .models import Crew, App, Resume, Job
+from .forms import ResumeForm
 
 
 def about(request):
@@ -55,3 +58,53 @@ def setlang(request, lang_code):
 
 def robots(request):
     return render(request, 'robots.txt', content_type='text/plain')
+
+
+def takeride(request):
+    jobs = Job.objects.filter(active=True)
+    return render(request, 'jobs.html', {
+        'jobs': jobs,
+    })
+
+
+class resume_add(CreateView):
+    model = Resume
+    form_class = ResumeForm
+    slug_field = 'hash_code'
+    template_name_suffix = '_add'
+
+    def get_initial(self):
+        return {'apply_to': self.request.GET.get('job')}
+
+    def get_success_url(self):
+        return reverse_lazy('resume_detail', args=(self.object.hash_code,))
+
+
+class resume_detail(DetailView):
+    model = Resume
+    slug_field = 'hash_code'
+
+
+class resume_update(UpdateView):
+    model = Resume
+    form_class = ResumeForm
+    slug_field = 'hash_code'
+    template_name_suffix = '_update'
+
+    def get_initial(self):
+        initial = {}
+        for k in self.model._jsonfields().iterkeys():
+            initial[k] = self.object.desc.get(k)
+
+        return initial
+
+    def get_success_url(self):
+        return reverse_lazy('resume_detail', args=(self.object.hash_code,))
+
+
+class resume_delete(DeleteView):
+    model = Resume
+    forms = ResumeForm
+    slug_field = 'hash_code'
+    template_name_suffix = '_delete'
+    success_url = reverse_lazy('takeride')

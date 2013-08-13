@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<section id="support">
+    <h1>{% trans "Resume" %}</h1>
+    {% blocktrans %}section-resume-1{% endblocktrans %}
+    <p>
+    {{ resume }}
+    </p>
+    <p>
+    LinkedIn : {{ resume.desc.linkedin }}
+    </p>
+    <p>
+    Github : {{ resume.desc.github }}
+    </p>
+    <p>
+        <a class="btn btn-large" href="{% url 'resume_update' resume.hash_code %}">Update</a>
+        <a class="btn btn-large" href="{% url 'resume_delete' resume.hash_code %}">Delete</a>
+    </p>
+</section>
+{% endblock %}

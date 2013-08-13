@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
 from easymode.i18n.admin.decorators import L10n
-from models import Crew, App, AppImage, AppCategory
+from django_summernote.admin import SummernoteModelAdmin
+from models import Crew, App, AppImage, AppCategory, Job, Resume
 
 
 @L10n(Crew)
@@ -31,7 +32,7 @@ class AppImageInline(admin.TabularInline):
     extra = 5
 
 
-class AppAdmin(admin.ModelAdmin):
+class AppAdmin(SummernoteModelAdmin):
     list_display = ('id', 'title_ko', 'title_en',)
     inlines = [AppImageInline, ]
     search_fields = ['title_ko', 'title_en', ]
@@ -48,3 +49,13 @@ class AppCategoryAdmin(admin.ModelAdmin):
     ordering = ('-id',)
 
 admin.site.register(AppCategory, AppCategoryAdmin)
+
+
+class ResumeAdmin(SummernoteModelAdmin):
+    list_display = ('id', 'email', 'name', 'apply_to', 'hash_code', 'applied')
+    search_fields = ['email', 'hashcode', 'apply_to__name', 'name', 'desc']
+    ordering = ('-id',)
+
+admin.site.register(Resume, ResumeAdmin)
+
+admin.site.register(Job, SummernoteModelAdmin)

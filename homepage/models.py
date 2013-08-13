@@ -2,8 +2,11 @@
 from django.db import models
 from easymode.i18n.decorators import I18n
 from easy_thumbnails.fields import ThumbnailerImageField as ImageField
-from tinymce.models import HTMLField
+from django.forms import CharField
+from django_summernote.widgets import SummernoteWidget
+from jsonfield import JSONField
 from library import uploaded_filepath
+from uuid import uuid4
 
 
 @I18n('name', 'title', 'nick', 'comment', )
@@ -42,8 +45,8 @@ class App(models.Model):
     appid_appstore = models.CharField(max_length=255, null=True, blank=True)
     appid_playstore = models.CharField(max_length=255, null=True, blank=True)
 
-    desc = HTMLField(blank=True)
-    desc_more = HTMLField(blank=True)
+    desc = models.TextField(blank=True)
+    desc_more = models.TextField(blank=True)
 
     launched = models.DateField(auto_now_add=True)
 
@@ -70,3 +73,50 @@ class AppCategory(models.Model):
     uid = models.CharField(max_length=255)
     title = models.CharField(max_length=255, null=True, blank=True)
     app = models.ManyToManyField(App, blank=True)
+
+
+class Job(models.Model):
+    name = models.CharField(max_length=100)
+    desc = models.TextField()
+    active = models.BooleanField(default=True)
+
+    begin = models.DateField(null=True, blank=True)
+    end = models.DateField(null=True, blank=True)
+
+    def __unicode__(self):
+        return self.name
+
+
+class Resume(models.Model):
+    apply_to = models.ForeignKey(Job)
+    hash_code = models.CharField(max_length=255, editable=False, db_index=True)
+
+    email = models.EmailField(max_length=255, db_index=True)
+    name = models.CharField(max_length=100, db_index=True)
+    desc = JSONField()
+    attachment = models.FileField(upload_to=uploaded_filepath, null=True, blank=True)
+
+    applied = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+
+    @classmethod
+    def _jsonfields(cls):
+        from collections import OrderedDict
+        return OrderedDict([
+            ('linkedin', {'field': CharField(max_length=255)}),
+            ('homepage', {'field': CharField(max_length=255)}),
+            ('github', {'field': CharField(max_length=255)}),
+            ('selfdesc', {'field': CharField(widget=SummernoteWidget())}),
+            ('resume', {'field': CharField(widget=SummernoteWidget())}),
+        ])
+
+    def _generate_key(self):
+        return (str(uuid4())).replace('-', '')
+
+    def save(self, *args, **kwargs):
+        if self.pk is None:
+            self.hash_code = self._generate_key()
+        super(Resume, self).save()
+
+    def __unicode__(self):
+        return '%s(%s)' % (self.name, self.email)
