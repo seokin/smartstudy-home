@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, url, include
 from django.conf import settings
 from .views import about, product, contact, withyou, license, privacy, setlang, robots
-from .views import takeride, resume_add, resume_detail, resume_update, resume_delete
+from .views import takeride, ResumeAdd, ResumeDetail, ResumeUpdate, ResumeDelete
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -19,10 +19,10 @@ urlpatterns = patterns(
 
     # for resume
     url(r'^takeride/$', takeride, name='takeride'),
-    url(r'^resume/new/$', resume_add.as_view(), name='resume_add'),
-    url(r'^resume/(?P<slug>\w+)/$', resume_detail.as_view(), name='resume_detail'),
-    url(r'^resume/(?P<slug>\w+)/update/$', resume_update.as_view(), name='resume_update'),
-    url(r'^resume/(?P<slug>\w+)/delete/$', resume_delete.as_view(), name='resume_delete'),
+    url(r'^resume/new/$', ResumeAdd.as_view(), name='resume_add'),
+    url(r'^resume/(?P<slug>\w+)/$', ResumeDetail.as_view(), name='resume_detail'),
+    url(r'^resume/(?P<slug>\w+)/update/$', ResumeUpdate.as_view(), name='resume_update'),
+    url(r'^resume/(?P<slug>\w+)/delete/$', ResumeDelete.as_view(), name='resume_delete'),
 
     url(r'^lang/(?P<lang_code>.*)/$', setlang, name='setlang'),
     # Uncomment the admin/doc line below to enable admin documentation:

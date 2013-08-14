@@ -3,6 +3,7 @@ from django.db import models
 from easymode.i18n.decorators import I18n
 from easy_thumbnails.fields import ThumbnailerImageField as ImageField
 from django.forms import CharField
+from django.core.urlresolvers import reverse
 from django_summernote.widgets import SummernoteWidget
 from jsonfield import JSONField
 from library import uploaded_filepath
@@ -80,19 +81,29 @@ class Job(models.Model):
     desc = models.TextField()
     active = models.BooleanField(default=True)
 
-    begin = models.DateField(null=True, blank=True)
-    end = models.DateField(null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True)
 
     def __unicode__(self):
         return self.name
 
 
 class Resume(models.Model):
+    DRAFT = 'D'
+    SUBMIT = 'S'
+    ARCHIVE = 'A'
+    STATUS = (
+        (DRAFT, 'Draft'),
+        (SUBMIT, 'Submitted'),
+        (ARCHIVE, 'Archived'),
+    )
+
+    status = models.CharField(max_length=1, choices=STATUS, default=DRAFT, editable=False)
     apply_to = models.ForeignKey(Job)
-    hash_code = models.CharField(max_length=255, editable=False, db_index=True)
+    uuid = models.CharField(max_length=255, editable=False, db_index=True)
 
     email = models.EmailField(max_length=255, db_index=True)
     name = models.CharField(max_length=100, db_index=True)
+    contact = models.CharField(max_length=100)
     desc = JSONField()
     attachment = models.FileField(upload_to=uploaded_filepath, null=True, blank=True)
 
@@ -100,22 +111,28 @@ class Resume(models.Model):
     modified = models.DateTimeField(auto_now=True)
 
     @classmethod
-    def _jsonfields(cls):
+    def descfields(cls):
         from collections import OrderedDict
         return OrderedDict([
-            ('linkedin', {'field': CharField(max_length=255)}),
-            ('homepage', {'field': CharField(max_length=255)}),
-            ('github', {'field': CharField(max_length=255)}),
-            ('selfdesc', {'field': CharField(widget=SummernoteWidget())}),
-            ('resume', {'field': CharField(widget=SummernoteWidget())}),
+            ('linkedin', {'field': CharField(max_length=255, required=False)}),
+            ('homepage', {'field': CharField(max_length=255, required=False)}),
+            ('github', {'field': CharField(max_length=255, required=False)}),
+            ('selfdesc', {'field': CharField(widget=SummernoteWidget(), required=False)}),
+            ('resume', {'field': CharField(widget=SummernoteWidget(), required=False)}),
         ])
 
     def _generate_key(self):
         return (str(uuid4())).replace('-', '')
 
+    def get_absolute_url(self):
+        return reverse('resume_detail', args=(self.uuid,))
+
+    def in_draft(self):
+        return self.status == Resume.DRAFT
+
     def save(self, *args, **kwargs):
         if self.pk is None:
-            self.hash_code = self._generate_key()
+            self.uuid = self._generate_key()
         super(Resume, self).save()
 
     def __unicode__(self):

@@ -5,6 +5,7 @@
     <h1>{% trans "Resume" %}</h1>
     {% blocktrans %}section-resume-1{% endblocktrans %}
     <p>
+    Status : {{ resume.get_status_display }}
     {{ resume }}
     </p>
     <p>
@@ -14,8 +15,10 @@
     Github : {{ resume.desc.github }}
     </p>
     <p>
-        <a class="btn btn-large" href="{% url 'resume_update' resume.hash_code %}">Update</a>
-        <a class="btn btn-large" href="{% url 'resume_delete' resume.hash_code %}">Delete</a>
+        {% if resume.in_draft %}
+        <a class="btn btn-large" href="{% url 'resume_update' resume.uuid %}">Update</a>
+        {% endif %}
+        <a class="btn btn-large" href="{% url 'resume_delete' resume.uuid %}">Delete</a>
     </p>
 </section>
 {% endblock %}

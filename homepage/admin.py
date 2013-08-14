@@ -52,8 +52,9 @@ admin.site.register(AppCategory, AppCategoryAdmin)
 
 
 class ResumeAdmin(SummernoteModelAdmin):
-    list_display = ('id', 'email', 'name', 'apply_to', 'hash_code', 'applied')
-    search_fields = ['email', 'hashcode', 'apply_to__name', 'name', 'desc']
+    list_display = ('id', 'status', 'email', 'name', 'apply_to', 'uuid', 'applied')
+    list_filter = ('apply_to', 'status')
+    search_fields = ['email', 'uuid', 'apply_to__name', 'name', 'desc']
     ordering = ('-id',)
 
 admin.site.register(Resume, ResumeAdmin)

@@ -4,6 +4,7 @@ from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import render
 from django.utils.http import is_safe_url
 from django.utils.translation import check_for_language
+from django.http import Http404
 from django.views.decorators.cache import cache_page
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
 from .models import Crew, App, Resume, Job
@@ -67,44 +68,52 @@ def takeride(request):
     })
 
 
-class resume_add(CreateView):
+class ResumeEditMixin(object):
     model = Resume
     form_class = ResumeForm
-    slug_field = 'hash_code'
-    template_name_suffix = '_add'
-
-    def get_initial(self):
-        return {'apply_to': self.request.GET.get('job')}
-
-    def get_success_url(self):
-        return reverse_lazy('resume_detail', args=(self.object.hash_code,))
-
-
-class resume_detail(DetailView):
-    model = Resume
-    slug_field = 'hash_code'
-
-
-class resume_update(UpdateView):
-    model = Resume
-    form_class = ResumeForm
-    slug_field = 'hash_code'
-    template_name_suffix = '_update'
+    slug_field = 'uuid'
+    template_name_suffix = '_edit'
 
     def get_initial(self):
         initial = {}
-        for k in self.model._jsonfields().iterkeys():
-            initial[k] = self.object.desc.get(k)
+
+        if self.object:
+            for k in self.model.descfields().iterkeys():
+                initial[k] = self.object.desc.get(k)
+        else:
+            initial['apply_to'] = self.request.GET.get('job')
 
         return initial
 
-    def get_success_url(self):
-        return reverse_lazy('resume_detail', args=(self.object.hash_code,))
+    def form_valid(self, form):
+        if self.request.POST.get('draft'):
+            form.instance.status = Resume.DRAFT
+        elif self.request.POST.get('submit'):
+            form.instance.status = Resume.SUBMIT
+        print form.instance.status
+        return super(ResumeEditMixin, self).form_valid(form)
 
 
-class resume_delete(DeleteView):
+class ResumeAdd(ResumeEditMixin, CreateView):
+    pass
+
+
+class ResumeUpdate(ResumeEditMixin, UpdateView):
+    def get_object(self, *args, **kwargs):
+        obj = super(ResumeUpdate, self).get_object(*args, **kwargs)
+        if not obj.in_draft():
+            raise Http404
+        return obj
+
+
+class ResumeDetail(DetailView):
+    model = Resume
+    slug_field = 'uuid'
+
+
+class ResumeDelete(DeleteView):
     model = Resume
     forms = ResumeForm
-    slug_field = 'hash_code'
+    slug_field = 'uuid'
     template_name_suffix = '_delete'
     success_url = reverse_lazy('takeride')

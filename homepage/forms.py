@@ -10,9 +10,9 @@ class ResumeForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super(ResumeForm, self).__init__(*args, **kwargs)
 
-        for k, v in self.Meta.model._jsonfields().iteritems():
+        for k, v in self.Meta.model.descfields().iteritems():
             self.fields[k] = v['field']
 
     def save(self, commit=True):
         # do something with self.cleaned_data['temp_id']
-        super(ResumeForm, self).save(commit=commit)
+        return super(ResumeForm, self).save(commit=commit)
