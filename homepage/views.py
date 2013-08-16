@@ -1,7 +1,7 @@
 from django import http
 from django.conf import settings
 from django.core.urlresolvers import reverse_lazy
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.utils.http import is_safe_url
 from django.utils.translation import check_for_language
 from django.http import Http404
@@ -86,16 +86,21 @@ class ResumeEditMixin(object):
         return initial
 
     def form_valid(self, form):
+        # Which submit button had been chosen?
         if self.request.POST.get('draft'):
             form.instance.status = Resume.DRAFT
         elif self.request.POST.get('submit'):
             form.instance.status = Resume.SUBMIT
-        print form.instance.status
+
+        # Put data into jsonfield
+        for k, v in self.model.descfields().iteritems():
+            form.instance.desc[k] = self.request.POST.get(k)
         return super(ResumeEditMixin, self).form_valid(form)
 
 
 class ResumeAdd(ResumeEditMixin, CreateView):
-    pass
+    def get_success_url(self):
+        return reverse_lazy('resume_inform', args=(self.object.uuid,))
 
 
 class ResumeUpdate(ResumeEditMixin, UpdateView):
@@ -117,3 +122,12 @@ class ResumeDelete(DeleteView):
     slug_field = 'uuid'
     template_name_suffix = '_delete'
     success_url = reverse_lazy('takeride')
+
+
+def resume_inform(request, slug):
+    resume = get_object_or_404(Resume, uuid=slug)
+    # TODO: send email
+
+    return render(request, 'homepage/resume_inform.html', {
+        'resume': resume,
+    })

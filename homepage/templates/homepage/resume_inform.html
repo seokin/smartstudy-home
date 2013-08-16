@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<section id="support">
+    <h3>Thank you for joining us!</h3>
+    <p>
+        <a class="btn btn-large" href="{% url 'resume_detail' resume.uuid %}">Go to resume</a>
+    </p>
+</section>
+{% endblock %}
