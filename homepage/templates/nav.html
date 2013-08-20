@@ -11,6 +11,9 @@
             <li><a href="{% url 'contact' %}"{% if view == 'contact' %} class="active"{% endif %}>
                 <i class="icon-contact"></i> {% trans "CONTACT" %}</a>
             </li>
+            <li><a href="{% url 'withyou' %}"{% if view == 'withyou' %} class="active"{% endif %}>
+                <i class="icon-with"></i> {% trans "WITH" %}</a>
+            </li>
         </ul>
         <ul class="pull-right hidden-phone">
             <li><a href="{% url 'index' %}"{% if view == 'index' %} class="active"{% endif %}>
