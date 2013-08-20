@@ -9,7 +9,9 @@
     <div class="span12">
     {% for t in testimonials %}
         <div class="rounded-box span4 testimonial">
-            <img class="photo" src="{{ t.picture.thumbnail.url }}" alt="picture">
+            <a href="{% url 'testimonial' t.id %}">
+                <img class="photo" src="{{ t.picture.thumbnail.url }}" alt="picture">
+            </a>
             <center>
                 <h3>{{ t.name }}</h3>
                 <span class="title">{{ t.title }}</span>
