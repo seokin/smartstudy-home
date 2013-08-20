@@ -25,7 +25,7 @@ a:hover {
     text-decoration: underline;
 }
 
-p, li, span {
+p, li, span, input {
     color: #667;
     font-family: 'Open Sans', 'Nanum Gothic', 'Helvetica Neue', 'Arial', 'Apple Gothic', sans-serif;
     font-size: 11pt;
@@ -709,7 +709,7 @@ section p img {
 }
 
 .control-group .textinput {
-    width: 200px;
+    width: 240px;
 }
 
 .control-group .asteriskField {
