@@ -117,7 +117,7 @@ class ResumeDelete(DeleteView):
     forms = ResumeForm
     slug_field = 'uuid'
     template_name_suffix = '_delete'
-    success_url = reverse_lazy('takeride')
+    success_url = reverse_lazy('index')
 
 
 def resume_inform(request, slug):

@@ -3,22 +3,30 @@
 {% block content %}
 <section id="support">
     <h1>{% trans "Resume" %}</h1>
-    {% blocktrans %}section-resume-1{% endblocktrans %}
-    <p>
-    Status : {{ resume.get_status_display }}
-    {{ resume }}
-    </p>
-    <p>
-    LinkedIn : {{ resume.desc.linkedin }}
-    </p>
-    <p>
-    Github : {{ resume.desc.github }}
-    </p>
+    <h2>{{ resume.name }}</h2>
+    <table>
+        <tr>
+            <th>{% trans 'Status' %}</th>
+            <td>{{ resume.get_status_display }}</td>
+        </tr>
+        <tr>
+            <th>{% trans 'Apply to' %}</th>
+            <td>{{ resume.apply_to }}</td>
+        </tr>
+        <tr>
+            <th>{% trans 'Email' %}</th>
+            <td>{{ resume.email }}</td>
+        </tr>
+        <tr>
+            <th>{% trans 'Last update' %}</th>
+            <td>{{ resume.modified }}</td>
+        </tr>
+    </table>
     <p>
         {% if resume.in_draft %}
-        <a class="btn btn-large" href="{% url 'resume_update' resume.uuid %}">Update</a>
+        <a class="btn btn-large btn-blue" href="{% url 'resume_update' resume.uuid %}">{% trans 'Update' %}</a>
         {% endif %}
-        <a class="btn btn-large" href="{% url 'resume_delete' resume.uuid %}">Delete</a>
+        <a class="btn btn-large btn-red" href="{% url 'resume_delete' resume.uuid %}">{% trans 'Delete' %}</a>
     </p>
 </section>
 {% endblock %}

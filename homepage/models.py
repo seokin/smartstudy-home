@@ -2,7 +2,8 @@
 from django.db import models
 from easymode.i18n.decorators import I18n
 from easy_thumbnails.fields import ThumbnailerImageField as ImageField
-from django.forms import CharField
+from django import forms
+from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import reverse
 from django_summernote.widgets import SummernoteWidget
 from jsonfield import JSONField
@@ -92,20 +93,20 @@ class Resume(models.Model):
     SUBMIT = 'S'
     ARCHIVE = 'A'
     STATUS = (
-        (DRAFT, 'Draft'),
-        (SUBMIT, 'Submitted'),
-        (ARCHIVE, 'Archived'),
+        (DRAFT, _('Draft')),
+        (SUBMIT, _('Submitted')),
+        (ARCHIVE, _('Archived')),
     )
 
     status = models.CharField(max_length=1, choices=STATUS, default=DRAFT, editable=False)
-    apply_to = models.ForeignKey(Job)
+    apply_to = models.ForeignKey(Job, verbose_name=_('Apply to'))
     uuid = models.CharField(max_length=255, editable=False, db_index=True)
 
-    email = models.EmailField(max_length=255, db_index=True)
-    name = models.CharField(max_length=100, db_index=True)
-    contact = models.CharField(max_length=100)
+    email = models.EmailField(max_length=255, db_index=True, verbose_name=_('Email'))
+    name = models.CharField(max_length=100, db_index=True, verbose_name=_('Full name'))
+    contact = models.CharField(max_length=100, verbose_name=_('Contact / Phone'))
     desc = JSONField()
-    attachment = models.FileField(upload_to=uploaded_filepath, null=True, blank=True)
+    attachment = models.FileField(upload_to=uploaded_filepath, null=True, blank=True, verbose_name=_('Resume as file (optional)'))
 
     applied = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
@@ -114,11 +115,11 @@ class Resume(models.Model):
     def descfields(cls):
         from collections import OrderedDict
         return OrderedDict([
-            ('linkedin', {'field': CharField(max_length=255, required=False)}),
-            ('homepage', {'field': CharField(max_length=255, required=False)}),
-            ('github', {'field': CharField(max_length=255, required=False)}),
-            ('selfdesc', {'field': CharField(widget=SummernoteWidget(), required=False)}),
-            ('resume', {'field': CharField(widget=SummernoteWidget(), required=False)}),
+            ('linkedin', {'field': forms.CharField(max_length=255, required=False, label=_('LinkedIn URL (optional)'))}),
+            ('homepage', {'field': forms.URLField(max_length=255, required=False, label=_('Homepage URL (optional)'))}),
+            ('github', {'field': forms.CharField(max_length=255, required=False, label=_('Github id (optional)'))}),
+            ('description', {'field': forms.CharField(widget=SummernoteWidget(), required=False, label=_('Self description'))}),
+            ('resume', {'field': forms.CharField(widget=SummernoteWidget(), required=False, label=_('Education / Experience'))}),
         ])
 
     def _generate_key(self):

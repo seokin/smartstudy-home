@@ -2,9 +2,10 @@
 {% load i18n %}
 {% block content %}
 <section id="support">
-    <h3>Thank you for joining us!</h3>
+    <h1>{% trans 'Wow!' %}</h1>
+    <h3>{% trans 'Thank you for applying.' %}</h3>
     <p>
-        <a class="btn btn-large" href="{% url 'resume_detail' resume.uuid %}">Go to resume</a>
+        <a class="btn btn-large btn-blue" href="{% url 'resume_detail' resume.uuid %}">{% trans 'Go to resume' %}</a>
     </p>
 </section>
 {% endblock %}

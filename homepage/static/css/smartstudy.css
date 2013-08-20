@@ -114,10 +114,23 @@ pre {
     width: 100%;
 }
 
+.rounded-box {
+    padding: 15px 24px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-bottom-width: 2px;
+    border-radius: 6px;
+    -webkit-border-border: 6px;
+}
+
 .wrap {
     max-width: 880px;
     padding: 0 5%;
     margin: auto;
+}
+
+.summernote {
+    height: 400px;
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -701,6 +714,11 @@ section p img {
 
 .control-group .asteriskField {
     margin-left: 5px;
+    color: #EE2020;
+}
+
+.control-group p.help-block {
+    display: inline;
     color: #EE2020;
 }
 

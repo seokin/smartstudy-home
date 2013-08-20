@@ -125,3 +125,16 @@
 .btn.btn-purple.active {
     background-color: #3B428D;
 }
+.btn.btn-red {
+    background-color: #D32750;
+}
+.btn.btn-red:hover,
+.btn.btn-red:focus,
+.btn-group:focus .btn.btn-red.dropdown-toggle {
+    background-color: #FF1F54;
+}
+.btn.btn-red:active,
+.btn-group.open .btn.btn-red.dropdown-toggle,
+.btn.btn-red.active {
+    background-color: #B64762;
+}

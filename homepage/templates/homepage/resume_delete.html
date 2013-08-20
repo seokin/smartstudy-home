@@ -3,10 +3,9 @@
 {% block content %}
 <section id="support">
     <h1>{% trans "Resume" %}</h1>
-    {% blocktrans %}section-resume-1{% endblocktrans %}
     <form action="" method="post">{% csrf_token %}
-        <p>Are you sure you want to delete "{{ object }}"?</p>
-        <input class="btn btn-large" type="submit" value="Confirm" />
+        <p>{% trans 'Are you sure you want to delete?' %}</p>
+        <input class="btn btn-large btn-red" type="submit" value="{% trans 'Confirm to delete' %}" />
     </form>
 </section>
 {% endblock %}

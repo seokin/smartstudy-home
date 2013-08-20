@@ -1,21 +1,25 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block content %}
-<section id="support">
+<section id="withyou">
     <h1>{% trans "WITH YOU" %}</h1>
     <h2>{% trans "We're hiring!" %}</h2>
     {% blocktrans %}section-withyou-1{% endblocktrans %}
-    <hr>
+</section>
+<hr>
+<section id="position">
     <h1>{% trans "Open position" %}</h1>
     {% blocktrans %}section-withyou-2{% endblocktrans %}
     {% for job in jobs %}
-        <h2>{{ job.name }}</h2>
-        <div class="job description">
-            {{ job.desc|safe }}
+        <div class="rounded-box">
+            <h2>{{ job.name }}</h2>
+            <div class="job description">
+                {{ job.desc|safe }}
+            </div>
+            <p>
+            <a class="btn btn-large btn-purple" href="{% url 'resume_add' %}?job={{ job.id }}">{% trans "Apply for this job" %}</a>
+            </p>
         </div>
-        <p>
-        <a class="btn btn-large btn-purple" href="{% url 'resume_add' %}?job={{ job.id }}">{% trans "Apply for this job" %}</a>
-        </p>
     {% endfor %}
 </section>
 {% endblock %}
