@@ -23,9 +23,11 @@ class ResumeForm(forms.ModelForm):
     def clean_attachment(self):
         attachment = self.cleaned_data.get('attachment', False)
         if attachment:
-            print attachment._size
-            if attachment._size > (self.ATTACHMENT_LIMIT_IN_MB * 1024 * 1024):  # 10 MB
-                raise forms.ValidationError(_("Too large attachment( > %d MB )") % self.ATTACHMENT_LIMIT_IN_MB)
+            try:
+                if attachment._size > (self.ATTACHMENT_LIMIT_IN_MB * 1024 * 1024):  # 10 MB
+                    raise forms.ValidationError(_("Too large attachment( > %d MB )") % self.ATTACHMENT_LIMIT_IN_MB)
+            except AttributeError:
+                pass
             return attachment
 
     def save(self, commit=True):
