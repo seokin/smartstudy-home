@@ -2,13 +2,13 @@
 {% load i18n %}
 {% block content %}
 <section id="withyou">
-    <h1>{% trans "WITH YOU" %}</h1>
+    <h1><img class="icon" src="{{ STATIC_URL }}image/icon/withyou.png" alt="withyou">{% trans "WITH YOU" %}</h1>
     <h2>{% trans "We're hiring!" %}</h2>
     {% blocktrans %}section-withyou-1{% endblocktrans %}
 </section>
 <hr>
 <section id="position">
-    <h1>{% trans "Open position" %}</h1>
+    <h1><img class="icon" src="{{ STATIC_URL }}image/icon/position.png" alt="position">{% trans "Open position" %}</h1>
     {% blocktrans %}section-withyou-2{% endblocktrans %}
     {% for job in jobs %}
         <div class="rounded-box">

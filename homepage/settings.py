@@ -198,11 +198,10 @@ THUMBNAIL_BASEDIR = 'thumbnails'
 #    }
 #}
 
-TINYMCE_DEFAULT_CONFIG = {
-    'theme': 'advanced',
-    'plugins': '',
-    'height': 400,
-    'body_class': 'desc',
-    'content_css': '%s/css/tinymce.css' % STATIC_URL,
-    'cleanup_on_startup': True,
-}
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_SENDER = _('SMARTSTUDY <recruit@smartstudy.co.kr>')
+EMAIL_RESUME_TITLE = _('[SMARTSTUDY] Thank you for applying.')

@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load capture %}
 {% block content %}
 <section id="support">
     <h1>{% trans 'Wow!' %}</h1>
     <h3>{% trans 'Thank you for applying.' %}</h3>
+    {% capture email %}{{ resume.email }}{% endcapture %}
+    <p>
+        {% blocktrans %}Email contains a link to the resume was sent to {{ email }}.<br>You can update your resume later via the link.{% endblocktrans %}
+    </p>
     <p>
         <a class="btn btn-large btn-blue" href="{% url 'resume_detail' resume.uuid %}">{% trans 'Go to resume' %}</a>
     </p>

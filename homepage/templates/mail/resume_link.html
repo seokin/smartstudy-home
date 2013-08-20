@@ -1,0 +1,9 @@
+{% load i18n %}
+<h1>{% trans 'SMARTSTUDY 이력서 안내' %}</h1>
+<p>{% trans '아래 링크를 통해 등록하신 이력서를 수정하실 수 있습니다.' %}</p>
+<p>{% trans '이름' %}: {{ resume.name }}</p>
+<p>{% trans '링크' %}:
+    <a href="http://{{ request.get_host }}{% url 'resume_detail' resume.uuid %}">
+        http://{{ request.get_host }}{% url 'resume_detail' resume.uuid %}
+    </a>
+</p>

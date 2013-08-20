@@ -1,0 +1,5 @@
+{% load i18n %}
+{% trans '아래 링크를 통해 등록하신 이력서를 수정하실 수 있습니다.' %}
+
+{% trans '이름' %}: {{ resume.name }}
+{% trans '링크' %}: http://{{ request.get_host }}{% url 'resume_detail' resume.uuid %}

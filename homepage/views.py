@@ -9,6 +9,7 @@ from django.views.decorators.cache import cache_page
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
 from .models import Crew, App, Resume, Job
 from .forms import ResumeForm
+from .helper import sendResumeLink
 
 
 def about(request):
@@ -96,6 +97,7 @@ class ResumeEditMixin(object):
 
 class ResumeAdd(ResumeEditMixin, CreateView):
     def get_success_url(self):
+        #sendResumeLink(request, self.object)
         return reverse_lazy('resume_inform', args=(self.object.uuid,))
 
 
@@ -122,7 +124,7 @@ class ResumeDelete(DeleteView):
 
 def resume_inform(request, slug):
     resume = get_object_or_404(Resume, uuid=slug)
-    # TODO: send email
+    sendResumeLink(request, resume)
 
     return render(request, 'homepage/resume_inform.html', {
         'resume': resume,
