@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, url, include
 from django.conf import settings
 from .views import about, product, contact, withyou, license, privacy, setlang, robots
-from .views import takeride, ResumeAdd, ResumeDetail, ResumeUpdate, ResumeDelete, resume_inform
+from .views import ResumeAdd, ResumeDetail, ResumeUpdate, ResumeDelete, resume_inform
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -18,7 +18,6 @@ urlpatterns = patterns(
     url(r'^privacy/$', privacy, name='privacy'),
 
     # for resume
-    url(r'^takeride/$', takeride, name='takeride'),
     url(r'^resume/new/$', ResumeAdd.as_view(), name='resume_add'),
     url(r'^resume/(?P<slug>\w+)/$', ResumeDetail.as_view(), name='resume_detail'),
     url(r'^resume/(?P<slug>\w+)/update/$', ResumeUpdate.as_view(), name='resume_update'),

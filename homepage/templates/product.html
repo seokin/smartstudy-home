@@ -27,10 +27,10 @@
             {{ app.desc|safe }}
         </div>
         {% if app.appid_appstore %}
-        <button class="btn btn-appstore" onclick="location.href='{{ app.link_appstore }}'"><i class="icon-appstore"></i> AppStore</button>
+        <button class="btn btn-blue" onclick="location.href='{{ app.link_appstore }}'"><i class="icon-appstore"></i> AppStore</button>
         {% endif %}
         {% if app.appid_playstore %}
-        <button class="btn btn-playstore" onclick="location.href='{{ app.link_playstore }}'"><i class="icon-playstore"></i> PlayStore</button>
+        <button class="btn btn-emerald" onclick="location.href='{{ app.link_playstore }}'"><i class="icon-playstore"></i> PlayStore</button>
         {% endif %}
     </div>
     <div class="clear"></div>

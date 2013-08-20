@@ -5,5 +5,17 @@
     <h1>{% trans "WITH YOU" %}</h1>
     <h2>{% trans "We're hiring!" %}</h2>
     {% blocktrans %}section-withyou-1{% endblocktrans %}
+    <hr>
+    <h1>{% trans "Open position" %}</h1>
+    {% blocktrans %}section-withyou-2{% endblocktrans %}
+    {% for job in jobs %}
+        <h2>{{ job.name }}</h2>
+        <div class="job description">
+            {{ job.desc|safe }}
+        </div>
+        <p>
+        <a class="btn btn-large btn-purple" href="{% url 'resume_add' %}?job={{ job.id }}">{% trans "Apply for this job" %}</a>
+        </p>
+    {% endfor %}
 </section>
 {% endblock %}

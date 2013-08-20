@@ -13,6 +13,9 @@ class ResumeForm(ModelForm):
         for k, v in self.Meta.model.descfields().iteritems():
             self.fields[k] = v['field']
 
+        self.fields['selfdesc'].widget.attrs['class'] = 'fill-width'
+        self.fields['resume'].widget.attrs['class'] = 'fill-width'
+
     def save(self, commit=True):
         # do something with self.cleaned_data['temp_id']
         return super(ResumeForm, self).save(commit=commit)

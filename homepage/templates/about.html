@@ -31,6 +31,7 @@
     <h2>{% trans "We're not on a rocket." %}</h2>
     {% capture recruit_link %}{% url 'withyou' %}{% endcapture %}
     {% blocktrans %}section-crew-1{% endblocktrans %}
+    <a class="btn btn-large btn-purple" href="{% url 'withyou' %}">{% trans "Join us" %}</a>
     <ul class="members">
         {% for c in crew %}
         <li>

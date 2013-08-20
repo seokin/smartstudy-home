@@ -130,6 +130,7 @@ INSTALLED_APPS = (
     'easy_thumbnails',
     'rosetta',
     'django_summernote',
+    'crispy_forms',
     'homepage',
 )
 

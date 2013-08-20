@@ -1,21 +1,17 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load crispy_forms_tags %}
 {% block content %}
 <section id="support">
     <h1>{% trans "Resume" %}</h1>
     {% blocktrans %}section-resume-1{% endblocktrans %}
-    <form class="form-horizontal" enctype="multipart/form-data" method="post">
-        <table>
+    <form enctype="multipart/form-data" method="post">
         {% csrf_token %}
-        {{ form.as_table }}
-        <tr>
-            <td></td>
-            <td>
-                <input class="btn btn-large" type="submit" name="draft" value="Save as DRAFT">
-                <input class="btn btn-large" type="submit" name="submit" value="Submit">
-            </td>
-        </tr>
-        </table>
+        {% crispy form %}
+        <p>
+            <input class="btn btn-large btn-blue" type="submit" name="draft" value="Save as DRAFT">
+            <input class="btn btn-large btn-purple" type="submit" name="submit" value="Submit">
+        </p>
     </form>
 </section>
 {% endblock %}

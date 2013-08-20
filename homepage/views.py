@@ -30,7 +30,10 @@ def contact(request):
 
 
 def withyou(request):
-    return render(request, 'withyou.html')
+    jobs = Job.objects.filter(active=True)
+    return render(request, 'withyou.html', {
+        'jobs': jobs,
+    })
 
 
 def license(request):
@@ -59,13 +62,6 @@ def setlang(request, lang_code):
 
 def robots(request):
     return render(request, 'robots.txt', content_type='text/plain')
-
-
-def takeride(request):
-    jobs = Job.objects.filter(active=True)
-    return render(request, 'jobs.html', {
-        'jobs': jobs,
-    })
 
 
 class ResumeEditMixin(object):

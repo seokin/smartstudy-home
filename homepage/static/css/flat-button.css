@@ -7,6 +7,7 @@
     font-weight: 400;
 }
 .btn {
+    display: inline-block;
     border: none;
     background: #bdc3c7;
     color: #ffffff;
@@ -26,10 +27,15 @@
     transition: 0.25s;
     -webkit-backface-visibility: hidden;
     margin-right: 5px;
+
+    border: 3px solid white;
+    box-shadow: #666 0 1px 3px;
+    text-shadow: #666 0px -1px 2px;
 }
 .btn:hover,
 .btn:focus,
 .btn-group:focus .btn.dropdown-toggle {
+    text-decoration: none;
     background-color: #cacfd2;
     color: #ffffff;
     outline: none;
@@ -42,6 +48,7 @@
 .btn:active,
 .btn-group.open .btn.dropdown-toggle,
 .btn.active {
+    text-decoration: none;
     background-color: #a1a6a9;
     color: rgba(255, 255, 255, 0.75);
     -webkit-box-shadow: none;
@@ -65,48 +72,56 @@
     line-height: 20px;
     padding: 12px 18px 13px;
 }
+.btn.btn-xlarge {
+    font-size: 16.996px;
+    /* 17px */
+
+    line-height: 32px;
+    padding: 15px 28px 16px;
+    margin: 12px -28px;
+}
 .btn.btn-large > [class^="fui-"] {
     top: 0;
 }
 .btn.btn-large > [class^="fui-"].pull-right {
     margin-right: -2px;
 }
-.btn.btn-appstore {
+.btn.btn-blue {
     background-color: #3386d4;
 }
-.btn.btn-appstore:hover,
-.btn.btn-appstore:focus,
-.btn-group:focus .btn.btn-appstore.dropdown-toggle {
+.btn.btn-blue:hover,
+.btn.btn-blue:focus,
+.btn-group:focus .btn.btn-blue.dropdown-toggle {
     background-color: #5dade2;
 }
-.btn.btn-appstore:active,
-.btn-group.open .btn.btn-appstore.dropdown-toggle,
-.btn.btn-appstore.active {
+.btn.btn-blue:active,
+.btn-group.open .btn.btn-blue.dropdown-toggle,
+.btn.btn-blue.active {
     background-color: #2c81ba;
 }
-.btn.btn-playstore {
+.btn.btn-emerald {
     background-color: #3fabba;
 }
-.btn.btn-playstore:hover,
-.btn.btn-playstore:focus,
-.btn-group:focus .btn.btn-playstore.dropdown-toggle {
+.btn.btn-emerald:hover,
+.btn.btn-emerald:focus,
+.btn-group:focus .btn.btn-emerald.dropdown-toggle {
     background-color: #48c9b0;
 }
-.btn.btn-playstore:active,
-.btn-group.open .btn.btn-playstore.dropdown-toggle,
-.btn.btn-playstore.active {
+.btn.btn-emerald:active,
+.btn-group.open .btn.btn-emerald.dropdown-toggle,
+.btn.btn-emerald.active {
     background-color: #16a085;
 }
-.btn.btn-join {
-    background-color: #3fabba;
+.btn.btn-purple {
+    background-color: #563eb6;
 }
-.btn.btn-join:hover,
-.btn.btn-join:focus,
-.btn-group:focus .btn.btn-join.dropdown-toggle {
-    background-color: #48c9b0;
+.btn.btn-purple:hover,
+.btn.btn-purple:focus,
+.btn-group:focus .btn.btn-purple.dropdown-toggle {
+    background-color: #736EF1;
 }
-.btn.btn-join:active,
-.btn-group.open .btn.btn-join.dropdown-toggle,
-.btn.btn-join.active {
-    background-color: #16a085;
+.btn.btn-purple:active,
+.btn-group.open .btn.btn-purple.dropdown-toggle,
+.btn.btn-purple.active {
+    background-color: #3B428D;
 }
