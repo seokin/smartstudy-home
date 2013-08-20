@@ -704,6 +704,34 @@ section p img {
     background-image: url("../image/phone.png");
 }
 
+.testimonial {
+    padding-bottom: 15px;
+}
+
+.testimonial-desc .photo {
+    width: 33%;
+    max-width: 256px;
+    margin: 0;
+    border-radius: 600px;
+    -webkit-border-border: 600px;
+}
+
+.testimonial .photo {
+    width: 100%;
+    height: auto;
+    margin: 15px 5px 0 5px;
+    border-radius: 600px;
+    -webkit-border-border: 600px;
+}
+
+.testimonial .quote {
+    margin: 10px 5px;
+    padding: 8px;
+    background: #eee;
+    border-radius: 6px;
+    -webkit-border-border: 6px;
+}
+
 .control-group {
     margin-top: 8px;
 }
@@ -725,11 +753,20 @@ section p img {
 .span12 {
     width: 100%;
     display: block;
+    vertical-align: top;
 }
 
 .span6 {
     width: 39.6%;
-    padding: 0 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: inline-block;
+}
+
+.span4 {
+    width: 28.6%;
+    padding-left: 2%;
+    padding-right: 2%;
     display: inline-block;
 }
 
@@ -745,6 +782,13 @@ section p img {
     .members li {
         width: 45%;
         margin: 1%;
+    }
+
+    .span4 {
+        width: 39%;
+        padding-left: 5%;
+        padding-right: 5%;
+        display: inline-block;
     }
 }
 
@@ -769,7 +813,7 @@ section p img {
         width: 47%;
     }
 
-    .span6 {
+    .span6, .span4 {
         width: 90%;
         display: block;
     }

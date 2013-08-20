@@ -2,7 +2,7 @@
 from django.contrib import admin
 from easymode.i18n.admin.decorators import L10n
 from django_summernote.admin import SummernoteModelAdmin
-from models import Crew, App, AppImage, AppCategory, Job, Resume
+from models import Crew, App, AppImage, AppCategory, Job, Resume, Testimonial
 
 
 @L10n(Crew)
@@ -49,6 +49,14 @@ class AppCategoryAdmin(admin.ModelAdmin):
     ordering = ('-id',)
 
 admin.site.register(AppCategory, AppCategoryAdmin)
+
+
+class TestimonialAdmin(SummernoteModelAdmin):
+    list_display = ('id', 'name', 'title', 'created',)
+    search_fields = ['name', 'title', ]
+    ordering = ('-id',)
+
+admin.site.register(Testimonial, TestimonialAdmin)
 
 
 class ResumeAdmin(SummernoteModelAdmin):

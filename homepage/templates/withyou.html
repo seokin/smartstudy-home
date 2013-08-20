@@ -5,6 +5,22 @@
     <h1><img class="icon" src="{{ STATIC_URL }}image/icon/withyou.png" alt="withyou">{% trans "WITH YOU" %}</h1>
     <h2>{% trans "We're hiring!" %}</h2>
     {% blocktrans %}section-withyou-1{% endblocktrans %}
+    <h2>{% trans "Testimonial" %}</h2>
+    <div class="span12">
+    {% for t in testimonials %}
+        <div class="rounded-box span4 testimonial">
+            <img class="photo" src="{{ t.picture.thumbnail.url }}" alt="picture">
+            <center>
+                <h3>{{ t.name }}</h3>
+                <span class="title">{{ t.title }}</span>
+            </center>
+            <div class="quote">
+                {{ t.tldr|safe }}
+            </div>
+            <a class="btn btn-blue" href="{% url 'testimonial' t.id %}">{% trans "Read more" %}</a>
+        </div>
+    {% endfor %}
+    </div>
 </section>
 <hr>
 <section id="position">

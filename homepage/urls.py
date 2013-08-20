@@ -2,6 +2,7 @@ from django.conf.urls import patterns, url, include
 from django.conf import settings
 from .views import about, product, contact, withyou, license, privacy, setlang, robots
 from .views import ResumeAdd, ResumeDetail, ResumeUpdate, ResumeDelete, resume_inform
+from .views import TestimonialDetail
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -13,7 +14,7 @@ urlpatterns = patterns(
     url(r'^about/$', about, name='about'),
     url(r'^product/$', product, name='product'),
     url(r'^contact/$', contact, name='contact'),
-    url(r'^contact/withyou/$', withyou, name='withyou'),
+    url(r'^withyou/$', withyou, name='withyou'),
     url(r'^license/$', license, name='license'),
     url(r'^privacy/$', privacy, name='privacy'),
 
@@ -23,6 +24,9 @@ urlpatterns = patterns(
     url(r'^resume/(?P<slug>\w+)/update/$', ResumeUpdate.as_view(), name='resume_update'),
     url(r'^resume/(?P<slug>\w+)/delete/$', ResumeDelete.as_view(), name='resume_delete'),
     url(r'^resume/(?P<slug>\w+)/inform/$', resume_inform, name='resume_inform'),
+
+    # for testimonial
+    url(r'^testimonial/(?P<pk>\d+)/$', TestimonialDetail.as_view(), name='testimonial'),
 
     url(r'^lang/(?P<lang_code>.*)/$', setlang, name='setlang'),
     # Uncomment the admin/doc line below to enable admin documentation:

@@ -77,6 +77,20 @@ class AppCategory(models.Model):
     app = models.ManyToManyField(App, blank=True)
 
 
+class Testimonial(models.Model):
+    name = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    tldr = models.TextField()
+    desc = models.TextField()
+    picture = ImageField(upload_to='testimonial/')
+    active = models.BooleanField(default=True)
+
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __unicode__(self):
+        return self.name
+
+
 class Job(models.Model):
     name = models.CharField(max_length=100)
     desc = models.TextField()

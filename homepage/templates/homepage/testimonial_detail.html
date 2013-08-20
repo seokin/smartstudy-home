@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<section id="testimonial">
+    <h1><img class="icon" src="{{ STATIC_URL }}image/icon/withyou.png" alt="withyou">{% trans "Testimonial" %}</h1>
+    <h2>{{ testimonial.name }}</h2>
+    <a class="btn btn-blue pull-right" href="{% url 'withyou' %}">{% trans "Back" %}</a>
+    <h4>{{ testimonial.title }}</h4>
+    <div class="rounded-box testimonial-desc">
+        <img class="photo pull-right" src="{{ testimonial.picture.thumbnail.url }}" alt="picture">
+        {{ testimonial.desc|safe }}
+    </div>
+</section>
+{% endblock %}

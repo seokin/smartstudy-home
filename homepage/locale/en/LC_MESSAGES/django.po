@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-20 17:31+0900\n"
-"PO-Revision-Date: 2013-08-20 17:33+0900\n"
+"POT-Creation-Date: 2013-08-20 19:06+0900\n"
+"PO-Revision-Date: 2013-08-20 19:07+0900\n"
 "Last-Translator:   <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,55 +23,55 @@ msgstr "- Max. file size %d MB"
 msgid "Too large attachment( > %d MB )"
 msgstr "Too large attachment( > %d MB )"
 
-#: models.py:96
+#: models.py:110
 msgid "Draft"
 msgstr "Draft"
 
-#: models.py:97
+#: models.py:111
 msgid "Submitted"
 msgstr "Submitted"
 
-#: models.py:98
+#: models.py:112
 msgid "Archived"
 msgstr "Archived"
 
-#: models.py:102 templates/homepage/resume_detail.html:13
+#: models.py:116 templates/homepage/resume_detail.html:13
 msgid "Apply to"
 msgstr "Apply to"
 
-#: models.py:105 templates/homepage/resume_detail.html:17
+#: models.py:119 templates/homepage/resume_detail.html:17
 msgid "Email"
 msgstr "Email"
 
-#: models.py:106
+#: models.py:120
 msgid "Full name"
 msgstr "Full name"
 
-#: models.py:107
+#: models.py:121
 msgid "Contact / Phone"
 msgstr "Contact / Phone"
 
-#: models.py:109
+#: models.py:123
 msgid "Resume as file (optional)"
 msgstr "Résumé as file (optional)"
 
-#: models.py:118
+#: models.py:132
 msgid "LinkedIn URL (optional)"
 msgstr "LinkedIn URL (optional)"
 
-#: models.py:119
+#: models.py:133
 msgid "Homepage URL (optional)"
 msgstr "Homepage URL (optional)"
 
-#: models.py:120
+#: models.py:134
 msgid "Github id (optional)"
 msgstr "Github id (optional)"
 
-#: models.py:121
+#: models.py:135
 msgid "Self description"
 msgstr "Self description"
 
-#: models.py:122
+#: models.py:136
 msgid "Education / Experience"
 msgstr "Education / Experience"
 
@@ -534,13 +534,14 @@ msgstr "WITH YOU"
 msgid "section-withyou-1"
 msgstr ""
 "<p>Sorry, this page is currently available in Korean only.</p>\n"
-"<h3>스마트스터디는 넥슨/네오위즈/NHN 등에서 인터넷과 게임산업의 발전을 주도한 최고의 인재들로 구성되어 있습니다.</h3>\n"
 "<ol>\n"
 "    <li>\n"
 "        <h4>스마트스터디는 안정적인 사업구조로 산업을 주도하고 있습니다.</h4>\n"
 "        <ul>\n"
+"            <li>스마트스터디는 넥슨/네오위즈/NHN 등에서 인터넷과 게임산업의 발전을 주도한 최고의 인재들로 구성되어 있습니다.</li>\n"
 "            <li>60년 전통의 대한민국 No.1 출판사인 삼성출판사의 자회사로 각종 교육/도서/게임/인터넷 서비스의 기반이 되는 다양한 콘텐츠를 확보하고 있습니다.</li>\n"
 "            <li>2010년 6월 설립부터 다양한 타이틀을 출시하고 있으며, 앱스토어/티스토어 교육분야 매출 1위 보들북을 중심으로 안정적인 사업을 운용하고 있습니다.</li>\n"
+"            <li>2013년 8월, 넥슨의 지주회사인 NXC로부터 전략적인 투자를 받아 양질의 콘텐츠 확보와 우수한 인재 영입을 진행중입니다.</li>\n"
 "        </ul>\n"
 "    </li>\n"
 "    <li>\n"
@@ -551,33 +552,36 @@ msgstr ""
 "        </ul>\n"
 "    </li>\n"
 "    <li>\n"
-"        <h4>단, 스마트스터디는 이런 분들은 정중히 사양합니다.</h4>\n"
-"        <ul>\n"
-"            <li>저건 안돼, 재미 없어, 시시해 등을 남발하는 비관적인 사고를 가지신 분.</li>\n"
-"            <li>사회/문화/IT 등의 분야에서 나타나는 다양한 사건이나 현상에 대한 호기심을 잃어버리신 분.</li>\n"
-"            <li>휴가를 휴가답게 쓰지 않고 하루 단위로 쓰시는 분.</li>\n"
-"        </ul>\n"
-"    </li>\n"
-"    <li>\n"
-"        <h4>반면, 스마트스터디는 이런 분들을 환영합니다.</h4>\n"
+"        <h4>스마트스터디는 이런 분들을 환영합니다.</h4>\n"
 "        <ul>\n"
 "            <li>아이디어를 공유하기 좋아하며, 이를 실제로 만들어 보고 싶은 욕구가 넘치시는 분.</li>\n"
 "            <li>새로운 서비스나 앱이 출시되면 사용하는 것에 그치지 않고, 장단점과 발전 가능성에 대한 토론을 즐기시는 분.</li>\n"
-"            <li>집중해서 열심히 일한 후에, 19박 20일 유럽 휴가를 다녀오고 싶으신 분.</li>\n"
+"            <li>집중해서 열심히 일한 후에, 한 달 동안 유럽으로 휴가를 다녀오고 싶으신 분.</li>\n"
 "        </ul>\n"
 "    </li>\n"
-"</ol>\n"
-"<p>저희와 함께 일해보고 싶으신 분은 주저하지 말고 <a href=\"mailto:recruit@smartstudy.co.kr\">recruit@smartstudy.co.kr</a>로 간단한 자기소개, 이력서, 포트폴리오를 보내주세요.</p>"
+"</ol>"
 
-#: templates/withyou.html:11
+#: templates/withyou.html:8 templates/homepage/testimonial_detail.html:5
+msgid "Testimonial"
+msgstr "Testimonial from crews"
+
+#: templates/withyou.html:20
+msgid "Read more"
+msgstr "Read more"
+
+#: templates/withyou.html:27
 msgid "Open position"
 msgstr "Open position"
 
-#: templates/withyou.html:12
+#: templates/withyou.html:28
 msgid "section-withyou-2"
-msgstr "<p>Sorry, this page is currently available in Korean only.</p>"
+msgstr ""
+"<p>Sorry, this page is currently available in Korean only.</p>"
+"<h3>기다리고 있었습니다.</h3><p>우리는 함께할 분들을 항상 기다리고 있습니다. 아래 부문에 해당하지 않더래도 <a "
+"href=\"mailto:recruit@smartstudy.co.kr\">recruit@smartstudy.co.kr</a>로 간단한 "
+"자기소개, 이력서, 포트폴리오를 보내주세요. 연락드리겠습니다.</p>"
 
-#: templates/withyou.html:20
+#: templates/withyou.html:36
 msgid "Apply for this job"
 msgstr "Apply for this job"
 
@@ -617,7 +621,16 @@ msgstr "Read me first!"
 
 #: templates/homepage/resume_edit.html:7
 msgid "section-resume-1"
-msgstr "<p>Sorry, this page is currently available in Korean only.</p>"
+msgstr ""
+"<p>Sorry, this page is currently available in Korean only.</p>"
+"<h3>이력서 작성 안내</h3>\n"
+"<ul>\n"
+"    <li>별도의 비밀번호나 추가 개인정보를 요구하지 않습니다.</li>\n"
+"    <li>입력하신 이메일 주소로 이력서를 수정할 수 있는 URL을 알려드립니다.</li>\n"
+"    <li>파일로 첨부하는 이력서나 포트폴리오는 PDF 형식을 부탁드립니다.</li>\n"
+"    <li>이력서를 파일로 첨부하거나, 링크드인 주소를 적으신 경우에는 별도의 자기 소개나 학력, 경력 사항은 입력하지 않으셔도 됩니다.</li>\n"
+"    <li>프로그래머 부분에 지원하신 경우, Github 아이디를 입력해주시면 감사드리겠습니다.</li>\n"
+"</ul>"
 
 #: templates/homepage/resume_edit.html:16
 msgid "Save as DRAFT"
@@ -647,6 +660,10 @@ msgstr ""
 #: templates/homepage/resume_inform.html:13
 msgid "Go to resume"
 msgstr "Go to résumé"
+
+#: templates/homepage/testimonial_detail.html:7
+msgid "Back"
+msgstr "Back"
 
 #: templates/mail/resume_link.html:2
 msgid "SMARTSTUDY Resume"

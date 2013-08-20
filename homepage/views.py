@@ -7,7 +7,7 @@ from django.utils.translation import check_for_language
 from django.http import Http404
 from django.views.decorators.cache import cache_page
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
-from .models import Crew, App, Resume, Job
+from .models import Crew, App, Resume, Job, Testimonial
 from .forms import ResumeForm
 from .helper import sendResumeLink
 
@@ -32,8 +32,10 @@ def contact(request):
 
 def withyou(request):
     jobs = Job.objects.filter(active=True)
+    testimonials = Testimonial.objects.all()
     return render(request, 'withyou.html', {
         'jobs': jobs,
+        'testimonials': testimonials,
     })
 
 
@@ -129,3 +131,7 @@ def resume_inform(request, slug):
     return render(request, 'homepage/resume_inform.html', {
         'resume': resume,
     })
+
+
+class TestimonialDetail(DetailView):
+    model = Testimonial
