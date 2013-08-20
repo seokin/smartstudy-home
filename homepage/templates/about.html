@@ -36,9 +36,8 @@
         {% for c in crew %}
         <li>
             <div class="member">
-                <img class="photo" src="{{ c.picture.url }}"
-                    alt="{{ c.nick }}"
-                    data-original="{{ c.picture_big.url }}">
+                <img class="photo" src="{{ c.picture.url }}" alt="{{ c.nick }}">
+                <img class="photo-big" src="{{ c.picture_big.url }}" alt="{{ c.nick }}">
                 <div class="desc">
                     <p class="comment">{{ c.comment }}</p>
                     <p>
@@ -66,11 +65,10 @@
 function show_enlarge(e)
 {
     var $member = $(e).parent().clone();
-    $(".topmost #box").empty().append( $member );
-    $member.find(".photo").attr("src", $member.find(".photo").data("original"));
     $member.removeClass("member").addClass("enlarge");
-    $member.fadeIn(300);
+    $(".topmost #box").empty().append( $member );
     dimmer_on();
+    $member.show();
 }
 $(".member .photo").click( function() { show_enlarge(this) } );
 </script>
