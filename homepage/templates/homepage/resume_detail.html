@@ -4,6 +4,12 @@
 <section id="support">
     <h1>{% trans "Resume" %}</h1>
     <h2>{{ resume.name }}</h2>
+    <p>
+        {% if resume.in_draft %}
+        <a class="btn btn-large btn-blue" href="{% url 'resume_update' resume.uuid %}">{% trans 'Update' %}</a>
+        {% endif %}
+        <a class="btn btn-large btn-red" href="{% url 'resume_delete' resume.uuid %}">{% trans 'Delete' %}</a>
+    </p>
     <table class="table table-bordered">
         <tr>
             <th>{% trans 'Status' %}</th>
@@ -18,15 +24,41 @@
             <td>{{ resume.email }}</td>
         </tr>
         <tr>
+            <th>{% trans 'LinkedIn' %}</th>
+            <td><a href="{{ resume.desc.linkedin }}">{{ resume.desc.linkedin }}</a></td>
+        </tr>
+        <tr>
+            <th>{% trans 'Homepage' %}</th>
+            <td><a href="{{ resume.desc.homepage }}">{{ resume.desc.homepage }}</a></td>
+        </tr>
+        <tr>
+            <th>{% trans 'Github' %}</th>
+            <td><a href="https://github.com/{{ resume.desc.github }}">{{ resume.desc.github }}</a></td>
+        </tr>
+        <tr>
             <th>{% trans 'Last update' %}</th>
             <td>{{ resume.modified }}</td>
         </tr>
     </table>
-    <p>
-        {% if resume.in_draft %}
-        <a class="btn btn-large btn-blue" href="{% url 'resume_update' resume.uuid %}">{% trans 'Update' %}</a>
-        {% endif %}
-        <a class="btn btn-large btn-red" href="{% url 'resume_delete' resume.uuid %}">{% trans 'Delete' %}</a>
-    </p>
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th>{% trans 'description' %}</th>
+        </tr>
+        <tr>
+            <td>{{ resume.desc.description|safe }}</td>
+        </tr>
+        <tr>
+            <th>{% trans 'resume' %}</th>
+        </tr>
+        <tr>
+            <td>{{ resume.desc.resume|safe }}</td>
+        </tr>
+        <tr>
+            <th>{% trans 'attachment' %}</th>
+        </tr>
+        <tr>
+            <td><a href="{{ resume.attachment.url }}">{{ resume.attachment.url }}</a></td>
+        </tr>
+    </table>
 </section>
 {% endblock %}
