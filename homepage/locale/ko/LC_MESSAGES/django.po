@@ -57,15 +57,15 @@ msgstr "이력서 및 포트폴리오 파일 첨부 (가능한 경우)"
 
 #: models.py:132
 msgid "LinkedIn URL (optional)"
-msgstr "링크드인 주소 (옵션)"
+msgstr "링크드인 주소 (선택사항)"
 
 #: models.py:133
 msgid "Homepage URL (optional)"
-msgstr "홈페이지 주소 (옵션)"
+msgstr "홈페이지 주소 (선택사항)"
 
 #: models.py:134
 msgid "Github id (optional)"
-msgstr "Github 아이디 (옵션)"
+msgstr "Github 아이디 (선택사항)"
 
 #: models.py:135
 msgid "Self description"
