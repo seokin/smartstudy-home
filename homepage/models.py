@@ -152,3 +152,17 @@ class Resume(models.Model):
 
     def __unicode__(self):
         return '%s(%s)' % (self.name, self.email)
+
+
+class Poster(models.Model):
+    title = models.CharField(max_length=255, null=True, blank=True)
+    picture = ImageField(upload_to='poster/')
+    active = models.BooleanField(default=True)
+    desc = models.TextField(blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def get_absolute_url(self):
+        return reverse('poster', args=(self.uuid,))
+
+    def __unicode__(self):
+        return self.title

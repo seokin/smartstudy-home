@@ -6,8 +6,8 @@ from django.utils.http import is_safe_url
 from django.utils.translation import check_for_language
 from django.http import Http404
 from django.views.decorators.cache import cache_page
-from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
-from .models import Crew, App, Resume, Job, Testimonial
+from django.views.generic import CreateView, DetailView, UpdateView, DeleteView, ListView
+from .models import Crew, App, Resume, Job, Testimonial, Poster
 from .forms import ResumeForm
 from .helper import sendResumeLink
 
@@ -135,3 +135,11 @@ def resume_inform(request, slug):
 
 class TestimonialDetail(DetailView):
     model = Testimonial
+
+
+class PosterDetail(DetailView):
+    model = Poster
+
+
+class PosterList(ListView):
+    model = Poster

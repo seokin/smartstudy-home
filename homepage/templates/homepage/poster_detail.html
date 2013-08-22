@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<section id="poster" class="poster">
+    <h1>{% trans "Poster" %} #{{ poster.id|stringformat:"03d" }}</h1>
+    <a class="btn btn-blue pull-right" href="{% url 'poster_list' %}">{% trans "Back" %}</a>
+    <h2>{{ poster.title }}</h2>
+    {% include "twitter.html" %}
+    {% include "google-plus.html" %}
+    {% include "facebook.html" %}
+    <a href="{{ poster.picture.url }}">
+        <img class="photo" src="{{ poster.picture.large.url }}" alt="poster">
+    </a>
+    <div class="rounded-box testimonial-desc">
+        {{ poster.desc|safe }}
+    </div>
+    <p class="pull-right">{{ poster.created|date:'Y-m-d' }}</p>
+    <div class="clear"></div>
+</section>
+{% endblock %}

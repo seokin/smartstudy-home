@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<script src="{{ STATIC_URL }}lib/masonry/masonry.pkgd.min.js"></script>
+<section id="posters" class="posters">
+    <h1>{% trans "Posters" %}</h1>
+    <div id="container" class="span12">
+    {% for poster in poster_list %}
+        <div class="span4 rounded-box item">
+            <a href="{% url 'poster' poster.id %}">
+                <h2 class="pull-right">#{{ poster.id|stringformat:"03d" }}</h2>
+                <img class="photo" src="{{ poster.picture.thumbnail.url }}" alt="poster">
+                <p>{{ poster.title }}</p>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+</section>
+<script>
+var container = document.querySelector('#container');
+var msnry = new Masonry( container, {
+    // options
+    itemSelector: '.item'
+});
+</script>
+{% endblock %}

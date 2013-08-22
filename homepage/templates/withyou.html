@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block content %}
-<section id="withyou">
-    <h1><img class="icon" src="{{ STATIC_URL }}image/icon/withyou.png" alt="withyou">{% trans "WITH YOU" %}</h1>
+<section id="withus">
+    <h1><img class="icon" src="{{ STATIC_URL }}image/icon/withus.png" alt="withus">{% trans "With us" %}</h1>
     <h2>{% trans "We're hiring!" %}</h2>
-    {% blocktrans %}section-withyou-1{% endblocktrans %}
+    {% blocktrans %}section-withus-1{% endblocktrans %}
     <h2>{% trans "Testimonial" %}</h2>
     <div class="span12">
     {% for t in testimonials %}

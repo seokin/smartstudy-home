@@ -19,6 +19,7 @@
     <script src="{{ STATIC_URL }}lib/shy-navbar/shy-navbar.js"></script>
     <script src="{{ STATIC_URL }}lib/swipe/swipe.js"></script>
     <script src="{{ STATIC_URL }}lib/lazyload/jquery.lazyload.js"></script>
+    <script src="{{ STATIC_URL }}lib/masonry/masonry.pkgd.min.js"></script>
 
     <!-- Loading project css -->
     <link href="{{ STATIC_URL }}css/smartstudy.css" rel="stylesheet">
@@ -81,4 +82,5 @@ function dimmer_off()
 {% block script %}{% endblock %}
 </body>
 {% include "ga.html" %}
+{% include "facebook_script.html" %}
 </html>

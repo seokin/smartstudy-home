@@ -28,25 +28,27 @@
                     <li><a href="{% url 'contact' %}#business">{% trans "Business" %}</a></li>
                     <li><a href="{% url 'contact' %}#press">{% trans "Press" %}</a></li>
                     <li><a href="{% url 'contact' %}#location">{% trans "Location" %}</a></li>
-                    <li><a href="{% url 'withyou' %}#">{% trans "We're hiring!" %}</a></li>
                 </ul>
             </li>
             <li>
-                <a>{% trans "LINK" %}</a>
+                <a>{% trans "WITH" %}</a>
                 <ul class="submenu">
-                    <li><a href="https://www.facebook.com/SmartStudyKR" target="_blank"><i class="icon-facebook-white"></i> {% trans "Facebook" %}</a></li>
-                    <li><a href="https://twitter.com/smartstudy_kr" target="_blank"><i class="icon-twitter-white"></i> {% trans "Twitter" %}</a></li>
-                    <li><a href="https://github.com/smartstudy" target="_blank"><i class="icon-github-white"></i> {% trans "Github" %}</a></li>
-                    <li><a class="disabled">{% trans "Tech Blog" %}</a></li>
+                    <li><a href="{% url 'withyou' %}#withus">{% trans "With us" %}</a></li>
+                    <li><a href="{% url 'withyou' %}#position">{% trans "Open position" %}</a></li>
+                    <li><a href="{% url 'poster_list' %}">{% trans "Posters" %}</a></li>
                 </ul>
             </li>
             <li>
                 <a>{% trans "INFORMATION" %}</a>
                 <ul class="submenu">
+                    <li><a href="https://www.facebook.com/SmartStudyKR" target="_blank"><i class="icon-facebook-white"></i> {% trans "Facebook" %}</a></li>
+                    <li><a href="https://twitter.com/smartstudy_kr" target="_blank"><i class="icon-twitter-white"></i> {% trans "Twitter" %}</a></li>
+                    <li><a href="https://github.com/smartstudy" target="_blank"><i class="icon-github-white"></i> {% trans "Github" %}</a></li>
                     <li><a href="{% url 'license' %}#">{% trans "License" %}</a></li>
                     <li><a href="{% url 'privacy' %}#">{% trans "Privacy" %}</a></li>
                 </ul>
-                <hr>
+            </li>
+            <li>
                 <a>{% trans "LANGUAGE" %}</a>
                 <ul class="submenu">
                 {% include "i18n.html" %}

@@ -3,6 +3,7 @@ from django.conf import settings
 from .views import about, product, contact, withyou, license, privacy, setlang, robots
 from .views import ResumeAdd, ResumeDetail, ResumeUpdate, ResumeDelete, resume_inform
 from .views import TestimonialDetail
+from .views import PosterDetail, PosterList
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -24,6 +25,10 @@ urlpatterns = patterns(
     url(r'^resume/(?P<slug>\w+)/update/$', ResumeUpdate.as_view(), name='resume_update'),
     url(r'^resume/(?P<slug>\w+)/delete/$', ResumeDelete.as_view(), name='resume_delete'),
     url(r'^resume/(?P<slug>\w+)/inform/$', resume_inform, name='resume_inform'),
+
+    # for poster
+    url(r'^poster/$', PosterList.as_view(), name='poster_list'),
+    url(r'^poster/(?P<pk>\d+)/$', PosterDetail.as_view(), name='poster'),
 
     # for testimonial
     url(r'^testimonial/(?P<pk>\d+)/$', TestimonialDetail.as_view(), name='testimonial'),

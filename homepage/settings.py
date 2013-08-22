@@ -187,6 +187,7 @@ THUMBNAIL_ALIASES = {
     '': {
         'icon': {'size': (128, 128)},
         'thumbnail': {'size': (360, 360)},
+        'large': {'size': (1024, 1024)},
     }
 }
 THUMBNAIL_BASEDIR = 'thumbnails'

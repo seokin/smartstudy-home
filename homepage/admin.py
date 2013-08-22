@@ -2,7 +2,7 @@
 from django.contrib import admin
 from easymode.i18n.admin.decorators import L10n
 from django_summernote.admin import SummernoteModelAdmin
-from models import Crew, App, AppImage, AppCategory, Job, Resume, Testimonial
+from models import Crew, App, AppImage, AppCategory, Job, Resume, Testimonial, Poster
 
 
 @L10n(Crew)
@@ -68,3 +68,4 @@ class ResumeAdmin(SummernoteModelAdmin):
 admin.site.register(Resume, ResumeAdmin)
 
 admin.site.register(Job, SummernoteModelAdmin)
+admin.site.register(Poster, SummernoteModelAdmin)
