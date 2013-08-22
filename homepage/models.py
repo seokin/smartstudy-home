@@ -106,9 +106,11 @@ class Resume(models.Model):
     DRAFT = 'D'
     SUBMIT = 'S'
     ARCHIVE = 'A'
+    CANDIDATE = 'C'
     STATUS = (
         (DRAFT, _('Draft')),
         (SUBMIT, _('Submitted')),
+        (CANDIDATE, _('Candidate')),
         (ARCHIVE, _('Archived')),
     )
 

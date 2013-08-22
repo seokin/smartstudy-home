@@ -23,42 +23,54 @@
             <th>{% trans 'Email' %}</th>
             <td>{{ resume.email }}</td>
         </tr>
+        {% if resume.desc.linkedin %}
         <tr>
             <th>{% trans 'LinkedIn' %}</th>
-            <td><a href="{{ resume.desc.linkedin }}">{{ resume.desc.linkedin }}</a></td>
+            <td>{{ resume.desc.linkedin|urlize }}</td>
         </tr>
+        {% endif %}
+        {% if resume.desc.homepage %}
         <tr>
             <th>{% trans 'Homepage' %}</th>
-            <td><a href="{{ resume.desc.homepage }}">{{ resume.desc.homepage }}</a></td>
+            <td>{{ resume.desc.homepage|urlize }}</td>
         </tr>
+        {% endif %}
+        {% if resume.desc.github %}
         <tr>
             <th>{% trans 'Github' %}</th>
             <td><a href="https://github.com/{{ resume.desc.github }}">{{ resume.desc.github }}</a></td>
         </tr>
+        {% endif %}
         <tr>
             <th>{% trans 'Last update' %}</th>
             <td>{{ resume.modified }}</td>
         </tr>
     </table>
     <table class="table table-striped table-bordered">
+        {% if resume.desc.description %}
         <tr>
             <th>{% trans 'Description' %}</th>
         </tr>
         <tr>
             <td>{{ resume.desc.description|safe }}</td>
         </tr>
+        {% endif %}
+        {% if resume.desc.resume %}
         <tr>
             <th>{% trans 'Resume' %}</th>
         </tr>
         <tr>
             <td>{{ resume.desc.resume|safe }}</td>
         </tr>
+        {% endif %}
+        {% if resume.attachment %}
         <tr>
             <th>{% trans 'Attachment' %}</th>
         </tr>
         <tr>
             <td><a href="{{ resume.attachment.url }}">{{ resume.attachment.url }}</a></td>
         </tr>
+        {% endif %}
     </table>
 </section>
 {% endblock %}

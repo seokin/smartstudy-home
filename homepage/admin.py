@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from easymode.i18n.admin.decorators import L10n
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
 from django_summernote.admin import SummernoteModelAdmin
+from django.utils.html import mark_safe
+from django.db.models import Q
+from easymode.i18n.admin.decorators import L10n
 from models import Crew, App, AppImage, AppCategory, Job, Resume, Testimonial, Poster
 
 
@@ -59,11 +63,35 @@ class TestimonialAdmin(SummernoteModelAdmin):
 admin.site.register(Testimonial, TestimonialAdmin)
 
 
+def make_candidate(modeladmin, request, queryset):
+    queryset.update(status='C')
+make_candidate.short_description = _("Mark selected resume as candidate")
+
+
+def make_archive(modeladmin, request, queryset):
+    queryset.update(status='A')
+make_archive.short_description = _("Archive selected resumes")
+
+
 class ResumeAdmin(SummernoteModelAdmin):
-    list_display = ('id', 'status', 'email', 'name', 'apply_to', 'uuid', 'applied')
+    def link(self, obj):
+        return mark_safe('<a href="%s">%s</a>' % (
+            reverse('resume_detail', args=(obj.uuid,)),
+            _('Link to resume')))
+
+    def queryset(self, request):
+        qs = super(ResumeAdmin, self).queryset(request)
+        if request.GET.get('status__exact') == 'A':
+            return qs
+        return qs.filter(~Q(status='A'))
+
+    link.allow_tags = True
+    list_display = ('id', 'link', 'status', 'name', 'email', 'contact', 'apply_to', 'uuid', 'applied')
     list_filter = ('apply_to', 'status')
     search_fields = ['email', 'uuid', 'apply_to__name', 'name', 'desc']
     ordering = ('-id',)
+
+    actions = [make_candidate, make_archive]
 
 admin.site.register(Resume, ResumeAdmin)
 

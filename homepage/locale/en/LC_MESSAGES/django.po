@@ -5,13 +5,25 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-23 04:05+0900\n"
-"PO-Revision-Date: 2013-08-23 04:05+0900\n"
+"POT-Creation-Date: 2013-08-23 04:34+0900\n"
+"PO-Revision-Date: 2013-08-23 04:36+0900\n"
 "Last-Translator:   <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Translated-Using: django-rosetta 0.7.2\n"
+
+#: admin.py:68
+msgid "Mark selected resume as candidate"
+msgstr "Mark selected resume as candidate"
+
+#: admin.py:73
+msgid "Archive selected resumes"
+msgstr "Archive selected resumes"
+
+#: admin.py:80
+msgid "Link to resume"
+msgstr "Link to résumé"
 
 #: forms.py:21
 #, python-format
@@ -23,55 +35,59 @@ msgstr "- Max. file size %d MB"
 msgid "Too large attachment( > %d MB )"
 msgstr "Too large attachment( > %d MB )"
 
-#: models.py:110
+#: models.py:111
 msgid "Draft"
 msgstr "Draft"
 
-#: models.py:111
+#: models.py:112
 msgid "Submitted"
 msgstr "Submitted"
 
-#: models.py:112
+#: models.py:113
+msgid "Candidate"
+msgstr "Candidate"
+
+#: models.py:114
 msgid "Archived"
 msgstr "Archived"
 
-#: models.py:116 templates/homepage/resume_detail.html:19
+#: models.py:118 templates/homepage/resume_detail.html:19
 msgid "Apply to"
 msgstr "Apply to"
 
-#: models.py:119 templates/homepage/resume_detail.html:23
+#: models.py:121 templates/homepage/resume_detail.html:23
 msgid "Email"
 msgstr "Email"
 
-#: models.py:120
+#: models.py:122
 msgid "Full name"
 msgstr "Full name"
 
-#: models.py:121
+#: models.py:123
 msgid "Contact / Phone"
 msgstr "Contact / Phone"
 
-#: models.py:123
+#: models.py:125
 msgid "Resume as file (optional)"
 msgstr "Résumé as file (optional)"
 
-#: models.py:132
+#: models.py:134
 msgid "LinkedIn URL (optional)"
 msgstr "LinkedIn URL (optional)"
 
-#: models.py:133
+#: models.py:135
 msgid "Homepage URL (optional)"
 msgstr "Homepage URL (optional)"
 
-#: models.py:134
+#: models.py:136
 msgid "Github id (optional)"
 msgstr "Github id (optional)"
 
-#: models.py:135
+#: models.py:137
 msgid "Self description"
 msgstr "Self description"
 
-#: models.py:136
+#: models.py:138
 msgid "Education / Experience"
 msgstr "Education / Experience"
 
@@ -337,7 +353,7 @@ msgstr "Facebook"
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/footer.html:46 templates/homepage/resume_detail.html:35
+#: templates/footer.html:46 templates/homepage/resume_detail.html:40
 msgid "Github"
 msgstr "Github"
 
@@ -596,7 +612,7 @@ msgstr "Back"
 
 #: templates/homepage/resume_delete.html:5
 #: templates/homepage/resume_detail.html:5
-#: templates/homepage/resume_detail.html:51
+#: templates/homepage/resume_detail.html:60
 #: templates/homepage/resume_edit.html:11
 msgid "Resume"
 msgstr "Résumé"
@@ -621,23 +637,23 @@ msgstr "Delete"
 msgid "Status"
 msgstr "Status"
 
-#: templates/homepage/resume_detail.html:27
+#: templates/homepage/resume_detail.html:28
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: templates/homepage/resume_detail.html:31
+#: templates/homepage/resume_detail.html:34
 msgid "Homepage"
 msgstr "Homepage"
 
-#: templates/homepage/resume_detail.html:39
+#: templates/homepage/resume_detail.html:45
 msgid "Last update"
 msgstr "Last update"
 
-#: templates/homepage/resume_detail.html:45
+#: templates/homepage/resume_detail.html:52
 msgid "Description"
 msgstr "Self description"
 
-#: templates/homepage/resume_detail.html:57
+#: templates/homepage/resume_detail.html:68
 msgid "Attachment"
 msgstr "Attachment"
 
