@@ -73,7 +73,7 @@ msgstr "이력서 및 포트폴리오 파일 첨부 (가능한 경우)"
 
 #: models.py:134
 msgid "LinkedIn URL (optional)"
-msgstr "링크드인 주소 (선택사항)"
+msgstr "링크드인 주소 (선택사항) / 입력시 <a href='http://www.linkedin.com/profile/public-profile-settings'>[링크드인 설정]</a>에서 공개 설정 필수"
 
 #: models.py:135
 msgid "Homepage URL (optional)"

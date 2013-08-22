@@ -73,7 +73,7 @@ msgstr "Résumé as file (optional)"
 
 #: models.py:134
 msgid "LinkedIn URL (optional)"
-msgstr "LinkedIn URL (optional)"
+msgstr "LinkedIn URL (optional) / <a href='http://www.linkedin.com/profile/public-profile-settings'>[LinkedIn public profile settings]</a> is required."
 
 #: models.py:135
 msgid "Homepage URL (optional)"
