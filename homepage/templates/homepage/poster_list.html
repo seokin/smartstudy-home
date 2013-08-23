@@ -17,10 +17,9 @@
     </div>
 </section>
 <script>
-var container = document.querySelector('#container');
-var msnry = new Masonry( container, {
-    // options
-    itemSelector: '.item'
+$(function() {
+    var container = document.querySelector('#container');
+    var msnry = new Masonry( container, { itemSelector: '.item' });
 });
 </script>
 {% endblock %}
