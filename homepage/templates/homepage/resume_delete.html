@@ -5,7 +5,7 @@
     <h1>{% trans "Resume" %}</h1>
     <form action="" method="post">{% csrf_token %}
         <p>{% trans 'Are you sure you want to delete?' %}</p>
-        <input class="btn btn-large btn-red" type="submit" value="{% trans 'Confirm to delete' %}" />
+        <input class="btn btn-red" type="submit" value="{% trans 'Confirm to delete' %}" />
     </form>
 </section>
 {% endblock %}

@@ -4,12 +4,6 @@
 <section id="support">
     <h1>{% trans "Resume" %}</h1>
     <h2>{{ resume.name }}</h2>
-    <p>
-        {% if resume.in_draft %}
-        <a class="btn btn-large btn-blue" href="{% url 'resume_update' resume.uuid %}">{% trans 'Update' %}</a>
-        {% endif %}
-        <a class="btn btn-large btn-red" href="{% url 'resume_delete' resume.uuid %}">{% trans 'Delete' %}</a>
-    </p>
     <table class="table table-bordered">
         <tr>
             <th>{% trans 'Status' %}</th>
@@ -72,5 +66,11 @@
         </tr>
         {% endif %}
     </table>
+    <p>
+        {% if resume.in_draft %}
+        <a class="btn btn-blue" href="{% url 'resume_update' resume.uuid %}">{% trans 'Update' %}</a>
+        {% endif %}
+        <a class="btn btn-red" href="{% url 'resume_delete' resume.uuid %}">{% trans 'Delete' %}</a>
+    </p>
 </section>
 {% endblock %}
