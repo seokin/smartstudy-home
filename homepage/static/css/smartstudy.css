@@ -1,8 +1,7 @@
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Lato', 'Helvetica Neue', 'Nanum Gothic', 'Arial', sans-serif;
+    font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
     font-weight: 300;
     line-height: 180%;
 
@@ -32,7 +31,7 @@ a:hover {
 
 p, li, span, input {
     color: #667;
-    font-family: 'Open Sans', 'Nanum Gothic', 'Helvetica Neue', 'Arial', 'Apple Gothic', sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
     font-size: 11pt;
     font-style: normal;
     font-weight: 400;
@@ -56,20 +55,12 @@ h1 {
 
 h1 span {
     color: black;
-    font-family: 'Lato', 'Helvetica Neue', 'Nanum Gothic', 'Arial', sans-serif;
+    font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
     font-size: 36pt;
     font-weight: 900;
     display: inline-block;
     line-height: 100%;
 }
-
-//h1:before {
-//    content: "|";
-//    color: #3e8b8b;
-//    font-size: 36pt;
-//    margin-left: -36px;
-//    padding-right: 22px;
-//}
 
 h2 {
     font-size: 24pt;
@@ -93,7 +84,7 @@ h4 {
 hr {
     border: 0px;
     padding: 32px;
-    border-bottom: 1px solid #ebebff;
+    border-bottom: 1px solid #ebebeb;
 }
 
 section {
@@ -125,7 +116,7 @@ pre {
     border: 1px solid #ddd;
     border-bottom-width: 2px;
     border-radius: 6px;
-    -webkit-border-border: 6px;
+    -webkit-border-radius: 6px;
 }
 
 .wrap {
@@ -276,7 +267,7 @@ pre {
 }
 
 #navbar li .brand {
-    font-family: 'Lato', 'Helvetica Neue', 'Nanum Gothic', 'Arial', sans-serif;
+    font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
     color: #fff;
     font-weight: 600;
     line-height: 50px;
@@ -334,7 +325,7 @@ pre {
 }
 
 #footer > .wrap:first-child {
-    border-top: 4px solid #3e8b8b;
+    border-top: 4px solid #eb27a4;
 }
 
 #footer > .wrap:last-child {
@@ -628,7 +619,7 @@ section p img {
     height: 480px;
     border: 1px solid #667;
     border-radius: 3px;
-    -webkit-border-border: 3px;
+    -webkit-border-radius: 3px;
 }
 
 /* dimmer */
@@ -732,10 +723,11 @@ section p img {
 }
 
 .posters .item img { 
-    width: 100%; 
+    max-width: 100%; 
+    width: 360px;
     height: auto;
     border-radius: 6px;
-    -webkit-border-border: 6px;
+    -webkit-border-radius: 6px;
 }
 
 .poster .photo {
@@ -743,7 +735,7 @@ section p img {
     height: auto;
     box-shadow: #666 0 1px 4px;
     border-radius: 6px;
-    -webkit-border-border: 6px;
+    -webkit-border-radius: 6px;
 }
 
 .testimonial {
@@ -755,7 +747,7 @@ section p img {
     max-width: 256px;
     margin: 0;
     border-radius: 600px;
-    -webkit-border-border: 600px;
+    -webkit-border-radius: 600px;
 }
 
 .testimonial .photo {
@@ -763,7 +755,7 @@ section p img {
     height: auto;
     margin: 15px 5px 0 5px;
     border-radius: 600px;
-    -webkit-border-border: 600px;
+    -webkit-border-radius: 600px;
 }
 
 .testimonial .quote {
@@ -771,7 +763,7 @@ section p img {
     padding: 8px;
     background: #eee;
     border-radius: 6px;
-    -webkit-border-border: 6px;
+    -webkit-border-radius: 6px;
 }
 
 .control-group {
