@@ -5,6 +5,7 @@ from easy_thumbnails.fields import ThumbnailerImageField as ImageField
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import reverse
+from django.contrib.auth.models import User
 from django_summernote.widgets import SummernoteWidget
 from jsonfield import JSONField
 from library import uploaded_filepath
@@ -153,7 +154,17 @@ class Resume(models.Model):
         super(Resume, self).save()
 
     def __unicode__(self):
-        return '%s(%s)' % (self.name, self.email)
+        return '%s (%s)' % (self.name, self.email)
+
+
+class ResumeRating(models.Model):
+    resume = models.ForeignKey(Resume)
+    user = models.ForeignKey(User)
+    rating = models.IntegerField()
+    desc = models.TextField(blank=True)
+
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
 
 
 class Poster(models.Model):

@@ -131,6 +131,8 @@ INSTALLED_APPS = (
     'rosetta',
     'django_summernote',
     'crispy_forms',
+    'south',
+
     'homepage',
 )
 

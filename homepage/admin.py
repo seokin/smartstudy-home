@@ -6,7 +6,7 @@ from django_summernote.admin import SummernoteModelAdmin
 from django.utils.html import mark_safe
 from django.db.models import Q
 from easymode.i18n.admin.decorators import L10n
-from models import Crew, App, AppImage, AppCategory, Job, Resume, Testimonial, Poster
+from models import Crew, App, AppImage, AppCategory, Job, Resume, ResumeRating, Testimonial, Poster
 
 
 @L10n(Crew)
@@ -94,6 +94,23 @@ class ResumeAdmin(SummernoteModelAdmin):
     actions = [make_candidate, make_archive]
 
 admin.site.register(Resume, ResumeAdmin)
+
+
+class ResumeRatingAdmin(SummernoteModelAdmin):
+    raw_id_fields = ('resume', )
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'user':
+            kwargs['initial'] = request.user.id
+            return db_field.formfield(**kwargs)
+        elif db_field.name == 'resume':
+            kwargs['initial'] = request.GET.get('resume')
+            return db_field.formfield(**kwargs)
+        return super(ResumeRatingAdmin, self).formfield_for_foreignkey(
+            db_field, request, **kwargs
+        )
+
+admin.site.register(ResumeRating, ResumeRatingAdmin)
 
 admin.site.register(Job, SummernoteModelAdmin)
 admin.site.register(Poster, SummernoteModelAdmin)
