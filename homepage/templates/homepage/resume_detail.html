@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load url_target_blank %}
 {% block content %}
 <section id="support">
     <h1>{% trans "Resume" %}</h1>
@@ -20,13 +21,13 @@
         {% if resume.desc.linkedin %}
         <tr>
             <th>{% trans 'LinkedIn' %}</th>
-            <td>{{ resume.desc.linkedin|urlize }}</td>
+            <td>{{ resume.desc.linkedin|urlize|url_target_blank }}</td>
         </tr>
         {% endif %}
         {% if resume.desc.homepage %}
         <tr>
             <th>{% trans 'Homepage' %}</th>
-            <td>{{ resume.desc.homepage|urlize }}</td>
+            <td>{{ resume.desc.homepage|urlize|url_target_blank }}</td>
         </tr>
         {% endif %}
         {% if resume.desc.github %}
