@@ -1,10 +1,17 @@
 Homepage of SMARTSTUDY
 ======================
 
+a yet another *flat* site for a mobile app development company.
 
-a yet another *flat* site.
+Demo site : <http://www.smartstudy.co.kr>
 
-Demo : <http://www.smartstudy.co.kr>
+
+FEATURES
+--------
+
+  - Listing company crews.
+  - Listing companys apps.
+  - Resume management.
 
 
 INSTALL
@@ -15,6 +22,7 @@ INSTALL
     mkvirtualenv smartstudy-home
     pip install -r requirements.txt
     python manage.py syncdb
+    python manage.py migrate --all --fake
     python manage.py runserver
 
 
