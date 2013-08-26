@@ -17,9 +17,11 @@
     </div>
 </section>
 <script>
-$(function() {
-    var container = document.querySelector('#container');
-    var msnry = new Masonry( container, { itemSelector: '.item' });
+$('#container').imagesLoaded( function(){
+    $('#container').masonry({
+        itemSelector: '.item',
+        isAnimated: true,
+    });
 });
 </script>
 {% endblock %}
