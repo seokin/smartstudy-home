@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-23 04:34+0900\n"
-"PO-Revision-Date: 2013-08-23 04:36+0900\n"
+"POT-Creation-Date: 2013-08-26 20:58+0900\n"
+"PO-Revision-Date: 2013-08-26 21:15+0900\n"
 "Last-Translator:   <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,59 +35,61 @@ msgstr "- Max. file size %d MB"
 msgid "Too large attachment( > %d MB )"
 msgstr "Too large attachment( > %d MB )"
 
-#: models.py:111
+#: models.py:112
 msgid "Draft"
 msgstr "Draft"
 
-#: models.py:112
+#: models.py:113
 msgid "Submitted"
 msgstr "Submitted"
 
-#: models.py:113
+#: models.py:114
 msgid "Candidate"
 msgstr "Candidate"
 
-#: models.py:114
+#: models.py:115
 msgid "Archived"
 msgstr "Archived"
 
-#: models.py:118 templates/homepage/resume_detail.html:19
+#: models.py:119 templates/homepage/resume_detail.html:14
 msgid "Apply to"
 msgstr "Apply to"
 
-#: models.py:121 templates/homepage/resume_detail.html:23
+#: models.py:122 templates/homepage/resume_detail.html:18
 msgid "Email"
 msgstr "Email"
 
-#: models.py:122
+#: models.py:123
 msgid "Full name"
 msgstr "Full name"
 
-#: models.py:123
+#: models.py:124
 msgid "Contact / Phone"
 msgstr "Contact / Phone"
 
-#: models.py:125
+#: models.py:126
 msgid "Resume as file (optional)"
 msgstr "Résumé as file (optional)"
 
-#: models.py:134
-msgid "LinkedIn URL (optional)"
-msgstr "LinkedIn URL (optional) / <a href='http://www.linkedin.com/profile/public-profile-settings'>[LinkedIn public profile settings]</a> is required."
-
 #: models.py:135
+msgid "LinkedIn URL (optional)"
+msgstr ""
+"LinkedIn URL (optional) / <a href='http://www.linkedin.com/profile/public-"
+"profile-settings'>[LinkedIn public profile settings]</a> is required."
+
+#: models.py:136
 msgid "Homepage URL (optional)"
 msgstr "Homepage URL (optional)"
 
-#: models.py:136
+#: models.py:137
 msgid "Github id (optional)"
 msgstr "Github id (optional)"
 
-#: models.py:137
+#: models.py:138
 msgid "Self description"
 msgstr "Self description"
 
-#: models.py:138
+#: models.py:139
 msgid "Education / Experience"
 msgstr "Education / Experience"
 
@@ -99,11 +101,11 @@ msgstr "한국어"
 msgid "English"
 msgstr "English"
 
-#: settings.py:207
+#: settings.py:209
 msgid "SMARTSTUDY <recruit@smartstudy.co.kr>"
 msgstr "SMARTSTUDY <recruit@smartstudy.co.kr>"
 
-#: settings.py:208
+#: settings.py:210
 msgid "[SMARTSTUDY] Thank you for applying."
 msgstr "[SMARTSTUDY] Thank you for applying."
 
@@ -331,7 +333,7 @@ msgstr "WITH"
 
 #: templates/footer.html:36 templates/withyou.html:5
 msgid "With us"
-msgstr "WITH US"
+msgstr "With us"
 
 #: templates/footer.html:37 templates/withyou.html:29
 msgid "Open position"
@@ -353,7 +355,7 @@ msgstr "Facebook"
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/footer.html:46 templates/homepage/resume_detail.html:40
+#: templates/footer.html:46 templates/homepage/resume_detail.html:35
 msgid "Github"
 msgstr "Github"
 
@@ -386,15 +388,15 @@ msgstr "PROJECT"
 msgid "SOFTWARE"
 msgstr "SOFTWARE"
 
-#: templates/license.html:89
+#: templates/license.html:96
 msgid "FONTS"
 msgstr "FONTS"
 
-#: templates/license.html:114
+#: templates/license.html:121
 msgid "ICONS"
 msgstr "ICONS"
 
-#: templates/license.html:124
+#: templates/license.html:131
 msgid "All trademarks are property of their respective owners."
 msgstr "All trademarks are property of their respective owners."
 
@@ -591,15 +593,17 @@ msgstr "Read more"
 
 #: templates/withyou.html:30
 msgid "section-withyou-2"
-msgstr ""
-"<p>Sorry, this page is currently available in Korean only.</p><h3>기다리고 "
-"있었습니다.</h3><p>우리는 함께할 분들을 항상 기다리고 있습니다. 아래 부문에 해당하지 않더래도 <a "
-"href=\"mailto:recruit@smartstudy.co.kr\">recruit@smartstudy.co.kr</a>로 간단한 "
-"자기소개, 이력서, 포트폴리오를 보내주세요. 연락드리겠습니다.</p>"
+msgstr "<h3>We've been waiting for you.</h3>"
 
 #: templates/withyou.html:38
 msgid "Apply for this job"
 msgstr "Apply for this job"
+
+#: templates/withyou.html:42
+msgid "section-withyou-3"
+msgstr ""
+"Have questions? please send a mail to <a "
+"href=\"mailto:recruit@smartstudy.co.kr\">recruit@smartstudy.co.kr</a>."
 
 #: templates/homepage/poster_detail.html:5
 msgid "Poster"
@@ -611,8 +615,8 @@ msgid "Back"
 msgstr "Back"
 
 #: templates/homepage/resume_delete.html:5
-#: templates/homepage/resume_detail.html:5
-#: templates/homepage/resume_detail.html:60
+#: templates/homepage/resume_detail.html:6
+#: templates/homepage/resume_detail.html:55
 #: templates/homepage/resume_edit.html:11
 msgid "Resume"
 msgstr "Résumé"
@@ -625,37 +629,37 @@ msgstr "Are you sure you want to delete?"
 msgid "Confirm to delete"
 msgstr "Confirm to delete"
 
-#: templates/homepage/resume_detail.html:9
-msgid "Update"
-msgstr "Update resume"
-
-#: templates/homepage/resume_detail.html:11
-msgid "Delete"
-msgstr "Delete"
-
-#: templates/homepage/resume_detail.html:15
+#: templates/homepage/resume_detail.html:10
 msgid "Status"
 msgstr "Status"
 
-#: templates/homepage/resume_detail.html:28
+#: templates/homepage/resume_detail.html:23
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: templates/homepage/resume_detail.html:34
+#: templates/homepage/resume_detail.html:29
 msgid "Homepage"
 msgstr "Homepage"
 
-#: templates/homepage/resume_detail.html:45
+#: templates/homepage/resume_detail.html:40
 msgid "Last update"
 msgstr "Last update"
 
-#: templates/homepage/resume_detail.html:52
+#: templates/homepage/resume_detail.html:47
 msgid "Description"
 msgstr "Self description"
 
-#: templates/homepage/resume_detail.html:68
+#: templates/homepage/resume_detail.html:63
 msgid "Attachment"
 msgstr "Attachment"
+
+#: templates/homepage/resume_detail.html:72
+msgid "Update"
+msgstr "Update resume"
+
+#: templates/homepage/resume_detail.html:74
+msgid "Delete"
+msgstr "Delete"
 
 #: templates/homepage/resume_edit.html:6
 msgid "Read me first!"
@@ -664,12 +668,11 @@ msgstr "Read me first!"
 #: templates/homepage/resume_edit.html:7
 msgid "section-resume-1"
 msgstr ""
-"<p>Sorry, this page is currently available in Korean only.</p><h3>이력서 작성 안내</h3>\n"
+"<h3>이력서 작성 안내</h3>\n"
 "<ul>\n"
-"    <li>별도의 비밀번호나 추가 개인정보를 요구하지 않습니다.</li>\n"
-"    <li>입력하신 이메일 주소로 이력서를 수정할 수 있는 URL을 알려드립니다.</li>\n"
-"    <li>파일로 첨부하는 이력서나 포트폴리오는 PDF 형식을 부탁드립니다.</li>\n"
-"    <li>이력서를 파일로 첨부하거나, 링크드인 주소를 적으신 경우에는 별도의 자기 소개나 학력, 경력 사항은 입력하지 않으셔도 됩니다.</li>\n"
+"    <li>No password or no additional personal information needed.</li>\n"
+"    <li>We will send you an unique url for your résumé.</li>\n"
+"    <li>If you have </li>\n"
 "    <li>프로그래머 부분에 지원하신 경우, Github 아이디를 입력해주시면 감사드리겠습니다.</li>\n"
 "</ul>"
 
