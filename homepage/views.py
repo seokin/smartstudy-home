@@ -1,11 +1,14 @@
 from django import http
 from django.conf import settings
 from django.core.urlresolvers import reverse_lazy
+#from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import permission_required
 from django.shortcuts import render, get_object_or_404
+from django.utils.decorators import method_decorator
 from django.utils.http import is_safe_url
 from django.utils.translation import check_for_language
 from django.http import Http404
-from django.views.decorators.cache import cache_page
+#from django.views.decorators.cache import cache_page
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView, ListView
 from .models import Crew, App, Resume, Job, Testimonial, Poster
 from .forms import ResumeForm
@@ -109,6 +112,14 @@ class ResumeUpdate(ResumeEditMixin, UpdateView):
         if not obj.in_draft():
             raise Http404
         return obj
+
+
+class ResumeList(ListView):
+    model = Resume
+
+    @method_decorator(permission_required('homepage.change_resume'))
+    def dispatch(self, *args, **kwargs):
+        return super(ResumeList, self).dispatch(*args, **kwargs)
 
 
 class ResumeDetail(DetailView):

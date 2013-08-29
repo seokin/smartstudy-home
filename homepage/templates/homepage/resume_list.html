@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<script src="{{ STATIC_URL }}lib/masonry/masonry.pkgd.min.js"></script>
+<section id="resumes" class="resumes">
+    <h1>{% trans "Resumes" %}</h1>
+    <table class="table table-bordered">
+    {% for resume in resume_list %}
+        <tr>
+            <td>
+                <a href="{% url 'resume_detail' resume.uuid %}">
+                    <p>{{ resume.name }}</p>
+                </a>
+            </td>
+            <td>
+                <p>{{ resume.email }}</p>
+            </td>
+            <td>
+                <p>{{ resume.get_status_display }}</p>
+            </td>
+            <td>
+                <p>{{ resume.apply_to }}</p>
+            </td>
+            <td>
+                <p>{{ resume.modified|date:'Y-m-d' }}</p>
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+</section>
+{% endblock %}
