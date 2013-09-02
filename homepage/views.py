@@ -10,8 +10,8 @@ from django.utils.translation import check_for_language
 from django.http import Http404
 #from django.views.decorators.cache import cache_page
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView, ListView
-from .models import Crew, App, Resume, Job, Testimonial, Poster
-from .forms import ResumeForm
+from .models import Crew, App, Resume, Job, Testimonial, Poster, ResumeReview
+from .forms import ResumeForm, ResumeReviewForm
 from .helper import sendResumeLink
 
 
@@ -115,11 +115,24 @@ class ResumeUpdate(ResumeEditMixin, UpdateView):
 
 
 class ResumeList(ListView):
-    model = Resume
+    paginate_by = 15
 
     @method_decorator(permission_required('homepage.change_resume'))
     def dispatch(self, *args, **kwargs):
         return super(ResumeList, self).dispatch(*args, **kwargs)
+
+    def get_queryset(self):
+        queryset = Resume.objects.order_by('-modified')
+        if self.request.GET.get('job'):
+            queryset = queryset.filter(apply_to=int(self.request.GET.get('job')))
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super(ResumeList, self).get_context_data(**kwargs)
+        context['user'] = self.request.user
+        context['job'] = int(self.request.GET.get('job', 0))
+        context['jobs'] = Job.objects.filter(active=True)
+        return context
 
 
 class ResumeDetail(DetailView):
@@ -154,3 +167,58 @@ class PosterDetail(DetailView):
 
 class PosterList(ListView):
     model = Poster
+
+
+class ResumeReviewAdd(CreateView):
+    model = ResumeReview
+    form_class = ResumeReviewForm
+    template_name_suffix = '_edit'
+
+    @method_decorator(permission_required('homepage.add_resumereview'))
+    def dispatch(self, *args, **kwargs):
+        return super(ResumeReviewAdd, self).dispatch(*args, **kwargs)
+
+    def get_initial(self):
+        initial = {
+            'resume': Resume.objects.get(uuid=self.kwargs['slug']),
+            'user': self.request.user,
+        }
+        return initial
+
+    def get_success_url(self):
+        return reverse_lazy('resume_detail', args=(self.object.resume.uuid,))
+
+
+class ResumeReviewUpdate(UpdateView):
+    model = ResumeReview
+    form_class = ResumeReviewForm
+    template_name_suffix = '_edit'
+
+    def get_object(self, *args, **kwargs):
+        obj = super(ResumeReviewUpdate, self).get_object(*args, **kwargs)
+        if not obj.user == self.request.user:
+            raise Http404
+        return obj
+
+    def get_initial(self):
+        initial = {
+            'resume': self.object.resume,
+            'user': self.object.user,
+        }
+        return initial
+
+    def get_success_url(self):
+        return reverse_lazy('resume_detail', args=(self.object.resume.uuid,))
+
+
+class ResumeReviewDelete(DeleteView):
+    model = ResumeReview
+    forms = ResumeReviewForm
+    template_name_suffix = '_delete'
+    success_url = reverse_lazy('resume_list')
+
+    def get_object(self, *args, **kwargs):
+        obj = super(ResumeReviewDelete, self).get_object(*args, **kwargs)
+        if not obj.user == self.request.user:
+            raise Http404
+        return obj

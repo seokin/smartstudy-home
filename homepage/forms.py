@@ -1,6 +1,7 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
-from .models import Resume
+from django_summernote.widgets import SummernoteWidget
+from .models import Resume, ResumeReview
 
 
 class ResumeForm(forms.ModelForm):
@@ -33,3 +34,17 @@ class ResumeForm(forms.ModelForm):
     def save(self, commit=True):
         # do something with self.cleaned_data['temp_id']
         return super(ResumeForm, self).save(commit=commit)
+
+
+class ResumeReviewForm(forms.ModelForm):
+    class Meta:
+        model = ResumeReview
+
+    def __init__(self, *args, **kwargs):
+        super(ResumeReviewForm, self).__init__(*args, **kwargs)
+
+        self.fields['user'].widget = forms.HiddenInput()
+        self.fields['resume'].widget = forms.HiddenInput()
+
+        self.fields['desc'] = forms.CharField(widget=SummernoteWidget())
+        self.fields['desc'].widget.attrs['class'] = 'fill-width summernote'

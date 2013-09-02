@@ -2,6 +2,7 @@ from django.conf.urls import patterns, url, include
 from django.conf import settings
 from .views import about, product, contact, withyou, license, privacy, setlang, robots
 from .views import ResumeAdd, ResumeList, ResumeDetail, ResumeUpdate, ResumeDelete, resume_inform
+from .views import ResumeReviewAdd, ResumeReviewUpdate, ResumeReviewDelete
 from .views import TestimonialDetail
 from .views import PosterDetail, PosterList
 
@@ -26,6 +27,10 @@ urlpatterns = patterns(
     url(r'^resume/(?P<slug>\w+)/update/$', ResumeUpdate.as_view(), name='resume_update'),
     url(r'^resume/(?P<slug>\w+)/delete/$', ResumeDelete.as_view(), name='resume_delete'),
     url(r'^resume/(?P<slug>\w+)/inform/$', resume_inform, name='resume_inform'),
+
+    url(r'^resume/(?P<slug>\w+)/review/$', ResumeReviewAdd.as_view(), name='resumereview_add'),
+    url(r'^resume/review/(?P<pk>\d+)/$', ResumeReviewUpdate.as_view(), name='resumereview_update'),
+    url(r'^resume/review/(?P<pk>\d+)/delete/$', ResumeReviewDelete.as_view(), name='resumereview_delete'),
 
     # for poster
     url(r'^poster/$', PosterList.as_view(), name='poster_list'),

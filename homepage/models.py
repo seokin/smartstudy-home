@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.db import models
+from django.db.models import Avg
 from easymode.i18n.decorators import I18n
 from easy_thumbnails.fields import ThumbnailerImageField as ImageField
 from django import forms
@@ -148,6 +149,15 @@ class Resume(models.Model):
     def in_draft(self):
         return self.status == Resume.DRAFT
 
+    def avg_rating(self):
+        rating = ResumeReview.objects.filter(resume=self).aggregate(avg_rating=Avg('rating'))['avg_rating']
+        if not rating:
+            rating = ''
+        return rating
+
+    def rated_by(self):
+        return ResumeReview.objects.filter(resume=self).values_list('user__id', flat=True)
+
     def save(self, *args, **kwargs):
         if self.pk is None:
             self.uuid = self._generate_key()
@@ -157,7 +167,7 @@ class Resume(models.Model):
         return '%s (%s)' % (self.name, self.email)
 
 
-class ResumeRating(models.Model):
+class ResumeReview(models.Model):
     resume = models.ForeignKey(Resume)
     user = models.ForeignKey(User)
     rating = models.IntegerField()

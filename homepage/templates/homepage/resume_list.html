@@ -1,31 +1,35 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block content %}
-<script src="{{ STATIC_URL }}lib/masonry/masonry.pkgd.min.js"></script>
 <section id="resumes" class="resumes">
     <h1>{% trans "Resumes" %}</h1>
-    <table class="table table-bordered">
-    {% for resume in resume_list %}
-        <tr>
-            <td>
-                <a href="{% url 'resume_detail' resume.uuid %}">
-                    <p>{{ resume.name }}</p>
-                </a>
-            </td>
-            <td>
-                <p>{{ resume.email }}</p>
-            </td>
-            <td>
-                <p>{{ resume.get_status_display }}</p>
-            </td>
-            <td>
-                <p>{{ resume.apply_to }}</p>
-            </td>
-            <td>
-                <p>{{ resume.modified|date:'Y-m-d' }}</p>
-            </td>
-        </tr>
-    {% endfor %}
-    </table>
+    <p>
+        <a class="btn{% if 0 == job %} btn-blue{% endif %}" href="{% url 'resume_list' %}">
+            {% trans 'All' %}
+        </a>
+        {% for j in jobs %}
+        <a class="btn{% if j.id == job %} btn-blue{% endif %}" href="{% url 'resume_list' %}?job={{ j.id }}">
+            {{ j.name }}
+        </a>
+        {% endfor %}
+    </p>
+    {% with list=resume_list %}
+    {% include "homepage/resume_list_fragment.html" %}
+    {% endwith %}
+    {% if is_paginated %}
+    <div class="pagination">
+        <span class="page-links">
+            {% if page_obj.has_previous %}
+            <a class="btn btn-blue" href="{% url 'resume_list' %}?page={{ page_obj.previous_page_number }}{% if job %}&job={{ job }}{% endif %}">previous</a>
+            {% endif %}
+            <span class="page-current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+            {% if page_obj.has_next %}
+            <a class="btn btn-blue" href="{% url 'resume_list' %}?page={{ page_obj.next_page_number }}{% if job %}&job={{ job }}{% endif %}">next</a>
+            {% endif %}
+        </span>
+    </div>
+    {% endif %}
 </section>
 {% endblock %}

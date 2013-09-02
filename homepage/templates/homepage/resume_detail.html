@@ -41,6 +41,37 @@
             <td>{{ resume.modified }}</td>
         </tr>
     </table>
+    {% if perms.homepage.change_resume %}
+    <h3>
+        {% trans "Review" %}
+        {% if user.id not in resume.rated_by %}
+            <a class="btn btn-blue" href="{% url 'resumereview_add' resume.uuid %}">
+                {% trans "Review now" %}
+            </a>
+        {% endif %}
+    </h3>
+    {% if resume.resumereview_set.all|length > 0 %}
+    <table class="table table-bordered">
+        {% for r in resume.resumereview_set.all %}
+        <tr>
+            <td>{{ r.user.username }}</td>
+            <td>{{ r.rating }}</td>
+            <td>
+                {% if r.user == user %}
+                <a class="btn pull-right" href="{% url 'resumereview_update' r.id %}">{% trans "Update" %}</a>
+                {% endif %}
+                {{ r.desc|safe }}
+                <br><small>{{ r.modified }}</small>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>
+        {% trans "No review, yet" %}
+    </p>
+    {% endif %}
+    {% endif %}
     <table class="table table-striped table-bordered">
         {% if resume.desc.description %}
         <tr>
