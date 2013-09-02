@@ -8,152 +8,22 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Adding model 'Crew'
-        db.create_table(u'homepage_crew', (
+        # Adding model 'ResumeRating'
+        db.create_table(u'homepage_resumerating', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('nick_en', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-            ('nick_ko', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-            ('title_en', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-            ('title_ko', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-            ('name_en', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-            ('name_ko', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-            ('uid', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-            ('picture', self.gf('django.db.models.fields.files.ImageField')(max_length=100)),
-            ('picture_big', self.gf('django.db.models.fields.files.ImageField')(max_length=100)),
-            ('comment_en', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('comment_ko', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('email', self.gf('django.db.models.fields.EmailField')(max_length=75, null=True, blank=True)),
-            ('home', self.gf('django.db.models.fields.URLField')(max_length=200, null=True, blank=True)),
-            ('facebook', self.gf('django.db.models.fields.URLField')(max_length=200, null=True, blank=True)),
-            ('twitter', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-            ('github', self.gf('django.db.models.fields.CharField')(max_length=50, null=True, blank=True)),
-        ))
-        db.send_create_signal(u'homepage', ['Crew'])
-
-        # Adding model 'App'
-        db.create_table(u'homepage_app', (
-            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('title_en', self.gf('django.db.models.fields.CharField')(max_length=100, null=True, blank=True)),
-            ('title_ko', self.gf('django.db.models.fields.CharField')(max_length=100, null=True, blank=True)),
-            ('subtitle_en', self.gf('django.db.models.fields.CharField')(max_length=100, null=True, blank=True)),
-            ('subtitle_ko', self.gf('django.db.models.fields.CharField')(max_length=100, null=True, blank=True)),
-            ('icon', self.gf('django.db.models.fields.files.ImageField')(max_length=100)),
-            ('appid_appstore_en', self.gf('django.db.models.fields.CharField')(max_length=255, null=True, blank=True)),
-            ('appid_appstore_ko', self.gf('django.db.models.fields.CharField')(max_length=255, null=True, blank=True)),
-            ('appid_playstore_en', self.gf('django.db.models.fields.CharField')(max_length=255, null=True, blank=True)),
-            ('appid_playstore_ko', self.gf('django.db.models.fields.CharField')(max_length=255, null=True, blank=True)),
-            ('desc_en', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('desc_ko', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('desc_more_en', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('desc_more_ko', self.gf('django.db.models.fields.TextField')(null=True, blank=True)),
-            ('launched', self.gf('django.db.models.fields.DateField')(auto_now_add=True, blank=True)),
-        ))
-        db.send_create_signal(u'homepage', ['App'])
-
-        # Adding model 'AppImage'
-        db.create_table(u'homepage_appimage', (
-            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('app', self.gf('django.db.models.fields.related.ForeignKey')(related_name='images', to=orm['homepage.App'])),
-            ('image', self.gf('django.db.models.fields.files.ImageField')(max_length=100)),
-        ))
-        db.send_create_signal(u'homepage', ['AppImage'])
-
-        # Adding model 'AppCategory'
-        db.create_table(u'homepage_appcategory', (
-            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('uid', self.gf('django.db.models.fields.CharField')(max_length=255)),
-            ('title_en', self.gf('django.db.models.fields.CharField')(max_length=255, null=True, blank=True)),
-            ('title_ko', self.gf('django.db.models.fields.CharField')(max_length=255, null=True, blank=True)),
-        ))
-        db.send_create_signal(u'homepage', ['AppCategory'])
-
-        # Adding M2M table for field app on 'AppCategory'
-        m2m_table_name = db.shorten_name(u'homepage_appcategory_app')
-        db.create_table(m2m_table_name, (
-            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
-            ('appcategory', models.ForeignKey(orm[u'homepage.appcategory'], null=False)),
-            ('app', models.ForeignKey(orm[u'homepage.app'], null=False))
-        ))
-        db.create_unique(m2m_table_name, ['appcategory_id', 'app_id'])
-
-        # Adding model 'Testimonial'
-        db.create_table(u'homepage_testimonial', (
-            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('name', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('title', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('tldr', self.gf('django.db.models.fields.TextField')()),
-            ('desc', self.gf('django.db.models.fields.TextField')()),
-            ('picture', self.gf('django.db.models.fields.files.ImageField')(max_length=100)),
-            ('active', self.gf('django.db.models.fields.BooleanField')(default=True)),
-            ('created', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
-        ))
-        db.send_create_signal(u'homepage', ['Testimonial'])
-
-        # Adding model 'Job'
-        db.create_table(u'homepage_job', (
-            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('name', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('desc', self.gf('django.db.models.fields.TextField')()),
-            ('active', self.gf('django.db.models.fields.BooleanField')(default=True)),
-            ('created', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
-        ))
-        db.send_create_signal(u'homepage', ['Job'])
-
-        # Adding model 'Resume'
-        db.create_table(u'homepage_resume', (
-            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('status', self.gf('django.db.models.fields.CharField')(default='D', max_length=1)),
-            ('apply_to', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['homepage.Job'])),
-            ('uuid', self.gf('django.db.models.fields.CharField')(max_length=255, db_index=True)),
-            ('email', self.gf('django.db.models.fields.EmailField')(max_length=255, db_index=True)),
-            ('name', self.gf('django.db.models.fields.CharField')(max_length=100, db_index=True)),
-            ('contact', self.gf('django.db.models.fields.CharField')(max_length=100)),
-            ('desc', self.gf('jsonfield.fields.JSONField')(default={})),
-            ('attachment', self.gf('django.db.models.fields.files.FileField')(max_length=100, null=True, blank=True)),
-            ('applied', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
-            ('modified', self.gf('django.db.models.fields.DateTimeField')(auto_now=True, blank=True)),
-        ))
-        db.send_create_signal(u'homepage', ['Resume'])
-
-        # Adding model 'Poster'
-        db.create_table(u'homepage_poster', (
-            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('title', self.gf('django.db.models.fields.CharField')(max_length=255, null=True, blank=True)),
-            ('picture', self.gf('django.db.models.fields.files.ImageField')(max_length=100)),
-            ('active', self.gf('django.db.models.fields.BooleanField')(default=True)),
+            ('resume', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['homepage.Resume'])),
+            ('user', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['auth.User'])),
+            ('rating', self.gf('django.db.models.fields.IntegerField')()),
             ('desc', self.gf('django.db.models.fields.TextField')(blank=True)),
             ('created', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
+            ('modified', self.gf('django.db.models.fields.DateTimeField')(auto_now=True, blank=True)),
         ))
-        db.send_create_signal(u'homepage', ['Poster'])
+        db.send_create_signal(u'homepage', ['ResumeRating'])
 
 
     def backwards(self, orm):
-        # Deleting model 'Crew'
-        db.delete_table(u'homepage_crew')
-
-        # Deleting model 'App'
-        db.delete_table(u'homepage_app')
-
-        # Deleting model 'AppImage'
-        db.delete_table(u'homepage_appimage')
-
-        # Deleting model 'AppCategory'
-        db.delete_table(u'homepage_appcategory')
-
-        # Removing M2M table for field app on 'AppCategory'
-        db.delete_table(db.shorten_name(u'homepage_appcategory_app'))
-
-        # Deleting model 'Testimonial'
-        db.delete_table(u'homepage_testimonial')
-
-        # Deleting model 'Job'
-        db.delete_table(u'homepage_job')
-
-        # Deleting model 'Resume'
-        db.delete_table(u'homepage_resume')
-
-        # Deleting model 'Poster'
-        db.delete_table(u'homepage_poster')
+        # Deleting model 'ResumeRating'
+        db.delete_table(u'homepage_resumerating')
 
 
     models = {
@@ -275,6 +145,16 @@ class Migration(SchemaMigration):
             'name': ('django.db.models.fields.CharField', [], {'max_length': '100', 'db_index': 'True'}),
             'status': ('django.db.models.fields.CharField', [], {'default': "'D'", 'max_length': '1'}),
             'uuid': ('django.db.models.fields.CharField', [], {'max_length': '255', 'db_index': 'True'})
+        },
+        u'homepage.resumerating': {
+            'Meta': {'object_name': 'ResumeRating'},
+            'created': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
+            'desc': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
+            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'modified': ('django.db.models.fields.DateTimeField', [], {'auto_now': 'True', 'blank': 'True'}),
+            'rating': ('django.db.models.fields.IntegerField', [], {}),
+            'resume': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['homepage.Resume']"}),
+            'user': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['auth.User']"})
         },
         u'homepage.testimonial': {
             'Meta': {'object_name': 'Testimonial'},
