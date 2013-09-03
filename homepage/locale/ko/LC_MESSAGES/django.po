@@ -696,6 +696,9 @@ msgid "Opinion"
 msgstr "의견"
 
 #: templates/homepage/resume_detail.html:37
+msgid "Update"
+msgstr "의견 수정"
+
 #: templates/homepage/resume_detail.html:55
 msgid "Update"
 msgstr "이력서 수정"

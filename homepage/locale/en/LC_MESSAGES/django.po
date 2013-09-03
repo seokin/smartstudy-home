@@ -657,6 +657,9 @@ msgid "Opinion"
 msgstr "Opinion"
 
 #: templates/homepage/resume_detail.html:37
+msgid "Update"
+msgstr "Update review"
+
 #: templates/homepage/resume_detail.html:55
 msgid "Update"
 msgstr "Update resume"
