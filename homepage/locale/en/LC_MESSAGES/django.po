@@ -657,12 +657,12 @@ msgid "Opinion"
 msgstr "Opinion"
 
 #: templates/homepage/resume_detail.html:37
-msgid "Update"
+msgid "Update review"
 msgstr "Update review"
 
 #: templates/homepage/resume_detail.html:55
-msgid "Update"
-msgstr "Update resume"
+msgid "Update resume"
+msgstr "Update résumé"
 
 #: templates/homepage/resume_detail.html:48
 msgid "No review, yet"

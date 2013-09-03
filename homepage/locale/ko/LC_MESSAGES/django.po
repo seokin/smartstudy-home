@@ -696,11 +696,11 @@ msgid "Opinion"
 msgstr "의견"
 
 #: templates/homepage/resume_detail.html:37
-msgid "Update"
+msgid "Update review"
 msgstr "의견 수정"
 
 #: templates/homepage/resume_detail.html:55
-msgid "Update"
+msgid "Update resume"
 msgstr "이력서 수정"
 
 #: templates/homepage/resume_detail.html:48

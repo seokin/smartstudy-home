@@ -34,7 +34,7 @@
             <tr>
                 <td colspan="2">
                     {% if r.user == user %}
-                    <a class="btn pull-right" href="{% url 'resumereview_update' r.id %}">{% trans "Update" %}</a>
+                    <a class="btn pull-right" href="{% url 'resumereview_update' r.id %}">{% trans "Update review" %}</a>
                     {% endif %}
                     {{ r.desc|safe }}
                     <br><small>{{ r.modified }}</small>
@@ -52,7 +52,7 @@
     {% include "homepage/resume_detail_fragment.html" %}
     <p>
         {% if resume.in_draft %}
-        <a class="btn btn-blue" href="{% url 'resume_update' resume.uuid %}">{% trans 'Update' %}</a>
+        <a class="btn btn-blue" href="{% url 'resume_update' resume.uuid %}">{% trans 'Update resume' %}</a>
         {% endif %}
         <a class="btn btn-red" href="{% url 'resume_delete' resume.uuid %}">{% trans 'Delete' %}</a>
     </p>
