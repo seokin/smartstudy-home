@@ -116,7 +116,7 @@ class ResumeUpdate(ResumeEditMixin, UpdateView):
 
 
 class ResumeList(ListView):
-    paginate_by = 10
+    paginate_by = 50
 
     @method_decorator(permission_required('homepage.change_resume'))
     def dispatch(self, *args, **kwargs):
