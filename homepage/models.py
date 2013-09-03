@@ -164,7 +164,7 @@ class Resume(models.Model):
         super(Resume, self).save()
 
     def __unicode__(self):
-        return '%s (%s)' % (self.name, self.email)
+        return u'%s (%s)' % (self.name, self.email)
 
 
 class ResumeReview(models.Model):
@@ -177,7 +177,7 @@ class ResumeReview(models.Model):
     modified = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
-        return '%s (by %s)' % (self.resume, self.user)
+        return u'%s (by %s)' % (self.resume, self.user)
 
 
 class Poster(models.Model):
