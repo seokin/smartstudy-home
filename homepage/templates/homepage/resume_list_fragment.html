@@ -1,21 +1,26 @@
 {% load i18n %}
-<table class="table table-bordered">
+{% load capture %}
+{% load url_replace %}
+<table class="table table-bordered table-condensed">
     <thead>
-        <th>{% trans "Reviewed" %}</th>
-        {% for col, name in table %}
-        <th><a href="?sort={% if sort == col %}-{% endif %}{{ col }}">{% trans name %}</a></th>
-        {% endfor %}
+        <tr>
+            <th>{% trans "Reviewed" %}</th>
+            {% for col, name in table %}
+            {% capture c %}{% if sort == col %}-{% endif %}{{ col }}{% endcapture %}
+            <th><a href="?{% url_replace 'sort' c %}">{% trans name %}</a></th>
+            {% endfor %}
+        </tr>
     </thead>
     <tbody>
         {% for resume in list %}
         <tr>
             <td>
                 {% if resume.reviewed %}
-                <a class="btn" href="{% url 'resume_detail' resume.uuid %}">
-                    {% trans "Review" %}
-                </a>
+                {% trans "Complete" %}
                 {% else %}
-                {% trans "Reviewed" %}
+                <a href="{% url 'resumereview_add' resume.uuid %}">
+                    {% trans "Review now" %}
+                </a>
                 {% endif %}
             </td>
             <td>

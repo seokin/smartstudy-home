@@ -16,4 +16,8 @@
         </p>
     </form>
 </section>
+<hr>
+{% with resume=form.initial.resume %}
+{% include "homepage/resume_detail_fragment.html" %}
+{% endwith %}
 {% endblock %}

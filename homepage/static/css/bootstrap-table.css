@@ -7,7 +7,7 @@ table {
 
 .table {
   width: 100%;
-  margin-bottom: 20px;
+  margin: 5px 0 10px 0;
 }
 
 .table th,
@@ -21,6 +21,7 @@ table {
 
 .table th {
   font-weight: bold;
+  background-color: #f1f1f1;
 }
 
 .table thead th {
@@ -47,6 +48,14 @@ table {
 .table-condensed th,
 .table-condensed td {
   padding: 4px 5px;
+}
+
+.table-condensed th,
+.table-condensed td,
+.table-condensed a,
+.table-condensed p,
+.table-condensed span {
+  font-size: 10pt;
 }
 
 .table-bordered {

@@ -1,0 +1,66 @@
+{% load i18n %}
+{% load url_target_blank %}
+<h3>{% trans 'Basic information' %}</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>{% trans 'Status' %}</th>
+        <td>{{ resume.get_status_display }}</td>
+    </tr>
+    <tr>
+        <th>{% trans 'Apply to' %}</th>
+        <td>{{ resume.apply_to }}</td>
+    </tr>
+    <tr>
+        <th>{% trans 'Email' %}</th>
+        <td>{{ resume.email }}</td>
+    </tr>
+    {% if resume.desc.linkedin %}
+    <tr>
+        <th>{% trans 'LinkedIn' %}</th>
+        <td>{{ resume.desc.linkedin|urlize|url_target_blank }}</td>
+    </tr>
+    {% endif %}
+    {% if resume.desc.homepage %}
+    <tr>
+        <th>{% trans 'Homepage' %}</th>
+        <td>{{ resume.desc.homepage|urlize|url_target_blank }}</td>
+    </tr>
+    {% endif %}
+    {% if resume.desc.github %}
+    <tr>
+        <th>{% trans 'Github' %}</th>
+        <td><a href="https://github.com/{{ resume.desc.github }}">{{ resume.desc.github }}</a></td>
+    </tr>
+    {% endif %}
+    <tr>
+        <th>{% trans 'Last update' %}</th>
+        <td>{{ resume.modified }}</td>
+    </tr>
+</table>
+<h3>{% trans 'Additional information' %}</h3>
+<table class="table table-striped table-bordered">
+    {% if resume.desc.description %}
+    <tr>
+        <th>{% trans 'Description' %}</th>
+    </tr>
+    <tr>
+        <td>{{ resume.desc.description|safe }}</td>
+    </tr>
+    {% endif %}
+    {% if resume.desc.resume %}
+    <tr>
+        <th>{% trans 'Resume' %}</th>
+    </tr>
+    <tr>
+        <td>{{ resume.desc.resume|safe }}</td>
+    </tr>
+    {% endif %}
+    {% if resume.attachment %}
+    <tr>
+        <th>{% trans 'Attachment' %}</th>
+    </tr>
+    <tr>
+        <td><a href="{{ resume.attachment.url }}">{{ resume.attachment.url }}</a></td>
+    </tr>
+    {% endif %}
+</table>

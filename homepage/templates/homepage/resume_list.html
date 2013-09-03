@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load url_replace %}
 {% block content %}
 <section id="resumes" class="resumes">
     <h1>{% trans "Resumes" %}</h1>
@@ -20,13 +21,13 @@
     <div class="pagination">
         <span class="page-links">
             {% if page_obj.has_previous %}
-            <a class="btn btn-blue" href="{% url 'resume_list' %}?page={{ page_obj.previous_page_number }}{% if job %}&job={{ job }}{% endif %}">previous</a>
+            <a class="btn btn-blue" href="{% url 'resume_list' %}?{% url_replace 'page' page_obj.previous_page_number %}">previous</a>
             {% endif %}
             <span class="page-current">
                 Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
             </span>
             {% if page_obj.has_next %}
-            <a class="btn btn-blue" href="{% url 'resume_list' %}?page={{ page_obj.next_page_number }}{% if job %}&job={{ job }}{% endif %}">next</a>
+            <a class="btn btn-blue" href="{% url 'resume_list' %}?{% url_replace 'page' page_obj.next_page_number %}">next</a>
             {% endif %}
         </span>
     </div>

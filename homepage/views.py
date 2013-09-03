@@ -116,7 +116,7 @@ class ResumeUpdate(ResumeEditMixin, UpdateView):
 
 
 class ResumeList(ListView):
-    paginate_by = 100
+    paginate_by = 10
 
     @method_decorator(permission_required('homepage.change_resume'))
     def dispatch(self, *args, **kwargs):
@@ -153,7 +153,7 @@ class ResumeList(ListView):
         context['user'] = self.request.user
         context['sort'] = self.request.GET.get('sort')
         context['job'] = int(self.request.GET.get('job', 0))
-        context['jobs'] = Job.objects.filter(active=True)
+        context['jobs'] = Job.objects.all()
         return context
 
 
