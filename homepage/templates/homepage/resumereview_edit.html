@@ -2,13 +2,16 @@
 {% load i18n %}
 {% load crispy_forms_tags %}
 {% block content %}
-<section id="resume">
+<section id="review">
     <h1>{% trans "Write a review" %}</h1>
     <h2>{{ form.initial.resume }} / {{ form.initial.resume.apply_to }}</h2>
     <form enctype="multipart/form-data" method="post">
         {% csrf_token %}
         {{ form|crispy }}
         <p>
+            {% if form.instance.id %}
+            <a class="btn btn-red pull-right" href="{% url 'resumereview_delete' form.instance.id %}">{% trans 'Delete' %}</a>
+            {% endif %}
             <input class="btn btn-purple" type="submit" name="submit" value="{% trans 'Submit' %}">
         </p>
     </form>

@@ -1,6 +1,7 @@
 from django import http
 from django.conf import settings
 from django.core.urlresolvers import reverse_lazy
+from django.db.models import Avg, Count
 #from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import permission_required
 from django.shortcuts import render, get_object_or_404
@@ -115,21 +116,42 @@ class ResumeUpdate(ResumeEditMixin, UpdateView):
 
 
 class ResumeList(ListView):
-    paginate_by = 15
+    paginate_by = 100
 
     @method_decorator(permission_required('homepage.change_resume'))
     def dispatch(self, *args, **kwargs):
         return super(ResumeList, self).dispatch(*args, **kwargs)
 
     def get_queryset(self):
-        queryset = Resume.objects.order_by('-modified')
+        queryset = Resume.objects.all().annotate(
+            avg_rating=Avg('resumereview__rating'),
+            review_count=Count('resumereview__rating')
+        )
+        sort = self.request.GET.get('sort', '-modified')
+        if sort:
+            queryset = queryset.order_by(sort)
+
         if self.request.GET.get('job'):
             queryset = queryset.filter(apply_to=int(self.request.GET.get('job')))
+
+        for resume in queryset:
+            resume.reviewed = ResumeReview.objects.filter(user=self.request.user, resume=resume).exists()
+
         return queryset
 
     def get_context_data(self, **kwargs):
         context = super(ResumeList, self).get_context_data(**kwargs)
+        context['table'] = [
+            ('name', 'Name'),
+            ('email', 'Email'),
+            ('status', 'Status'),
+            ('apply_to', 'Apply to'),
+            ('avg_rating', 'Rating'),
+            ('review_count', 'Review'),
+            ('modified', 'Last update'),
+        ]
         context['user'] = self.request.user
+        context['sort'] = self.request.GET.get('sort')
         context['job'] = int(self.request.GET.get('job', 0))
         context['jobs'] = Job.objects.filter(active=True)
         return context

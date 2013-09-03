@@ -4,6 +4,9 @@
 {% block content %}
 <section id="support">
     <h1>{% trans "Resume" %}</h1>
+    {% if perms.homepage.change_resume %}
+    <a class="btn btn-blue pull-right" href="{% url 'resume_list' %}">{% trans "Back to list" %}</a>
+    {% endif %}
     <h2>{{ resume.name }}</h2>
     <table class="table table-bordered">
         <tr>

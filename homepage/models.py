@@ -176,6 +176,9 @@ class ResumeReview(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
+    def __unicode__(self):
+        return '%s (by %s)' % (self.resume, self.user)
+
 
 class Poster(models.Model):
     title = models.CharField(max_length=255, null=True, blank=True)

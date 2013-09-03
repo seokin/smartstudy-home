@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block content %}
-<section id="resume">
-    <h1>{% trans "Resume" %}</h1>
+<section id="review">
+    <h1>{% trans "Delete a review" %}</h1>
     <form action="" method="post">{% csrf_token %}
         <p>{% trans 'Are you sure you want to delete?' %}</p>
         <input class="btn btn-red" type="submit" value="{% trans 'Confirm to delete' %}" />

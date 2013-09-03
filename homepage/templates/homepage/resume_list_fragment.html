@@ -1,19 +1,16 @@
 {% load i18n %}
 <table class="table table-bordered">
     <thead>
-        <th>{% trans "Review" %}</th>
-        <th>{% trans "Name" %}</th>
-        <th>{% trans "Email" %}</th>
-        <th>{% trans "Status" %}</th>
-        <th>{% trans "Apply to" %}</th>
-        <th>{% trans "Rating" %}</th>
-        <th>{% trans "Last update" %}</th>
+        <th>{% trans "Reviewed" %}</th>
+        {% for col, name in table %}
+        <th><a href="?sort={% if sort == col %}-{% endif %}{{ col }}">{% trans name %}</a></th>
+        {% endfor %}
     </thead>
     <tbody>
         {% for resume in list %}
         <tr>
             <td>
-                {% if user.id not in resume.rated_by %}
+                {% if resume.reviewed %}
                 <a class="btn" href="{% url 'resume_detail' resume.uuid %}">
                     {% trans "Review" %}
                 </a>
@@ -37,6 +34,9 @@
             </td>
             <td>
                 <p>{{ resume.avg_rating }}</p>
+            </td>
+            <td>
+                <p>{{ resume.rated_by|length }}</p>
             </td>
             <td>
                 <p>{{ resume.modified|date:'Y-m-d' }}</p>
