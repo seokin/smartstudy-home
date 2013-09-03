@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 20:58+0900\n"
-"PO-Revision-Date: 2013-08-26 21:06+0900\n"
+"POT-Creation-Date: 2013-09-03 15:00+0900\n"
+"PO-Revision-Date: 2013-09-03 15:02+0900\n"
 "Last-Translator:   <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,71 +25,71 @@ msgstr "선택한 이력서를 보관하기"
 msgid "Link to resume"
 msgstr "이력서 보기"
 
-#: forms.py:21
+#: forms.py:22
 #, python-format
 msgid " - Max. file size %d MB"
 msgstr " - 파일 크기 %d MB 제한"
 
-#: forms.py:28
+#: forms.py:29
 #, python-format
 msgid "Too large attachment( > %d MB )"
 msgstr "첨부 파일의 크기가 용량 제한( %d MB ) 보다 큽니다."
 
-#: models.py:112
+#: models.py:113
 msgid "Draft"
 msgstr "임시 저장"
 
-#: models.py:113
+#: models.py:114
 msgid "Submitted"
 msgstr "제출됨"
 
-#: models.py:114
+#: models.py:115
 msgid "Candidate"
 msgstr "후보"
 
-#: models.py:115
+#: models.py:116
 msgid "Archived"
 msgstr "보관"
 
-#: models.py:119 templates/homepage/resume_detail.html:14
+#: models.py:120 templates/homepage/resume_detail_fragment.html:10
 msgid "Apply to"
 msgstr "지원 부문"
 
-#: models.py:122 templates/homepage/resume_detail.html:18
+#: models.py:123 templates/homepage/resume_detail_fragment.html:14
 msgid "Email"
 msgstr "이메일"
 
-#: models.py:123
+#: models.py:124
 msgid "Full name"
 msgstr "이름"
 
-#: models.py:124
+#: models.py:125
 msgid "Contact / Phone"
 msgstr "연락처 / 전화번호"
 
-#: models.py:126
+#: models.py:127
 msgid "Resume as file (optional)"
 msgstr "이력서 및 포트폴리오 파일 첨부 (가능한 경우)"
 
-#: models.py:135
+#: models.py:136
 msgid "LinkedIn URL (optional)"
 msgstr ""
 "링크드인 주소 (선택사항) / 입력시 <a href='http://www.linkedin.com/profile/public-"
 "profile-settings'>[링크드인 설정]</a>에서 공개 설정 필수"
 
-#: models.py:136
+#: models.py:137
 msgid "Homepage URL (optional)"
 msgstr "홈페이지 주소 (선택사항)"
 
-#: models.py:137
+#: models.py:138
 msgid "Github id (optional)"
 msgstr "Github 아이디 (선택사항)"
 
-#: models.py:138
+#: models.py:139
 msgid "Self description"
 msgstr "자기 소개"
 
-#: models.py:139
+#: models.py:140
 msgid "Education / Experience"
 msgstr "학력 / 경력 사항"
 
@@ -392,7 +392,7 @@ msgstr "페이스북"
 msgid "Twitter"
 msgstr "트위터"
 
-#: templates/footer.html:46 templates/homepage/resume_detail.html:35
+#: templates/footer.html:46 templates/homepage/resume_detail_fragment.html:31
 msgid "Github"
 msgstr "깃허브"
 
@@ -654,51 +654,92 @@ msgid "Back"
 msgstr "목록으로"
 
 #: templates/homepage/resume_delete.html:5
-#: templates/homepage/resume_detail.html:6
-#: templates/homepage/resume_detail.html:55
+#: templates/homepage/resume_detail.html:5
+#: templates/homepage/resume_detail_fragment.html:52
 #: templates/homepage/resume_edit.html:11
 msgid "Resume"
 msgstr "이력서"
 
 #: templates/homepage/resume_delete.html:7
+#: templates/homepage/resumereview_delete.html:7
 msgid "Are you sure you want to delete?"
 msgstr "정말로 삭제하시겠습니까?"
 
 #: templates/homepage/resume_delete.html:8
+#: templates/homepage/resumereview_delete.html:8
 msgid "Confirm to delete"
 msgstr "삭제"
 
+#: templates/homepage/resume_detail.html:8
+msgid "Back to list"
+msgstr "목록으로"
+
 #: templates/homepage/resume_detail.html:10
-msgid "Status"
-msgstr "상태"
+msgid "Review"
+msgstr "평가"
 
-#: templates/homepage/resume_detail.html:23
-msgid "LinkedIn"
-msgstr "링크드인"
+#: templates/homepage/resume_detail.html:13
+#: templates/homepage/resume_list_fragment.html:22
+msgid "Review now"
+msgstr "평가하기"
 
-#: templates/homepage/resume_detail.html:29
-msgid "Homepage"
-msgstr "홈페이지"
+#: templates/homepage/resume_detail.html:21
+msgid "Reviewer"
+msgstr "평가자"
 
-#: templates/homepage/resume_detail.html:40
-msgid "Last update"
-msgstr "최종 수정일"
+#: templates/homepage/resume_detail.html:22
+msgid "Rating"
+msgstr "평점"
 
-#: templates/homepage/resume_detail.html:47
-msgid "Description"
-msgstr "자기 소개"
+#: templates/homepage/resume_detail.html:25
+msgid "Opinion"
+msgstr "의견"
 
-#: templates/homepage/resume_detail.html:63
-msgid "Attachment"
-msgstr "첨부파일"
-
-#: templates/homepage/resume_detail.html:72
+#: templates/homepage/resume_detail.html:37
+#: templates/homepage/resume_detail.html:55
 msgid "Update"
 msgstr "이력서 수정"
 
-#: templates/homepage/resume_detail.html:74
+#: templates/homepage/resume_detail.html:48
+msgid "No review, yet"
+msgstr "아직 등록된 평가가 없습니다."
+
+#: templates/homepage/resume_detail.html:57
+#: templates/homepage/resumereview_edit.html:13
 msgid "Delete"
 msgstr "삭제"
+
+#: templates/homepage/resume_detail_fragment.html:3
+msgid "Basic information"
+msgstr "기본 정보"
+
+#: templates/homepage/resume_detail_fragment.html:6
+msgid "Status"
+msgstr "상태"
+
+#: templates/homepage/resume_detail_fragment.html:19
+msgid "LinkedIn"
+msgstr "링크드인"
+
+#: templates/homepage/resume_detail_fragment.html:25
+msgid "Homepage"
+msgstr "홈페이지"
+
+#: templates/homepage/resume_detail_fragment.html:36
+msgid "Last update"
+msgstr "최종 수정일"
+
+#: templates/homepage/resume_detail_fragment.html:40
+msgid "Additional information"
+msgstr "추가 정보"
+
+#: templates/homepage/resume_detail_fragment.html:44
+msgid "Description"
+msgstr "자기 소개"
+
+#: templates/homepage/resume_detail_fragment.html:60
+msgid "Attachment"
+msgstr "첨부파일"
 
 #: templates/homepage/resume_edit.html:6
 msgid "Read me first!"
@@ -721,6 +762,7 @@ msgid "Save as DRAFT"
 msgstr "임시저장"
 
 #: templates/homepage/resume_edit.html:17
+#: templates/homepage/resumereview_edit.html:15
 msgid "Submit"
 msgstr "제출"
 
@@ -742,6 +784,38 @@ msgstr "이력서를 수정할 수 있는 페이지 주소를 등록하신 %(ema
 #: templates/homepage/resume_inform.html:13
 msgid "Go to resume"
 msgstr "이력서 보기"
+
+#: templates/homepage/resume_list.html:6
+msgid "Resumes"
+msgstr "이력서"
+
+#: templates/homepage/resume_list.html:9
+msgid "All"
+msgstr "모두"
+
+#: templates/homepage/resume_list.html:24
+msgid "previous"
+msgstr "이전"
+
+#: templates/homepage/resume_list.html:30
+msgid "next"
+msgstr "다음"
+
+#: templates/homepage/resume_list_fragment.html:7
+msgid "Reviewed"
+msgstr "평가 여부"
+
+#: templates/homepage/resume_list_fragment.html:19
+msgid "Complete"
+msgstr "완료"
+
+#: templates/homepage/resumereview_delete.html:5
+msgid "Delete a review"
+msgstr "의견 삭제"
+
+#: templates/homepage/resumereview_edit.html:6
+msgid "Write a review"
+msgstr "의견 작성"
 
 #: templates/mail/resume_link.html:2
 msgid "SMARTSTUDY Resume"

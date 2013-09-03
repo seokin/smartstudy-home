@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 20:58+0900\n"
-"PO-Revision-Date: 2013-08-26 21:15+0900\n"
+"POT-Creation-Date: 2013-09-03 15:00+0900\n"
+"PO-Revision-Date: 2013-09-03 15:03+0900\n"
 "Last-Translator:   <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,71 +25,71 @@ msgstr "Archive selected resumes"
 msgid "Link to resume"
 msgstr "Link to résumé"
 
-#: forms.py:21
+#: forms.py:22
 #, python-format
 msgid " - Max. file size %d MB"
 msgstr "- Max. file size %d MB"
 
-#: forms.py:28
+#: forms.py:29
 #, python-format
 msgid "Too large attachment( > %d MB )"
 msgstr "Too large attachment( > %d MB )"
 
-#: models.py:112
+#: models.py:113
 msgid "Draft"
 msgstr "Draft"
 
-#: models.py:113
+#: models.py:114
 msgid "Submitted"
 msgstr "Submitted"
 
-#: models.py:114
+#: models.py:115
 msgid "Candidate"
 msgstr "Candidate"
 
-#: models.py:115
+#: models.py:116
 msgid "Archived"
 msgstr "Archived"
 
-#: models.py:119 templates/homepage/resume_detail.html:14
+#: models.py:120 templates/homepage/resume_detail_fragment.html:10
 msgid "Apply to"
 msgstr "Apply to"
 
-#: models.py:122 templates/homepage/resume_detail.html:18
+#: models.py:123 templates/homepage/resume_detail_fragment.html:14
 msgid "Email"
 msgstr "Email"
 
-#: models.py:123
+#: models.py:124
 msgid "Full name"
 msgstr "Full name"
 
-#: models.py:124
+#: models.py:125
 msgid "Contact / Phone"
 msgstr "Contact / Phone"
 
-#: models.py:126
+#: models.py:127
 msgid "Resume as file (optional)"
 msgstr "Résumé as file (optional)"
 
-#: models.py:135
+#: models.py:136
 msgid "LinkedIn URL (optional)"
 msgstr ""
 "LinkedIn URL (optional) / <a href='http://www.linkedin.com/profile/public-"
 "profile-settings'>[LinkedIn public profile settings]</a> is required."
 
-#: models.py:136
+#: models.py:137
 msgid "Homepage URL (optional)"
 msgstr "Homepage URL (optional)"
 
-#: models.py:137
+#: models.py:138
 msgid "Github id (optional)"
 msgstr "Github id (optional)"
 
-#: models.py:138
+#: models.py:139
 msgid "Self description"
 msgstr "Self description"
 
-#: models.py:139
+#: models.py:140
 msgid "Education / Experience"
 msgstr "Education / Experience"
 
@@ -355,7 +355,7 @@ msgstr "Facebook"
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/footer.html:46 templates/homepage/resume_detail.html:35
+#: templates/footer.html:46 templates/homepage/resume_detail_fragment.html:31
 msgid "Github"
 msgstr "Github"
 
@@ -615,51 +615,92 @@ msgid "Back"
 msgstr "Back"
 
 #: templates/homepage/resume_delete.html:5
-#: templates/homepage/resume_detail.html:6
-#: templates/homepage/resume_detail.html:55
+#: templates/homepage/resume_detail.html:5
+#: templates/homepage/resume_detail_fragment.html:52
 #: templates/homepage/resume_edit.html:11
 msgid "Resume"
 msgstr "Résumé"
 
 #: templates/homepage/resume_delete.html:7
+#: templates/homepage/resumereview_delete.html:7
 msgid "Are you sure you want to delete?"
 msgstr "Are you sure you want to delete?"
 
 #: templates/homepage/resume_delete.html:8
+#: templates/homepage/resumereview_delete.html:8
 msgid "Confirm to delete"
 msgstr "Confirm to delete"
 
+#: templates/homepage/resume_detail.html:8
+msgid "Back to list"
+msgstr "Back to list"
+
 #: templates/homepage/resume_detail.html:10
-msgid "Status"
-msgstr "Status"
+msgid "Review"
+msgstr "Review"
 
-#: templates/homepage/resume_detail.html:23
-msgid "LinkedIn"
-msgstr "LinkedIn"
+#: templates/homepage/resume_detail.html:13
+#: templates/homepage/resume_list_fragment.html:22
+msgid "Review now"
+msgstr "Review now"
 
-#: templates/homepage/resume_detail.html:29
-msgid "Homepage"
-msgstr "Homepage"
+#: templates/homepage/resume_detail.html:21
+msgid "Reviewer"
+msgstr "Reviewer"
 
-#: templates/homepage/resume_detail.html:40
-msgid "Last update"
-msgstr "Last update"
+#: templates/homepage/resume_detail.html:22
+msgid "Rating"
+msgstr "Rating"
 
-#: templates/homepage/resume_detail.html:47
-msgid "Description"
-msgstr "Self description"
+#: templates/homepage/resume_detail.html:25
+msgid "Opinion"
+msgstr "Opinion"
 
-#: templates/homepage/resume_detail.html:63
-msgid "Attachment"
-msgstr "Attachment"
-
-#: templates/homepage/resume_detail.html:72
+#: templates/homepage/resume_detail.html:37
+#: templates/homepage/resume_detail.html:55
 msgid "Update"
 msgstr "Update resume"
 
-#: templates/homepage/resume_detail.html:74
+#: templates/homepage/resume_detail.html:48
+msgid "No review, yet"
+msgstr "No review, yet."
+
+#: templates/homepage/resume_detail.html:57
+#: templates/homepage/resumereview_edit.html:13
 msgid "Delete"
 msgstr "Delete"
+
+#: templates/homepage/resume_detail_fragment.html:3
+msgid "Basic information"
+msgstr "Basic Information"
+
+#: templates/homepage/resume_detail_fragment.html:6
+msgid "Status"
+msgstr "Status"
+
+#: templates/homepage/resume_detail_fragment.html:19
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: templates/homepage/resume_detail_fragment.html:25
+msgid "Homepage"
+msgstr "Homepage"
+
+#: templates/homepage/resume_detail_fragment.html:36
+msgid "Last update"
+msgstr "Last update"
+
+#: templates/homepage/resume_detail_fragment.html:40
+msgid "Additional information"
+msgstr "Additional Information"
+
+#: templates/homepage/resume_detail_fragment.html:44
+msgid "Description"
+msgstr "Self description"
+
+#: templates/homepage/resume_detail_fragment.html:60
+msgid "Attachment"
+msgstr "Attachment"
 
 #: templates/homepage/resume_edit.html:6
 msgid "Read me first!"
@@ -681,6 +722,7 @@ msgid "Save as DRAFT"
 msgstr "Save as DRAFT"
 
 #: templates/homepage/resume_edit.html:17
+#: templates/homepage/resumereview_edit.html:15
 msgid "Submit"
 msgstr "Submit"
 
@@ -704,6 +746,38 @@ msgstr ""
 #: templates/homepage/resume_inform.html:13
 msgid "Go to resume"
 msgstr "Go to résumé"
+
+#: templates/homepage/resume_list.html:6
+msgid "Resumes"
+msgstr "Résumés"
+
+#: templates/homepage/resume_list.html:9
+msgid "All"
+msgstr "All"
+
+#: templates/homepage/resume_list.html:24
+msgid "previous"
+msgstr "Previous"
+
+#: templates/homepage/resume_list.html:30
+msgid "next"
+msgstr "Next"
+
+#: templates/homepage/resume_list_fragment.html:7
+msgid "Reviewed"
+msgstr "Reviewed"
+
+#: templates/homepage/resume_list_fragment.html:19
+msgid "Complete"
+msgstr "Complete"
+
+#: templates/homepage/resumereview_delete.html:5
+msgid "Delete a review"
+msgstr "Delete a review"
+
+#: templates/homepage/resumereview_edit.html:6
+msgid "Write a review"
+msgstr "Write a review"
 
 #: templates/mail/resume_link.html:2
 msgid "SMARTSTUDY Resume"
