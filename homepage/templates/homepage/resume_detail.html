@@ -29,14 +29,24 @@
             {% for r in resume.resumereview_set.all %}
             <tr>
                 <td>{{ r.user.username }}</td>
-                <td>{{ r.rating }}</td>
+                <td>
+                    {% if user.id not in resume.rated_by %}
+                    ----
+                    {% else %}
+                    {{ r.rating }}
+                    {% endif %}
+                </td>
             </tr>
             <tr>
                 <td colspan="2">
                     {% if r.user == user %}
                     <a class="btn pull-right" href="{% url 'resumereview_update' r.id %}">{% trans "Update review" %}</a>
                     {% endif %}
+                    {% if user.id not in resume.rated_by %}
+                    ----
+                    {% else %}
                     {{ r.desc|safe }}
+                    {% endif %}
                     <br><small>{{ r.modified }}</small>
                 </td>
             </tr>
