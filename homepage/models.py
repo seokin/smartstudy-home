@@ -107,12 +107,17 @@ class Job(models.Model):
 class Resume(models.Model):
     DRAFT = 'D'
     SUBMIT = 'S'
-    ARCHIVE = 'A'
     CANDIDATE = 'C'
+    INTERVIEW = 'I'
+    GRANT = 'G'
+    ARCHIVE = 'A'
+
     STATUS = (
         (DRAFT, _('Draft')),
         (SUBMIT, _('Submitted')),
         (CANDIDATE, _('Candidate')),
+        (INTERVIEW, _('Interviewed')),
+        (GRANT, _('Granted')),
         (ARCHIVE, _('Archived')),
     )
 

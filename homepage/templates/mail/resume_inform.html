@@ -1,0 +1,10 @@
+{% load i18n %}
+{% if top_image %}
+<div><img src="cid:top_image" /></div>
+{% endif %}
+<div>
+    {{ message|safe }}
+</div>
+{% if bottom_image %}
+<div><img src="cid:bottom_image" /></div>
+{% endif %}

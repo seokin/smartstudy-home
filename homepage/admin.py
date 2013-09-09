@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
-from django_summernote.admin import SummernoteModelAdmin
+#from django.db.models import Q
+from django.http import HttpResponseRedirect
 from django.utils.html import mark_safe
-from django.db.models import Q
+from django.utils.translation import ugettext as _
+from django_summernote.admin import SummernoteModelAdmin
 from easymode.i18n.admin.decorators import L10n
 from models import Crew, App, AppImage, AppCategory, Job, Resume, ResumeReview, Testimonial, Poster
 
@@ -63,27 +64,41 @@ class TestimonialAdmin(SummernoteModelAdmin):
 admin.site.register(Testimonial, TestimonialAdmin)
 
 
-def make_candidate(modeladmin, request, queryset):
-    queryset.update(status='C')
-make_candidate.short_description = _("Mark selected resume as candidate")
-
-
-def make_archive(modeladmin, request, queryset):
-    queryset.update(status='A')
-make_archive.short_description = _("Archive selected resumes")
-
-
 class ResumeAdmin(SummernoteModelAdmin):
     def link(self, obj):
         return mark_safe('<a href="%s">%s</a>' % (
-            reverse('resume_detail', args=(obj.uuid,)),
-            _('Link to resume')))
+            reverse('resume_detail', args=(obj.uuid,)), _('Link to resume')))
 
-    def queryset(self, request):
-        qs = super(ResumeAdmin, self).queryset(request)
-        if request.GET.get('status__exact') == 'A':
-            return qs
-        return qs.filter(~Q(status='A'))
+#    def queryset(self, request):
+#        qs = super(ResumeAdmin, self).queryset(request)
+#        if request.GET.get('status__exact') == 'A':
+#            return qs
+#        return qs.filter(~Q(status='A'))
+
+    def make_submit(modeladmin, request, queryset):
+        queryset.update(status='S')
+    make_submit.short_description = _("Back to submitted")
+
+    def make_candidate(modeladmin, request, queryset):
+        queryset.update(status='C')
+    make_candidate.short_description = _("Mark selected resume as candidate")
+
+    def make_interview(modeladmin, request, queryset):
+        queryset.update(status='I')
+    make_interview.short_description = _("Interview was finished")
+
+    def make_grant(modeladmin, request, queryset):
+        queryset.update(status='G')
+    make_grant.short_description = _("Grant this resume")
+
+    def make_archive(modeladmin, request, queryset):
+        queryset.update(status='A')
+    make_archive.short_description = _("Archive selected resumes")
+
+    def send_mail(modeladmin, request, queryset):
+        selected = request.POST.getlist(admin.ACTION_CHECKBOX_NAME)
+        return HttpResponseRedirect(reverse('resume_mail') + '?resume_ids=%s' % (','.join(selected)))
+    send_mail.short_description = _("Send an inform mail")
 
     link.allow_tags = True
     list_display = ('id', 'link', 'status', 'name', 'email', 'contact', 'apply_to', 'uuid', 'applied')
@@ -91,7 +106,7 @@ class ResumeAdmin(SummernoteModelAdmin):
     search_fields = ['email', 'uuid', 'apply_to__name', 'name', 'desc']
     ordering = ('-id',)
 
-    actions = [make_candidate, make_archive]
+    actions = [make_submit, make_candidate, make_interview, make_grant, make_archive, send_mail]
 
 admin.site.register(Resume, ResumeAdmin)
 

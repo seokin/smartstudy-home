@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section id="mailform">
+    <h1>{% trans "Resume mailing" %}</h1>
+    <form enctype="multipart/form-data" method="post" action="{% url 'resume_mail_send' %}">
+        {{ form|crispy }}
+        {% csrf_token %}
+        <p>
+            <input class="btn btn-purple" type="submit" name="submit" value="{% trans 'Send' %}">
+        </p>
+    </form>
+</section>
+<section id="resumes" class="resumes">
+    <h2>{% trans "Resumes" %}</h2>
+    {% with list=resume_list %}
+    {% include "homepage/resume_list_fragment.html" %}
+    {% endwith %}
+</section>
+{% endblock %}

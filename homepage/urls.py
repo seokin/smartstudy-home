@@ -5,6 +5,7 @@ from .views import ResumeAdd, ResumeList, ResumeDetail, ResumeUpdate, ResumeDele
 from .views import ResumeReviewAdd, ResumeReviewUpdate, ResumeReviewDelete
 from .views import TestimonialDetail
 from .views import PosterDetail, PosterList
+from .views import resume_mail, resume_mail_send
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -23,6 +24,9 @@ urlpatterns = patterns(
     # for resume
     url(r'^resume/$', ResumeList.as_view(), name='resume_list'),
     url(r'^resume/new/$', ResumeAdd.as_view(), name='resume_add'),
+    url(r'^resume/mail/$', resume_mail, name='resume_mail'),
+    url(r'^resume/mail/send/$', resume_mail_send, name='resume_mail_send'),
+
     url(r'^resume/(?P<slug>\w+)/$', ResumeDetail.as_view(), name='resume_detail'),
     url(r'^resume/(?P<slug>\w+)/update/$', ResumeUpdate.as_view(), name='resume_update'),
     url(r'^resume/(?P<slug>\w+)/delete/$', ResumeDelete.as_view(), name='resume_delete'),

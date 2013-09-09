@@ -29,7 +29,7 @@ a:hover {
     text-decoration: underline;
 }
 
-p, li, span, input {
+p, li, span, input, select {
     color: #667;
     font-family: 'Open Sans', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
     font-size: 11pt;
@@ -810,7 +810,7 @@ section p img {
 }
 
 .fill-width {
-    width: 100%;
+    width: 100% !important;
 }
 
 @media (max-width: 900px) {

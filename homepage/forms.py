@@ -1,6 +1,7 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 from django_summernote.widgets import SummernoteWidget
+from django.contrib.auth.models import User
 from .models import Resume, ResumeReview
 
 
@@ -48,3 +49,19 @@ class ResumeReviewForm(forms.ModelForm):
 
         self.fields['desc'] = forms.CharField(widget=SummernoteWidget())
         self.fields['desc'].widget.attrs['class'] = 'fill-width summernote'
+
+
+class ResumeMailForm(forms.Form):
+    sender = forms.ChoiceField(choices=User.objects.all().values_list('username', 'username'))
+    mail_password = forms.CharField(widget=forms.PasswordInput(), required=False)
+    resume_ids = forms.CharField(widget=forms.HiddenInput())
+    subject = forms.CharField()
+    top_image = forms.ImageField(required=False)
+    message = forms.CharField(widget=SummernoteWidget())
+    bottom_image = forms.ImageField(required=False)
+
+    def __init__(self, *args, **kwargs):
+        super(ResumeMailForm, self).__init__(*args, **kwargs)
+
+        self.fields['subject'].widget.attrs['class'] = 'fill-width'
+        self.fields['message'].widget.attrs['class'] = 'fill-width summernote'

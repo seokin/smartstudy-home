@@ -12,8 +12,18 @@ from django.http import Http404
 #from django.views.decorators.cache import cache_page
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView, ListView
 from .models import Crew, App, Resume, Job, Testimonial, Poster, ResumeReview
-from .forms import ResumeForm, ResumeReviewForm
-from .helper import sendResumeLink
+from .forms import ResumeForm, ResumeReviewForm, ResumeMailForm
+from .helper import sendResumeLink, sendResumeInformMail
+
+RESUME_TABLE_COLS = [
+    ('name', 'Name'),
+    ('email', 'Email'),
+    ('status', 'Status'),
+    ('apply_to', 'Apply to'),
+    ('avg_rating', 'Rating'),
+    ('review_count', 'Review'),
+    ('modified', 'Last update'),
+]
 
 
 def about(request):
@@ -141,15 +151,7 @@ class ResumeList(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ResumeList, self).get_context_data(**kwargs)
-        context['table'] = [
-            ('name', 'Name'),
-            ('email', 'Email'),
-            ('status', 'Status'),
-            ('apply_to', 'Apply to'),
-            ('avg_rating', 'Rating'),
-            ('review_count', 'Review'),
-            ('modified', 'Last update'),
-        ]
+        context['table'] = RESUME_TABLE_COLS
         context['user'] = self.request.user
         context['sort'] = self.request.GET.get('sort')
         context['job'] = int(self.request.GET.get('job', 0))
@@ -244,3 +246,36 @@ class ResumeReviewDelete(DeleteView):
         if not obj.user == self.request.user:
             raise Http404
         return obj
+
+
+def resume_mail(request):
+    resume_ids = request.GET.get('resume_ids')
+    resume_id_list = resume_ids.split(',')
+    resume_list = Resume.objects.filter(id__in=resume_id_list)
+
+    form = ResumeMailForm(
+        initial={
+            'sender': request.user,
+            'resume_ids': resume_ids,
+        }
+    )
+
+    return render(request, 'homepage/resume_mail.html', {
+        'request': request,
+        'resume_list': resume_list,
+        'resume_ids': resume_ids,
+        'form': form,
+        'table': RESUME_TABLE_COLS,
+    })
+
+
+def resume_mail_send(request):
+    resume_ids = request.POST.get('resume_ids')
+    resume_id_list = resume_ids.split(',')
+    resume_list = Resume.objects.filter(id__in=resume_id_list)
+
+    sendResumeInformMail(request, resume_list)
+
+    return render(request, 'homepage/resume_mail_send.html', {
+        'resume_list': resume_list,
+    })
