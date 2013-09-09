@@ -2,6 +2,7 @@ from django.template.loader import get_template
 from django.template import Context, Template
 from django.core.mail import EmailMultiAlternatives, get_connection
 from django.conf import settings
+from django.contrib.auth.models import User
 from email.mime.image import MIMEImage
 
 
@@ -38,20 +39,22 @@ def sendResumeInformMail(request, resumes):
         bottom_image = MIMEImage(request.FILES['bottom_image'].read())
         bottom_image.add_header('Content-ID', '<bottom_image>')
 
+    sender = User.objects.get(username=request.POST.get('sender'))
     username = settings.EMAIL_HOST_USER
     password = settings.EMAIL_HOST_PASSWORD
 
     if request.POST.get('mail_password'):
-        username = request.user.email
+        username = sender.email
         password = request.POST.get('mail_password')
-
-        print username, password
 
     connection = get_connection(host=settings.EMAIL_HOST,
                                 port=settings.EMAIL_PORT,
                                 username=username,
                                 password=password,
                                 user_tls=settings.EMAIL_USE_TLS)
+
+    sent_count = 0
+    failed = []
 
     for resume in resumes:
         subject = request.POST.get('subject')
@@ -74,7 +77,7 @@ def sendResumeInformMail(request, resumes):
         msg = EmailMultiAlternatives(
             subject,
             text,
-            '%s%s <%s>' % (request.user.last_name, request.user.first_name, request.user.email),
+            '%s%s <%s>' % (sender.last_name, sender.first_name, sender.email),
             [resume.email])
         msg.attach_alternative(html, "text/html")
         msg.content_subtype = 'html'
@@ -87,6 +90,18 @@ def sendResumeInformMail(request, resumes):
             msg.attach(bottom_image)
 
         try:
-            msg.send(fail_silently=False)
+            result = msg.send(fail_silently=False)
+
+            if result == 0:
+                failed.append(resume.email)
+            else:
+                sent_count += result
         except:
-            pass
+            failed.append(resume.email)
+
+    connection.close()
+
+    return {
+        'sent_count': sent_count,
+        'failed': failed,
+    }

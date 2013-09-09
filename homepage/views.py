@@ -274,8 +274,10 @@ def resume_mail_send(request):
     resume_id_list = resume_ids.split(',')
     resume_list = Resume.objects.filter(id__in=resume_id_list)
 
-    sendResumeInformMail(request, resume_list)
+    result = sendResumeInformMail(request, resume_list)
 
     return render(request, 'homepage/resume_mail_send.html', {
         'resume_list': resume_list,
+        'sent_count': result['sent_count'],
+        'failed': result['failed'],
     })

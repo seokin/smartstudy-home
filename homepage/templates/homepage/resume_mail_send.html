@@ -4,5 +4,14 @@
 {% block content %}
 <section id="resumes" class="resumes">
     <h1>{% trans "Mail sent." %}</h1>
+    <p>{% trans "Successfully transmitted" %} : {{ sent_count }}</p>
+    {% if failed %}
+    <h3>{% trans "Failed to send" %}</h3>
+    <ul>
+    {% for email in failed %}
+        <li>{{ email }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
 </section>
 {% endblock %}
