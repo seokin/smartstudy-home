@@ -105,6 +105,7 @@ class ResumeAdmin(SummernoteModelAdmin):
     list_filter = ('apply_to', 'status')
     search_fields = ['email', 'uuid', 'apply_to__name', 'name', 'desc']
     ordering = ('-id',)
+    list_per_page = 25
 
     actions = [make_submit, make_candidate, make_interview, make_grant, make_archive, send_mail]
 
