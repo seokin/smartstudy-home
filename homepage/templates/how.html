@@ -25,4 +25,12 @@
     {% endfor %}
     </div>
 </section>
+<script>
+$('#container').imagesLoaded( function(){
+    $('#container').masonry({
+        itemSelector: '.item',
+        isAnimated: true,
+    });
+});
+</script>
 {% endblock %}
