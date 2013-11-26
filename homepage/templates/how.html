@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<section id="technique">
+    <img class="icon" src="{{ STATIC_URL }}image/icon/technique.png" alt="technique">
+    <h1>{% trans "Technique" %}</h1>
+    <h2>{% trans "Built on Open Source ecosystem." %}</h2>
+    {% blocktrans %}section-technique-1{% endblocktrans %}
+    {% blocktrans %}section-technique-2{% endblocktrans %}
+</section>
+<hr>
+<section id="presentation">
+    <img class="icon" src="{{ STATIC_URL }}image/icon/presentation.png" alt="presentation">
+    <h1>{% trans "Presentation" %}</h1>
+    <h2>{% trans "We learn and grow, then share." %}</h2>
+    {% blocktrans %}section-presentation-1{% endblocktrans %}
+    <div id="container" class="span12 presentation">
+    {% for p in presentations %}
+        <div class="span4 rounded-box item">
+            <a href="{% url 'presentation' p.id p.slug %}">
+                <img class="photo" src="{{ p.picture.presentation.url }}" alt="presentation thumbnail">
+                <p>{{ p.title }}</p>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -7,7 +7,7 @@ from django.utils.html import mark_safe
 from django.utils.translation import ugettext as _
 from django_summernote.admin import SummernoteModelAdmin
 from easymode.i18n.admin.decorators import L10n
-from models import Crew, App, AppImage, AppCategory, Job, Resume, ResumeReview, Testimonial, Poster
+from models import Crew, App, AppImage, AppCategory, Job, Resume, ResumeReview, Testimonial, Poster, Presentation
 
 
 @L10n(Crew)
@@ -127,6 +127,13 @@ class ResumeReviewAdmin(SummernoteModelAdmin):
         )
 
 admin.site.register(ResumeReview, ResumeReviewAdmin)
+
+
+class PresentationAdmin(SummernoteModelAdmin):
+    readonly_fields = ('slug',)
+
+admin.site.register(Presentation, PresentationAdmin)
+
 
 admin.site.register(Job, SummernoteModelAdmin)
 admin.site.register(Poster, SummernoteModelAdmin)

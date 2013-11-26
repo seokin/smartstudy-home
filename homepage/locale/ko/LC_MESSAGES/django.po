@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-09 19:16+0900\n"
-"PO-Revision-Date: 2013-09-09 19:18+0900\n"
+"POT-Creation-Date: 2013-11-26 18:09+0900\n"
+"PO-Revision-Date: 2013-11-26 18:19+0900\n"
 "Last-Translator:   <ez@smartstudy.co.kr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,69 +51,69 @@ msgstr " - 파일 크기 %d MB 제한"
 msgid "Too large attachment( > %d MB )"
 msgstr "첨부 파일의 크기가 용량 제한( %d MB ) 보다 큽니다."
 
-#: models.py:116
+#: models.py:135
 msgid "Draft"
 msgstr "임시 저장"
 
-#: models.py:117
+#: models.py:136
 msgid "Submitted"
 msgstr "제출됨"
 
-#: models.py:118
+#: models.py:137
 msgid "Candidate"
 msgstr "후보"
 
-#: models.py:119
+#: models.py:138
 msgid "Interviewed"
 msgstr "인터뷰 완료"
 
-#: models.py:120
+#: models.py:139
 msgid "Granted"
 msgstr "합격됨"
 
-#: models.py:121
+#: models.py:140
 msgid "Archived"
 msgstr "보관"
 
-#: models.py:125 templates/homepage/resume_detail_fragment.html:10
+#: models.py:144 templates/homepage/resume_detail_fragment.html:10
 msgid "Apply to"
 msgstr "지원 부문"
 
-#: models.py:128 templates/homepage/resume_detail_fragment.html:14
+#: models.py:147 templates/homepage/resume_detail_fragment.html:14
 msgid "Email"
 msgstr "이메일"
 
-#: models.py:129
+#: models.py:148
 msgid "Full name"
 msgstr "이름"
 
-#: models.py:130
+#: models.py:149
 msgid "Contact / Phone"
 msgstr "연락처 / 전화번호"
 
-#: models.py:132
+#: models.py:151
 msgid "Resume as file (optional)"
 msgstr "이력서 및 포트폴리오 파일 첨부 (가능한 경우)"
 
-#: models.py:141
+#: models.py:160
 msgid "LinkedIn URL (optional)"
 msgstr ""
 "링크드인 주소 (선택사항) / 입력시 <a href='http://www.linkedin.com/profile/public-"
 "profile-settings'>[링크드인 설정]</a>에서 공개 설정 필수"
 
-#: models.py:142
+#: models.py:161
 msgid "Homepage URL (optional)"
 msgstr "홈페이지 주소 (선택사항)"
 
-#: models.py:143
+#: models.py:162
 msgid "Github id (optional)"
 msgstr "Github 아이디 (선택사항)"
 
-#: models.py:144
+#: models.py:163
 msgid "Self description"
 msgstr "자기 소개"
 
-#: models.py:145
+#: models.py:164
 msgid "Education / Experience"
 msgstr "학력 / 경력 사항"
 
@@ -210,42 +210,14 @@ msgstr ""
 "</p>"
 
 #: templates/about.html:23 templates/footer.html:11
-msgid "Technique"
-msgstr "기술"
-
-#: templates/about.html:24
-msgid "Built on Open Source eco systems."
-msgstr "오픈소스를 통해 이루어져 있습니다."
-
-#: templates/about.html:25
-msgid "section-technique-1"
-msgstr ""
-"<p>\n"
-"    오픈 소스는 단순한 코드 공유나 라이센스의 문제가 아닙니다. 그리고 단순히 무료이기 때문에 사용하는 것만은 아닙니다.\n"
-"    오픈 소스는 개발자들의 문화 그 자체이며, 열고 공유함으로써 지속적인 발전과 공동 문제 해결을 가능하게 합니다.\n"
-"    따라서, 문제가 발생했을 때, 문제의 원인을 스스로 찾고 분석하여 직접 문제를 해결할 수 있도록 늘 준비하고 학습해야 합니다.\n"
-"    이러한 일이 당장 자신에게 도움이 될 뿐 아니라, 같은 업계에 있는 동료에게 작으나마 점진적으로 도움이 된다고 생각합니다.\n"
-"</p>\n"
-"<p>\n"
-"    오픈 소스를 사용하여 제품을 만들고 서비스를 진행할 뿐 아니라, 내부 라이브러리나 도구를 만들 때에도 오픈 소스로 진행하는 것을 권장합니다.\n"
-"    내가 아닌 다른 사람, 특히 내 의사를 코드로만 전달해야 한다면 코드 품질이나 문서화에 대해 신경을 써야 합니다.\n"
-"    이는 자연스럽게 개발자 본인의 역량 향상으로 이어지며, 이런 문화에 동의하는 수준 높은 개발자와 함께 일할 수 있는 계기가 됩니다.\n"
-"</p>\n"
-"<p>\n"
-"    우리는 오픈 소스를 사용하며 그 결과나 후기를 공유하는 소극적인 활동으로부터 시작해,\n"
-"    회사 외부에서도 사용할 가치가 있는 모듈의 오픈 소스화 작업을 권장하고 있으며,\n"
-"    우리가 사용하고 있는 오픈 소스 프로젝트에 대한 실습 세션을 지속적으로 열어 공동체에 기여하고자 합니다.\n"
-"</p>"
-
-#: templates/about.html:30 templates/footer.html:12
 msgid "Crew"
 msgstr "구성원"
 
-#: templates/about.html:31
+#: templates/about.html:24
 msgid "We're not on a rocket."
 msgstr "우리는 로켓에 타고 있지 않습니다."
 
-#: templates/about.html:33
+#: templates/about.html:26
 msgid "section-crew-1"
 msgstr ""
 "<p>\n"
@@ -261,7 +233,7 @@ msgstr ""
 "로켓도 아니고 멋진 리무진도 아니지만, 옆 사람과 소란스럽게 떠들며 목적지를 향해 덜컹거리며 가는 미니 버스라면 좋을 것 같습니다.\n"
 "</p>"
 
-#: templates/about.html:34
+#: templates/about.html:27
 msgid "Join us"
 msgstr "탑승하기"
 
@@ -352,7 +324,7 @@ msgstr ""
 "    </li>\n"
 "</ul>"
 
-#: templates/footer.html:7 templates/nav.html:6
+#: templates/footer.html:7 templates/nav.html:11
 msgid "ABOUT"
 msgstr "우리는"
 
@@ -360,82 +332,144 @@ msgstr "우리는"
 msgid "Company"
 msgstr "회사"
 
-#: templates/footer.html:16 templates/nav.html:9
+#: templates/footer.html:15 templates/nav.html:14
 msgid "PRODUCT"
 msgstr "무엇을"
 
-#: templates/footer.html:18
+#: templates/footer.html:17
 msgid "Featured"
 msgstr "추천"
 
-#: templates/footer.html:25 templates/nav.html:12
+#: templates/footer.html:24 templates/nav.html:17
+msgid "HOW"
+msgstr "어떻게"
+
+#: templates/footer.html:26 templates/how.html:6
+msgid "Technique"
+msgstr "기술"
+
+#: templates/footer.html:27 templates/how.html:14
+msgid "Presentation"
+msgstr "발표자료"
+
+#: templates/footer.html:31 templates/nav.html:20
 msgid "CONTACT"
 msgstr "어디서"
 
-#: templates/footer.html:27
+#: templates/footer.html:33
 msgid "Support"
 msgstr "고객 지원"
 
-#: templates/footer.html:28
+#: templates/footer.html:34
 msgid "Business"
 msgstr "업무 문의"
 
-#: templates/footer.html:29
+#: templates/footer.html:35
 msgid "Press"
 msgstr "기사 및 자료"
 
-#: templates/footer.html:30
+#: templates/footer.html:36
 msgid "Location"
 msgstr "위치"
 
-#: templates/footer.html:34 templates/nav.html:15
+#: templates/footer.html:40 templates/nav.html:23
 msgid "WITH"
 msgstr "같이"
 
-#: templates/footer.html:36 templates/withyou.html:5
+#: templates/footer.html:42 templates/withyou.html:5
 msgid "With us"
 msgstr "우리와 함께"
 
-#: templates/footer.html:37 templates/withyou.html:29
+#: templates/footer.html:43 templates/withyou.html:29
 msgid "Open position"
 msgstr "인재 등록"
 
-#: templates/footer.html:38 templates/homepage/poster_list.html:6
+#: templates/footer.html:44 templates/homepage/poster_list.html:6
 msgid "Posters"
 msgstr "포스터"
 
-#: templates/footer.html:42
+#: templates/footer.html:48
 msgid "INFORMATION"
 msgstr "정보"
 
-#: templates/footer.html:44
+#: templates/footer.html:50
 msgid "Facebook"
 msgstr "페이스북"
 
-#: templates/footer.html:45
+#: templates/footer.html:51
 msgid "Twitter"
 msgstr "트위터"
 
-#: templates/footer.html:46 templates/homepage/resume_detail_fragment.html:31
+#: templates/footer.html:52 templates/homepage/resume_detail_fragment.html:31
 msgid "Github"
 msgstr "깃허브"
 
-#: templates/footer.html:47
+#: templates/footer.html:53
 msgid "License"
 msgstr "저작권"
 
-#: templates/footer.html:48
+#: templates/footer.html:54
 msgid "Privacy"
 msgstr "개인정보"
 
-#: templates/footer.html:52
+#: templates/footer.html:58
 msgid "LANGUAGE"
 msgstr "언어"
 
-#: templates/footer.html:62
+#: templates/footer.html:68
 #, python-format
 msgid "Designed and published by © SMARTSTUDY 2010-%(year)s"
 msgstr "스마트스터디가 직접 꾸미고 발행했습니다. 주식회사 스마트스터디, © 2010-%(year)s"
+
+#: templates/how.html:7
+msgid "Built on Open Source ecosystem."
+msgstr "오픈소스를 통해 이루어져 있습니다."
+
+#: templates/how.html:8
+msgid "section-technique-1"
+msgstr ""
+"<p>\n"
+"    오픈 소스는 단순한 코드 공유나 라이센스의 문제가 아닙니다. 그리고 단순히 무료이기 때문에 사용하는 것만은 아닙니다.\n"
+"    오픈 소스는 개발자들의 문화 그 자체이며, 열고 공유함으로써 지속적인 발전과 공동 문제 해결을 가능하게 합니다.\n"
+"    따라서, 문제가 발생했을 때, 문제의 원인을 스스로 찾고 분석하여 직접 문제를 해결할 수 있도록 늘 준비하고 학습해야 합니다.\n"
+"    이러한 일이 당장 자신에게 도움이 될 뿐 아니라, 같은 업계에 있는 동료에게 작으나마 점진적으로 도움이 된다고 생각합니다.\n"
+"</p>\n"
+"<p>\n"
+"    오픈 소스를 사용하여 제품을 만들고 서비스를 진행할 뿐 아니라, 내부 라이브러리나 도구를 만들 때에도 오픈 소스로 진행하는 것을 권장합니다.\n"
+"    내가 아닌 다른 사람, 특히 내 의사를 코드로만 전달해야 한다면 코드 품질이나 문서화에 대해 신경을 써야 합니다.\n"
+"    이는 자연스럽게 개발자 본인의 역량 향상으로 이어지며, 이런 문화에 동의하는 수준 높은 개발자와 함께 일할 수 있는 계기가 됩니다.\n"
+"</p>\n"
+"<p>\n"
+"    우리는 오픈 소스를 사용하며 그 결과나 후기를 공유하는 소극적인 활동으로부터 시작해,\n"
+"    회사 외부에서도 사용할 가치가 있는 모듈의 오픈 소스화 작업을 권장하고 있으며,\n"
+"    우리가 사용하고 있는 오픈 소스 프로젝트에 대한 실습 세션을 지속적으로 열어 공동체에 기여하고자 합니다.\n"
+"</p>"
+
+#: templates/how.html:9
+msgid "section-technique-2"
+msgstr ""
+"<ul>\n"
+"        <li>\n"
+"            <a href=\"https://github.com/lqez/npk/\">libnpk</a>\n"
+"            <span class=\"desc\"> - neat package system written in C</span>\n"
+"        </li>\n"
+"        <li>\n"
+"            <a href=\"https://github.com/Kroisse/FormEncode-Jinja/\">FormEncode-Jinja</a>\n"
+"            <span class=\"desc\"> - A Jinja2 extension for filling HTML forms via FormEncode</span>\n"
+"        </li>\n"
+"        <li>\n"
+"            <a href=\"https://github.com/smartstudy/django-project-layout/\">django-project-layout</a>\n"
+"            <span class=\"desc\"> - Django project layout for better experience</span>\n"
+"        </li>\n"
+"</ul>"
+
+#: templates/how.html:15
+msgid "We learn and grow, then share."
+msgstr "배우고 성장하며, 그리고 나눕니다."
+
+#: templates/how.html:16
+msgid "section-presentation-1"
+msgstr " "
 
 #: templates/license.html:5
 msgid "LICENSE"
@@ -461,7 +495,7 @@ msgstr "아이콘"
 msgid "All trademarks are property of their respective owners."
 msgstr "모든 상표명, 제품명 또는 상표는 해당 소유자의 재산입니다."
 
-#: templates/nav.html:20
+#: templates/nav.html:28
 msgid "SMARTSTUDY"
 msgstr "스마트스터디"
 
@@ -848,6 +882,14 @@ msgstr "보내기"
 #: templates/homepage/resume_mail_send.html:6
 msgid "Mail sent."
 msgstr "메일 발송 완료"
+
+#: templates/homepage/resume_mail_send.html:7
+msgid "Successfully transmitted"
+msgstr "성공적으로 발송되었습니다"
+
+#: templates/homepage/resume_mail_send.html:9
+msgid "Failed to send"
+msgstr "발송에 실패했습니다"
 
 #: templates/homepage/resumereview_delete.html:5
 msgid "Delete a review"

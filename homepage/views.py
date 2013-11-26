@@ -11,7 +11,7 @@ from django.utils.translation import check_for_language
 from django.http import Http404
 #from django.views.decorators.cache import cache_page
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView, ListView
-from .models import Crew, App, Resume, Job, Testimonial, Poster, ResumeReview
+from .models import Crew, App, Resume, Job, Testimonial, Poster, ResumeReview, Presentation
 from .forms import ResumeForm, ResumeReviewForm, ResumeMailForm
 from .helper import sendResumeLink, sendResumeInformMail
 
@@ -38,6 +38,17 @@ def product(request):
     return render(request, 'product.html', {
         'apps': apps,
     })
+
+
+def how(request):
+    presentations = Presentation.objects.all()
+    return render(request, 'how.html', {
+        'presentations': presentations,
+    })
+
+
+class PresentationDetail(DetailView):
+    model = Presentation
 
 
 def contact(request):

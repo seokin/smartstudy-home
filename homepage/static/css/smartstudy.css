@@ -101,6 +101,10 @@ pre {
     white-space: pre-line;
 }
 
+.visible-phone {
+    display: none !important;
+}
+
 .pull-right {
     float: right;
 }
@@ -189,6 +193,10 @@ pre {
 
 .icon-product {
     background-image: url("../image/icon/product.png");
+}
+
+.icon-how {
+    background-image: url("../image/icon/how.png");
 }
 
 .icon-contact {
@@ -726,6 +734,14 @@ section p img {
     background-image: url("../image/phone.png");
 }
 
+.presentation .item img { 
+    max-width: 100%; 
+    width: 360px;
+    height: auto;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
 .posters .item img { 
     max-width: 100%; 
     width: 360px;
@@ -847,6 +863,10 @@ section p img {
 
     .hidden-phone {
         display: none !important;
+    }
+
+    .visible-phone {
+        display: inline-block !important;
     }
 
     #footer .sitemap > li {

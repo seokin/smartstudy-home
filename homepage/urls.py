@@ -1,8 +1,9 @@
 from django.conf.urls import patterns, url, include
 from django.conf import settings
-from .views import about, product, contact, withyou, license, privacy, setlang, robots
+from .views import about, product, how, contact, withyou, license, privacy, setlang, robots
 from .views import ResumeAdd, ResumeList, ResumeDetail, ResumeUpdate, ResumeDelete, resume_inform
 from .views import ResumeReviewAdd, ResumeReviewUpdate, ResumeReviewDelete
+from .views import PresentationDetail
 from .views import TestimonialDetail
 from .views import PosterDetail, PosterList
 from .views import resume_mail, resume_mail_send
@@ -16,6 +17,7 @@ urlpatterns = patterns(
     url(r'^$', about, name='index'),
     url(r'^about/$', about, name='about'),
     url(r'^product/$', product, name='product'),
+    url(r'^how/$', how, name='how'),
     url(r'^contact/$', contact, name='contact'),
     url(r'^withyou/$', withyou, name='withyou'),
     url(r'^license/$', license, name='license'),
@@ -39,6 +41,9 @@ urlpatterns = patterns(
     # for poster
     url(r'^poster/$', PosterList.as_view(), name='poster_list'),
     url(r'^poster/(?P<pk>\d+)/$', PosterDetail.as_view(), name='poster'),
+
+    # for presentation
+    url(r'^presentation/(?P<pk>\d+)/(?P<slug>[\w-]+)/$', PresentationDetail.as_view(), name='presentation'),
 
     # for testimonial
     url(r'^testimonial/(?P<pk>\d+)/$', TestimonialDetail.as_view(), name='testimonial'),

@@ -4,9 +4,10 @@ from django.db.models import Avg
 from easymode.i18n.decorators import I18n
 from easy_thumbnails.fields import ThumbnailerImageField as ImageField
 from django import forms
-from django.utils.translation import ugettext_lazy as _
-from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
+from django.template.defaultfilters import slugify
+from django.utils.translation import ugettext_lazy as _
 from django_summernote.widgets import SummernoteWidget
 from jsonfield import JSONField
 from library import uploaded_filepath
@@ -91,6 +92,24 @@ class Testimonial(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+@I18n('title', 'desc', )
+class Presentation(models.Model):
+    slug = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    desc = models.TextField()
+    picture = ImageField(upload_to='presentation/')
+
+    created = models.DateTimeField(auto_now_add=True)
+
+    def save(self, *args, **kwargs):
+        if self.pk is None:
+            self.slug = slugify(self.title)
+        super(Presentation, self).save()
+
+    def __unicode__(self):
+        return self.title
 
 
 class Job(models.Model):

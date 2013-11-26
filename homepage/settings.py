@@ -189,6 +189,7 @@ THUMBNAIL_ALIASES = {
     '': {
         'icon': {'size': (128, 128)},
         'thumbnail': {'size': (360, 360)},
+        'presentation': {'size': (360, 240), 'crop': 'smart'},
         'large': {'size': (1024, 1024)},
     }
 }
@@ -208,3 +209,7 @@ EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_SENDER = _('SMARTSTUDY <recruit@smartstudy.co.kr>')
 EMAIL_RESUME_TITLE = _('[SMARTSTUDY] Thank you for applying.')
+
+SUMMERNOTE_CONFIG = {
+    'height': 600,
+}

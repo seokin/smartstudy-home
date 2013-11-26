@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<section id="presentation" class="presentation">
+    <a class="btn btn-blue pull-right" href="{% url 'how' %}#presentation">{% trans "Back" %}</a>
+    <h1>
+        {{ presentation.title }}
+    </h1>
+    <div class="rounded-box presentation-desc">
+        {{ presentation.desc|safe }}
+    </div>
+    <div class="clear"></div>
+</section>
+{% endblock %}
