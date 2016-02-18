@@ -290,7 +290,7 @@ msgstr ""
 "    <li>SMARTSTUDY Address</li>\n"
 "    5th floor<br>\n"
 "    94 Myeongdal-ro<br>\n"
-"    Seocho-Gu, Seoul 137-871<br>\n"
+"    Seocho-Gu, Seoul 06668<br>\n"
 "    Korea\n"
 "</ul>"
 
